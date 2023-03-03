@@ -1,0 +1,13 @@
+{
+    "name": "Lte",
+    "alias": "lte",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Lte\\Providers\\LteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
