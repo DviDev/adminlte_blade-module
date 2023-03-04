@@ -56,12 +56,16 @@
         <!-- Brand Logo -->
         <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link">
             @if($app_logo)
-                <img src="{{asset($app_logo)}}"
-                     class="brand-image img-circle elevation-3" style="opacity: .8">
+                <div class="">
+                    <img src="{{asset($app_logo)}}" width="90%" style="opacity: .8">
+                    <div class="brand-text font-weight-light text-sm">
+                        {{config('app.description')}}
+                    </div>
+                </div>
             @else
                 <i class="fas fa-user-circle-o fa-2x brand-image img-circle elevation-3" style="opacity: .8"></i>
+                <span class="brand-text font-weight-light">{{config('app.name')}}</span>
             @endif
-            <span class="brand-text font-weight-light">{{config('app.name')}}</span>
         </a>
         @if(isset($sidebar))
             {{$sidebar}}
