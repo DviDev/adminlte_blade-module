@@ -59,7 +59,7 @@
                 <div class="">
                     <img src="{{asset($app_logo)}}" width="90%" style="opacity: .8">
                     <div class="brand-text font-weight-light text-sm">
-                        Personaliação e Aquisição de Opicionais
+                        {{config('app.description')}}
                     </div>
                 </div>
             @else
