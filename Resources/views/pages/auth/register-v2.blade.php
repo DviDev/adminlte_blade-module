@@ -10,8 +10,6 @@
             </div>
             <div class="card-body">
                 <p class="login-box-msg h5">Criar conta</p>
-                <!-- Validation Errors -->
-                <x-auth-validation-errors class="mb-4" :errors="$errors"/>
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="input-group mb-3">
@@ -23,6 +21,7 @@
                                 <span class="fas fa-user"></span>
                             </div>
                         </div>
+                        <x-lte::error field="name"/>
                     </div>
                     <div class="input-group mb-3">
                         <input id="email" name="email" type="email" placeholder="Email" value="{{old('email')}}"
@@ -33,6 +32,7 @@
                                 <span class="fas fa-envelope"></span>
                             </div>
                         </div>
+                        <x-lte::error field="email"/>
                     </div>
                     <div class="input-group mb-3">
                         <input id="cpf" name="cpf" placeholder="Cpf" x-data x-mask="999.999.999-99"
@@ -44,6 +44,7 @@
                                 <span class="fas fa-id-card"></span>
                             </div>
                         </div>
+                        <x-lte::error field="cpf"/>
                     </div>
                     <div class="input-group mb-3">
                         <input id="password" name="password" type="password" placeholder="Senha" required
@@ -53,16 +54,17 @@
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
+                        <x-lte::error field="password"/>
                     </div>
                     <div class="input-group mb-3">
                         <input id="password_confirmation" name="password_confirmation" type="password" required
-                               placeholder="Confirme a senha" class="form-control"
-                        >
+                               placeholder="Confirme a senha" class="form-control">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
+                        <x-lte::error field="password_confirmation"/>
                     </div>
                     <div class="row">
                         <div class="col-8">
