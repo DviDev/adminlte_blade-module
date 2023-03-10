@@ -71,7 +71,7 @@
                             <div class="icheck-primary">
                                 <input type="checkbox" id="agreeTerms" name="terms" value="agree" required>
                                 <label for="agreeTerms">
-                                    Aceito os <a href="{{route('terms')}}">termos</a>
+                                    Aceito os <a href="{{route('terms')}}" target="_blank">termos</a>
                                 </label>
                             </div>
                         </div>
