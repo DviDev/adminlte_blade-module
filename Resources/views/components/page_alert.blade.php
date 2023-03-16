@@ -28,4 +28,15 @@
             </script>
         @endpush
     @endif
+@elseif(session()->has('warning'))
+    @if(!$only_toastr)
+        <div class="alert alert-warning">{!! session('warning') !!}</div>
+    @endif
+    @if($toastr || $only_toastr)
+        @push('scripts')
+            <script>
+                toastrDispatch({ type: 'warning', 'msg': '{!! session('warning') !!}' })
+            </script>
+        @endpush
+    @endif
 @endif
