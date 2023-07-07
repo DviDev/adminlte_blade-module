@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="{{asset("plugins/jqvmap/jqvmap.min.css")}}">
         <!-- overlayScrollbars -->
         <link rel="stylesheet" href="{{asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css")}}">
-        <!-- Daterange picker -->
+        <!-- Date-range picker -->
         <link rel="stylesheet" href="{{asset("plugins/daterangepicker/daterangepicker.css")}}">
         {{--    <link rel="stylesheet" href="{{asset("plugins/summernote/summernote-bs4.min.css")}}">--}}
         <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
@@ -54,14 +54,10 @@
                 {{$body}}
             </x-lte::card.body>
         @elseif($slot)
-            <x-lte::card.body class="p-0">
-                {{$slot}}
-            </x-lte::card.body>
+            <x-lte::card.body class="p-0">{{$slot}}</x-lte::card.body>
         @endif
         @if(isset($footer))
-            <x-lte::card.footer>
-                {{$footer}}
-            </x-lte::card.footer>
+            <x-lte::card.footer>{{$footer}}</x-lte::card.footer>
         @endif
     </x-lte::card>
 </x-lte::layout.v1>

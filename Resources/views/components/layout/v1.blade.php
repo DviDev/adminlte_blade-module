@@ -37,7 +37,7 @@
         @endif
     @endif
     <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     @livewireStyles
     @powerGridStyles
 </head>
@@ -57,13 +57,13 @@
         <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link">
             @if($app_logo)
                 <div class="">
-                    <img src="{{asset($app_logo)}}" width="90%" style="opacity: .8">
+                    <img src="{{asset($app_logo)}}"  height="40px" style="opacity: .8">
                     <div class="brand-text font-weight-light text-sm">
                         {{config('app.description')}}
                     </div>
                 </div>
             @else
-                <i class="fas fa-user-circle-o fa-2x brand-image img-circle elevation-3" style="opacity: .8"></i>
+                <x-dvui::icon.user.circle class="brand-image img-circle elevation-3 w-5"/>
                 <span class="brand-text font-weight-light">{{config('app.name')}}</span>
             @endif
         </a>
