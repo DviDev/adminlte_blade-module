@@ -31,7 +31,7 @@
 
     @if($tailwind_css)
         @if($use_vite)
-            @vite('resources/css/app.css')
+            @vite('resources/css/app.css', 'resources/js/app.js')
         @else
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
@@ -39,7 +39,6 @@
     <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     @livewireStyles
-    @powerGridStyles
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
@@ -180,6 +179,5 @@
 </script>
 @stack('scripts')
 @livewireScripts
-@powerGridScripts
 </body>
 </html>

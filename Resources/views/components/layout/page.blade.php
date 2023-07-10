@@ -1,7 +1,6 @@
 @props([
     'header' => null,
     'tailwind_css' => true,
-    'navbar_menu_items' => [],
     'sidebar_menu_items' => [],
     'show_cart_icon' => false,
     'show_right_sidebar_icon' => true,
@@ -9,7 +8,7 @@
     'app_logo' => null,
     'outline' => true,
     'primary' => true,
-    'use_vite' => false,
+    'use_vite' => true,
 ])
 @once
     @push('header_libs')
@@ -35,14 +34,13 @@
 >
     <x-slot:navbar>
         <x-lte::layout.navbar
-            :items="$navbar_menu_items"
             :show_cart_icon="$show_cart_icon"
             :show_right_sidebar_icon="$show_right_sidebar_icon"
             :show_notifications="$show_notifications"
         />
     </x-slot:navbar>
     <x-slot:sidebar>
-        <x-lte::layout.sidebar :items="$sidebar_menu_items"/>
+        <x-lte::layout.sidebar/>
     </x-slot:sidebar>
     <x-lte::page_alert toastr/>
     <x-lte::card :card_id="'page_'.random_int(1000, 2000)" :header="$header" :outline="$outline" :primary="$primary">

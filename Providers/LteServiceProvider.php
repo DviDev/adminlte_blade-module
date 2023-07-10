@@ -5,6 +5,9 @@ namespace Modules\Lte\Providers;
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
+use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
 use Modules\Lte\View\Components\Box;
 use Modules\Lte\View\Components\Button;
 use Modules\Lte\View\Components\Card\Body;
@@ -148,6 +151,10 @@ class LteServiceProvider extends ServiceProvider
 
     private function registerComponents()
     {
+        Livewire::component('lte::dashboard.darshboard-v1', DashboardV1::class);
+        Livewire::component('lte::layout.navbar.notifications', Notifications::class);
+        Livewire::component('lte::page', Page::class);
+
         Blade::component('lte::card', Card::class);
         Blade::component('lte::card.header', Header::class);
         Blade::component('lte::card.body', Body::class);
