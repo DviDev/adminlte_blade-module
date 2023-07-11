@@ -14,7 +14,7 @@
 
     $app_logo = ConfigModel::whereFn(fn(ConfigEntityModel $c) => [[$c->name, 'app_logo']])->first()->value;
 @endphp
-<x-lte::layout.page
+<x-lte::layout.page-card
     :tailwind_css="$tailwind_css"
     :header="$header ? null : $title"
     :sidebar_menu_items="[]"
@@ -50,4 +50,4 @@
     @else
         <page_footer></page_footer>
     @endif
-</x-lte::layout.page>
+</x-lte::layout.page-card>

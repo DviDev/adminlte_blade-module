@@ -171,7 +171,7 @@ class LteServiceProvider extends ServiceProvider
         Blade::component('lte::form.date-mask', DateMask::class);
         Blade::component('lte::form.summernote', Summernote::class);
         Blade::component('lte::layout.navbar', Navbar::class);
-        Blade::component('lte::layout.page', Page::class);
+        Blade::component('lte::layout.page-card', Page::class);
         Blade::component('lte::layout.sidebar', Sidebar::class);
         Blade::component('lte::layout.v1', V1::class);
         Blade::component('lte::nav.tab', \Modules\Lte\View\Components\Nav\Tab\Tab::class);

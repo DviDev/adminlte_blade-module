@@ -42,21 +42,27 @@ class Sidebar extends Component
             'active' => Request::is('menu')
         ];
         $menu['root'][] = [
-            'label' => 'Pedidos',
+            'label' => 'My orders',
             'url' => route('orders'),
             'icon' => 'far fa-shopping-bag',
             'active' => Request::is('orders')
         ];
         if (Gate::check(UserType::SUPER_ADMIN->value) || Gate::check(UserType::ADMIN->value)) {
+            $menu['store'][] = [
+                'label' => 'Products',
+                'url' => route('admin.products'),
+                'icon' => 'fas fa-cog',
+                'active' => request()->routeIs('admin.products') || request()->routeIs('admin.product')
+            ];
 
-
-            if (Gate::check(UserType::SUPER_ADMIN->value)) {
+            if (Gate::check(UserType::ADMIN->value)) {
                 $menu['admin'][] = [
                     'label' => 'Configurações',
                     'url' => route('admin.configs'),
                     'icon' => 'fas fa-cog',
                     'active' => request()->routeIs('admin.configs') || request()->routeIs('admin.config')
                 ];
+
             }
             if (Gate::check(UserType::SUPER_ADMIN->value) || Gate::check(UserType::ADMIN->value)) {
                 $menu['admin'][] = [

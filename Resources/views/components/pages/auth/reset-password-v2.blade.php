@@ -1,24 +1,25 @@
-<x-lte.guest class="login-page">
+<x-lte::pages.guest class="login-page">
     <div class="login-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="{{route('home')}}" class="h1"><b>{{$title}}</b></a>
-                <div>
-                    <img src="{{$logo}}" width="50px">
-                </div>
+                <a href="{{route('home')}}" class="h1">
+                    <div>
+                        <img src="{{asset('dist/img/app_logo.png')}}" width="100px"
+                             alt="{{config('app.name')}}" title="{{config('app.name')}}">
+                    </div>
+                </a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Digite a nova senha</p>
                 <!-- Validation Errors -->
-                <x-auth-validation-errors class="mb-4" :errors="$errors"/>
                 <form method="POST" action="{{ route('password.update') }}">
                     @csrf
                     <!-- Password Reset Token -->
-                    <input type="hidden" id="token" name="token" value="{{ $request->route('token') }}">
+                    <input type="hidden" id="token" name="token" value="{{ $token }}">
                     <!-- Email Address -->
                     <div class="input-group mb-3">
-                        <x-input id="email" name="email" type="email" class="form-control" placeholder="email"
-                                 :value="old('email', $request->email)" required autofocus/>
+                        <input id="email" name="email" type="email" class="form-control" placeholder="email"
+                               required autofocus/>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -56,4 +57,4 @@
             <!-- /.login-card-body -->
         </div>
     </div>
-</x-lte.guest>
+</x-lte::pages.guest>

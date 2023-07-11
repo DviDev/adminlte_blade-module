@@ -43,19 +43,7 @@
         <x-lte::layout.sidebar/>
     </x-slot:sidebar>
     <x-lte::page_alert toastr/>
-    <x-lte::card :card_id="'page_'.random_int(1000, 2000)" :header="$header" :outline="$outline" :primary="$primary">
-        @if(isset($card_header))
-            {{$card_header}}
-        @endif
-        @if(isset($body))
-            <x-lte::card.body class="{{$body->attributes->get('class')}}">
-                {{$body}}
-            </x-lte::card.body>
-        @elseif($slot)
-            <x-lte::card.body class="p-0">{{$slot}}</x-lte::card.body>
-        @endif
-        @if(isset($footer))
-            <x-lte::card.footer>{{$footer}}</x-lte::card.footer>
-        @endif
-    </x-lte::card>
+    <div>
+        {{$slot}}
+    </div>
 </x-lte::layout.v1>

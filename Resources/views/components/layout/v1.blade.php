@@ -44,7 +44,7 @@
 <div class="wrapper">
     <!-- Preloader -->
     {{--  <div class="preloader flex-column justify-content-center align-items-center">--}}
-    {{--    <img class="animation__shake" src="{{asset("dist/img/singular_logo.jpg")}}" alt="SingularLogo" height="60" width="60">--}}
+    {{--    <img class="animation__shake" src="{{asset("{{dist/img/app_logo.jpg}}")}}" alt="{{config('app.name')}}" height="60" width="60">--}}
     {{--  </div>--}}
 
     @if(isset($navbar))

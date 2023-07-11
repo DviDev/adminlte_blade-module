@@ -1,10 +1,10 @@
-<x-lte.guest class="register-page">
+<x-lte::pages.guest class="register-page">
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <div>
                     <a href="{{route('home')}}" class="h1">
-                        <img src="{{$logo}}" width="100px">
+                        <img src="{{asset('dist/img/app_logo.png')}}" width="100px">
                     </a>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                             <div class="icheck-primary">
                                 <input type="checkbox" id="agreeTerms" name="terms" value="agree" required>
                                 <label for="agreeTerms">
-                                    Aceito os <a href="{{route('terms')}}" target="_blank">termos</a>
+                                    Aceito os <a href="#" target="_blank">termos</a>
                                 </label>
                             </div>
                         </div>
@@ -97,4 +97,4 @@
             <!-- /.form-box -->
         </div><!-- /.card -->
     </div>
-</x-lte.guest>
+</x-lte::pages.guest>

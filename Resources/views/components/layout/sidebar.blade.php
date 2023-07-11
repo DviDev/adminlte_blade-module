@@ -53,6 +53,29 @@
                 </li>
             @endif
 
+            @if(isset($items['store']))
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-user-shield"></i>
+                        <p>
+                            Store
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        @foreach($items['store']??[] as $item)
+                            <li class="nav-item">
+                                <a href="{{$item['url']}}"
+                                    @class(["nav-link", "active" => $item['active'] ?? false])>
+                                    <i class="nav-icon {{$item['icon']}}"></i>
+                                    <p>{{$item['label']}}</p>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+            @endif
+
             @if(isset($items['devops']))
                 <li class="nav-item">
                     <a href="#" class="nav-link">

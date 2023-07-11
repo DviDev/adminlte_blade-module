@@ -1,10 +1,10 @@
-<x-lte.guest class="login-page">
+<x-lte::pages.guest class="login-page">
     <div class="login-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <div>
                     <a href="{{route('home')}}" class="h1">
-                        <img src="{{$logo}}" width="100px">
+                        <img src="{{asset('dist/img/app_logo.png')}}" width="100px">
                     </a>
                 </div>
             </div>
@@ -13,7 +13,9 @@
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')"/>
                 <!-- Validation Errors -->
-                <x-auth-validation-errors class="mb-4" :errors="$errors"/>
+                <div>
+
+                </div>
                 <form method="POST" action="{{ route('password.email') }}">
                     @csrf
                     <div class="input-group mb-3">
@@ -40,4 +42,4 @@
             <!-- /.login-card-body -->
         </div>
     </div>
-</x-lte.guest>
+</x-lte::pages.guest>

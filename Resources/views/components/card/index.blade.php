@@ -97,7 +97,6 @@
             window.localStorage.setItem('{{config('app.name')}}.'+ key, value)
             return value
         }
-
         function getStorage (key) {
             return window.localStorage.getItem('{{config('app.name')}}.'+ key)
         }
