@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
                 <x-auth-session-status class="mb-4" :status="session('status')"/>
-                <livewire:login/>
+                <livewire:app::auth.login/>
                 <p class="mb-1">
                     {{-- <a href="{{route('forgot-password')}}">Esqueci a senha</a> --}}
                     {{--                <a href="#">Esqueci a senha</a>--}}

@@ -1,5 +1,5 @@
 <x-lte::layout.v1.page :tailwind_css="false" :outline="false" :primary="false">
-    <livewire:app.dashboard />
+    <livewire:app::dashboard.dashboard-v1 />
 </x-lte::layout.v1.page>
 
 @push('scripts')

@@ -115,7 +115,7 @@
         <!-- Notifications Dropdown Menu -->
         @if($show_notifications)
             <li class="nav-item dropdown">
-                <livewire:lte.navbar.notifications/>
+                <livewire:lte::layout.navbar.notifications/>
             </li>
         @endif
         <li class="nav-item">
