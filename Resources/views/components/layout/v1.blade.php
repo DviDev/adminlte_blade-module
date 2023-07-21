@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset("plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
-    <title>{{ $header ?? config('app.name') }} | Dashboard</title>
+    <title>{{ $header ?? config('app.name') }} | Welcome</title>
     @stack('header_libs')
     @stack('styles')
     @stack('scripts_head')
@@ -36,6 +36,9 @@
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
+{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
+
     <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
     @livewireStyles
