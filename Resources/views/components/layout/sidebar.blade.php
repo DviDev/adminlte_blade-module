@@ -18,18 +18,33 @@
 
     <!-- Sidebar Menu -->
     <nav class="mt-2 pb-4">
+
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
-            @foreach($items['root']??[] as $item)
-                <li class="nav-item">
-                    <a href="{{$item['url']}}"
-                        @class(["nav-link", "active" => $item['active'] ?? false])>
-                        <i class="nav-icon fas fa-{{$item['icon']}}"></i>
-                        <p>{{$item['label']}}</p>
+            @foreach($items as $key => $menuItems)
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-user-shield"></i>
+                        <p>
+                            {{$key}}
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        @foreach($menuItems as $item)
+                            <li class="nav-item">
+                                <a href="{{$item['url']}}"
+                                    @class(["nav-link", "active" => $item['active'] ?? false])>
+                                    <i class="nav-icon {{$item['icon']}} text-xs"></i>
+                                    <p>{{$item['label']}}</p>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </li>
             @endforeach
+
             @if(isset($items['admin']))
                 <li class="nav-item menu-open">
                     <a href="#" class="nav-link">

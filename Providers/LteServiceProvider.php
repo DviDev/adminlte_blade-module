@@ -2,7 +2,6 @@
 
 namespace Modules\Lte\Providers;
 
-use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
@@ -76,6 +75,9 @@ class LteServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        Livewire::component('lte::dashboard.v1', DashboardV1::class);
+        Livewire::component('lte::layout.navbar.notifications', Notifications::class);
+        Livewire::component('lte::page', \Modules\Lte\Http\Livewire\Page\Page::class);
         $this->app->register(RouteServiceProvider::class);
     }
 

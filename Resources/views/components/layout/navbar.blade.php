@@ -48,7 +48,7 @@
                 @php
                     $product = request('product');
                 @endphp
-                <livewire:store::cart.cart-icon-items :product="$product"/>
+                <livewire:cart.cart-icon-items :product="$product"/>
             @endif
         </li>
         <!-- Messages Dropdown Menu -->
