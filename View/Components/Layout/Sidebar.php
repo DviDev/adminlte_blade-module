@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Request;
 use Illuminate\View\Component;
 use Modules\App\Entities\User\UserType;
-use Modules\DBMap\Domains\Module;
+use Modules\DBMap\Domains\ModuleDomain;
 
 class Sidebar extends Component
 {
@@ -36,7 +36,7 @@ class Sidebar extends Component
         if (auth()->user()->isAdmin() || auth()->user()->isAdmin()) {
             $menu['root'][] = ['label' => 'Dashboard', 'url' => route('dashboard'), 'icon' => 'far fa-chart-pie', 'active' => \Illuminate\Support\Facades\Request::is('dashboard')];
         }
-        $modules = (new Module)->repository()->menuList();
+        $modules = (new ModuleDomain)->repository()->menuList();
         foreach ($modules as $module) {
             foreach ($module->tables as $table) {
                 $menu[$module->name][] = [
