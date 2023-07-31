@@ -9,6 +9,7 @@ use Modules\App\Models\NotificationModel;
 class Notifications extends Component
 {
     protected $listeners = ['refresh' => '$refresh'];
+
     public function render()
     {
         return view('lte::livewire.layout.navbar.notifications');

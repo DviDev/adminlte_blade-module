@@ -10,7 +10,7 @@
         <div class="info grow my-auto">
             @auth()
                 <a href="{{route('profile')}}" class="">
-                   {{ str(Auth::user()->name)->words(2, '') }}
+                    {{ str(Auth::user()->name)->words(2, '') }}
                 </a>
             @endauth
         </div>

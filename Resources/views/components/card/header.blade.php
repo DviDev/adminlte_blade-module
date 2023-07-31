@@ -9,9 +9,9 @@
     @if($slot && $navs)
         <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
             @if($title)
-            <li class="pt-2 px-3">
-                <h3 class="card-title">{{$title}}</h3>
-            </li>
+                <li class="pt-2 px-3">
+                    <h3 class="card-title">{{$title}}</h3>
+                </li>
             @endif
             {{$slot}}
         </ul>

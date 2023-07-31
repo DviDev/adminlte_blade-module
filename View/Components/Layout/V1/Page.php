@@ -2,12 +2,8 @@
 
 namespace Modules\Lte\View\Components\Layout\V1;
 
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\Component;
-use Modules\App\Entities\User\UserType;
-
 
 class Page extends Component
 {
@@ -68,8 +64,6 @@ class Page extends Component
 
         return $items;
     }
-
-
 
     protected function getItems1(bool $condition, string $label1, string $label2): array
     {

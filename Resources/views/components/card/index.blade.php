@@ -93,14 +93,16 @@
 
     {{$slot}}
     <script>
-        function setStorage (key, value) {
-            window.localStorage.setItem('{{config('app.name')}}.'+ key, value)
+        function setStorage(key, value) {
+            window.localStorage.setItem('{{config('app.name')}}.' + key, value)
             return value
         }
-        function getStorage (key) {
-            return window.localStorage.getItem('{{config('app.name')}}.'+ key)
+
+        function getStorage(key) {
+            return window.localStorage.getItem('{{config('app.name')}}.' + key)
         }
-        function tryGetStorage (tab_name, value) {
+
+        function tryGetStorage(tab_name, value) {
             let val = getStorage(tab_name)
             return val ? val : setStorage(tab_name, value)
         }

@@ -36,8 +36,8 @@
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
-{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
-{{--    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
+    {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
+    {{--    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
 
     <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
@@ -59,7 +59,7 @@
         <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link">
             @if($app_logo)
                 <div class="">
-                    <img src="{{asset($app_logo)}}"  height="40px" style="opacity: .8">
+                    <img src="{{asset($app_logo)}}" height="40px" style="opacity: .8">
                     <div class="brand-text font-weight-light text-sm">
                         {{config('app.description')}}
                     </div>
@@ -130,7 +130,7 @@
 <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
 
 <script>
-    function toastrDispatch (obj) {
+    function toastrDispatch(obj) {
         toastr.options = {
             'closeButton': obj.options?.closeButton ?? true,
             'debug': obj.options?.debug ?? false,

@@ -13,7 +13,7 @@
     @if($toastr || $only_toastr)
         @push('scripts')
             <script>
-                toastrDispatch({ type: 'danger', 'msg': '{!! session('error') !!}' })
+                toastrDispatch({type: 'danger', 'msg': '{!! session('error') !!}'})
             </script>
         @endpush
     @endif
@@ -24,7 +24,7 @@
     @if($toastr || $only_toastr)
         @push('scripts')
             <script>
-                toastrDispatch({ type: 'success', 'msg': '{!! session('success') !!}' })
+                toastrDispatch({type: 'success', 'msg': '{!! session('success') !!}'})
             </script>
         @endpush
     @endif
@@ -35,7 +35,7 @@
     @if($toastr || $only_toastr)
         @push('scripts')
             <script>
-                toastrDispatch({ type: 'warning', 'msg': '{!! session('warning') !!}' })
+                toastrDispatch({type: 'warning', 'msg': '{!! session('warning') !!}'})
             </script>
         @endpush
     @endif

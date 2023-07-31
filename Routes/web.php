@@ -11,7 +11,7 @@
 |
 */
 
-Route::prefix('lte')->group(function() {
+Route::prefix('lte')->group(function () {
     if (config('app.env') == 'local') {
         Route::get('pages/form/advanced', fn() => view('lte.pages.forms.advanced'));
         Route::get('pages/ui/modals', fn() => view('lte.pages.UI.modals'));

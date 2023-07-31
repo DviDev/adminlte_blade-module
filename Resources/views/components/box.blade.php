@@ -18,7 +18,7 @@
      ])>
     <div class="inner">
         @if(isset($title))
-        <h3>{{$title}}</h3>
+            <h3>{{$title}}</h3>
         @endif
         <p>{{$content}}</p>
     </div>

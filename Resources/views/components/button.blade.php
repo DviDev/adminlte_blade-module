@@ -48,18 +48,18 @@
             'bg-green-600 text-white' => $success,
             'bg-light border' => !$info && !$danger && !$warning && !$success && !$attributes->has('disabled'),
         ])}}
-        @if($confirm)
-            data-toggle="modal" data-target="#modal-{{$id}}"
-        @endif
-        wire:loading.attr="disabled"
-        @if($action)
             @if($confirm)
-            wire:target="{{$action}}"
-            @else
-            wire:click="{{$action}}"
+                data-toggle="modal" data-target="#modal-{{$id}}"
             @endif
-        @endif
-        title="{{$title}}"
+            wire:loading.attr="disabled"
+            @if($action)
+                @if($confirm)
+                    wire:target="{{$action}}"
+            @else
+                wire:click="{{$action}}"
+            @endif
+            @endif
+            title="{{$title}}"
         {{$attributes}}
     >
         <div wire:loading.remove wire:target="{{$action}}">
