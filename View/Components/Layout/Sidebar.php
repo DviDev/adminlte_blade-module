@@ -32,7 +32,12 @@ class Sidebar extends Component
 
     public function getSidebarMenuItems(): array
     {
-        $menu = [];
+        $menu['root'][] = [
+            'label' => 'Menu',
+            'url' => route('menu'),
+            'icon' => 'far fa-shopping-bag',
+            'active' => Request::is('menu')
+        ];
         if (auth()->user()->isAdmin() || auth()->user()->isAdmin()) {
             $menu['root'][] = ['label' => 'Dashboard', 'url' => route('dashboard'), 'icon' => 'far fa-chart-pie', 'active' => \Illuminate\Support\Facades\Request::is('dashboard')];
         }
@@ -49,12 +54,7 @@ class Sidebar extends Component
             }
         }
 
-        $menu['root'][] = [
-            'label' => 'Menu',
-            'url' => route('menu'),
-            'icon' => 'far fa-shopping-bag',
-            'active' => Request::is('menu')
-        ];
+
         $menu['root'][] = [
             'label' => 'My orders',
             'url' => route('orders'),
