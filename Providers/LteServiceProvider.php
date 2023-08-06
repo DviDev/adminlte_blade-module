@@ -153,6 +153,7 @@ class LteServiceProvider extends ServiceProvider
 
     private function registerComponents()
     {
+
         Livewire::component('lte::dashboard.darshboard-v1', DashboardV1::class);
         Livewire::component('lte::layout.navbar.notifications', Notifications::class);
         Livewire::component('lte::page', Page::class);
