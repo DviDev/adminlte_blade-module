@@ -10,6 +10,7 @@
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    @stack('styles')
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
 </head>
@@ -191,15 +192,34 @@
                 </div>
             </div>
 
+
             <x-lte::pages.sidebar-menu/>
         </div>
         <!-- /.sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    @if('content_wrapper')
-        {{$content_wrapper}}
-    @endif
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>{{$title}}</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">{{$breadcrumb}}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        @if('content')
+            {{$content}}
+        @endif
+    </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
