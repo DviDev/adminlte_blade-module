@@ -13,6 +13,9 @@
 
 Route::prefix('lte')->group(function () {
     if (config('app.env') == 'local') {
+        Route::get('pages/dashboard/v1', fn() => view('lte::components.pages.dashboard1'))->name('lte.pages.dashboard1');
+        Route::get('pages/dashboard/v2', fn() => view('lte::components.pages.dashboard2'))->name('lte.pages.dashboard2');
+        Route::get('pages/dashboard/v3', fn() => view('lte::components.pages.dashboard3'))->name('lte.pages.dashboard3');
         Route::get('pages/charts/chartjs', fn() => view('lte::components.pages.charts.chartjs'))->name('lte.pages.charts.chartjs');
         Route::get('pages/charts/flot', fn() => view('lte::components.pages.charts.flot'))->name('lte.pages.charts.flot');
         Route::get('pages/charts/inline', fn() => view('lte::components.pages.charts.inline'))->name('lte.pages.charts.inline');
@@ -58,10 +61,12 @@ Route::prefix('lte')->group(function () {
         Route::get('pages/mailbox/compose', fn() => view('lte::components.pages.mailbox.compose'))->name('lte.pages.mailbox.compose');
         Route::get('pages/mailbox/mailbox', fn() => view('lte::components.pages.mailbox.mailbox'))->name('lte.pages.mailbox.mailbox');
         Route::get('pages/mailbox/read-mail', fn() => view('lte::components.pages.mailbox.read-mail'))->name('lte.pages.mailbox.read-mail');
-        Route::get('pages/search/enhanced', fn() => view('lte::components.pages.search.enhanced'))->name('lte.pages.search.enhanced');
+        Route::any('pages/search/enhanced', fn() => view('lte::components.pages.search.enhanced'))
+            ->name('lte.pages.search.enhanced');
         Route::get('pages/search/enhanced-results', fn() => view('lte::components.pages.search.enhanced-results'))->name('lte.pages.search.enhanced-results');
         Route::get('pages/search/simple', fn() => view('lte::components.pages.search.simple'))->name('lte.pages.search.simple');
         Route::get('pages/search/simple-results', fn() => view('lte::components.pages.search.simple-results'))->name('lte.pages.search.simple-results');
+        Route::get('miscellaneous/iframe', fn() => view('lte::components.pages.iframe'))->name('lte.pages.iframe');
         Route::get('pages/tables/data', fn() => view('lte::components.pages.tables.data'))->name('lte.pages.tables.data');
         Route::get('pages/tables/jsgrid', fn() => view('lte::components.pages.tables.jsgrid'))->name('lte.pages.tables.jsgrid');
         Route::get('pages/tables/simple', fn() => view('lte::components.pages.tables.simple'))->name('lte.pages.tables.simple');
