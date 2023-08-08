@@ -207,35 +207,38 @@
                         @endif
                     </p>
                 </a>
-                <ul class="nav nav-treeview">
-                    @foreach($menu['itens'] ?? [] as $item)
-                        <li class="nav-item">
-                            <a href="{{$item['route'] ?? '#'}}"
-                                @class([
-                                    'nav-link',
-                                    'active' => isset($item['route']) && Request::fullUrl() == $item['route']
-                                 ])>
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{!!  is_string($item) ? $item : $item['name'] !!}</p>
+                @if(isset($menu['itens']))
+                    <ul class="nav nav-treeview">
+                        @foreach($menu['itens'] ?? [] as $item)
+                            <li class="nav-item">
+                                <a href="{{$item['route'] ?? '#'}}"
+                                    @class([
+                                        'nav-link',
+                                        'active' => isset($item['route']) && Request::fullUrl() == $item['route']
+                                     ])>
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>{!!  is_string($item) ? $item : $item['name'] !!}</p>
+                                    @if(isset($item['itens']))
+                                        <i class="right fas fa-angle-left"></i>
+                                    @endif
+                                </a>
                                 @if(isset($item['itens']))
-                                    <i class="right fas fa-angle-left"></i>
+                                    <ul class="nav nav-treeview">
+                                        @foreach($item['itens'] ?? [] as $item)
+                                            <li class="nav-item">
+                                                <a href="{{$item['route'] ?? '#'}}" class="nav-link">
+                                                    <i class="far fa-circle nav-icon"></i>
+                                                    <p>{{$item['name']}}</p>
+                                                </a>
+                                            </li>
+
+                                        @endforeach
+                                    </ul>
                                 @endif
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @foreach($item['itens'] ?? [] as $item)
-                                    <li class="nav-item">
-                                        <a href="{{$item['route'] ?? '#'}}" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>{{$item['name']}}</p>
-                                        </a>
-                                    </li>
-
-                                @endforeach
-
-                            </ul>
-                        </li>
-                    @endforeach
-                </ul>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
             </li>
         @endforeach
         <li>DAQUI PRA BAIXO SERA REMOVIDO</li>

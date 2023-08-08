@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="../../index3.html" class="navbar-brand">
                 <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
                      class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">{{config('app.name')}}</span>
             </a>
 
             <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -209,7 +209,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
                  class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">{{config('app.name')}}</span>
         </a>
 
         <!-- Sidebar -->
