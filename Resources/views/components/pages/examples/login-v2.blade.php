@@ -20,12 +20,12 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+            <a href="{{route('lte.pages.dashboard2')}}" class="h1"><b>Admin</b>LTE</a>
         </div>
         <div class="card-body">
             <p class="login-box-msg">Sign in to start your session</p>
 
-            <form action="../../index3.html" method="post">
+            <form action="{{route('lte.pages.dashboard3')}}" method="post">
                 <div class="input-group mb-3">
                     <input type="email" class="form-control" placeholder="Email">
                     <div class="input-group-append">
@@ -70,10 +70,10 @@
             <!-- /.social-auth-links -->
 
             <p class="mb-1">
-                <a href="forgot-password.html">I forgot my password</a>
+                <a href="{{route('lte.pages.examples.forgot-password')}}">I forgot my password</a>
             </p>
             <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
+                <a href="{{route('lte.pages.examples.register')}}" class="text-center">Register a new membership</a>
             </p>
         </div>
         <!-- /.card-body -->

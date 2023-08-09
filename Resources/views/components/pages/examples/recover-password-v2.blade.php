@@ -19,11 +19,11 @@
 <div class="login-box">
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+            <a href="{{route('lte.pages.dashboard2')}}" class="h1"><b>Admin</b>LTE</a>
         </div>
         <div class="card-body">
             <p class="login-box-msg">You are only one step a way from your new password, recover your password now.</p>
-            <form action="login.html" method="post">
+            <form action="{{route('lte.pages.examples.login')}}" method="post">
                 <div class="input-group mb-3">
                     <input type="password" class="form-control" placeholder="Password">
                     <div class="input-group-append">
@@ -49,7 +49,7 @@
             </form>
 
             <p class="mt-3 mb-1">
-                <a href="login.html">Login</a>
+                <a href="{{route('lte.pages.examples.login')}}">Login</a>
             </p>
         </div>
         <!-- /.login-card-body -->

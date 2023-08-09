@@ -18,14 +18,14 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="{{route('lte.pages.dashboard2')}}"><b>Admin</b>LTE</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
 
-            <form action="recover-password.html" method="post">
+            <form action="{{route('lte.pages.examples.recover-password')}}" method="post">
                 <div class="input-group mb-3">
                     <input type="email" class="form-control" placeholder="Email">
                     <div class="input-group-append">
@@ -43,10 +43,10 @@
             </form>
 
             <p class="mt-3 mb-1">
-                <a href="login.html">Login</a>
+                <a href="{{route('lte.pages.examples.login')}}">Login</a>
             </p>
             <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
+                <a href="{{route('lte.pages.examples.register')}}" class="text-center">Register a new membership</a>
             </p>
         </div>
         <!-- /.login-card-body -->

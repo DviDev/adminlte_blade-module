@@ -141,7 +141,7 @@
             <div class="row">
                 <div class="col-12 mt-3 text-center">
                     <p class="lead">
-                        <a href="contact-us.html">Contact us</a>,
+                        <a href="{{route('lte.pages.examples.contact-us')}}">Contact us</a>,
                         if you found not the right anwser or you have a other question?<br/>
                     </p>
                 </div>

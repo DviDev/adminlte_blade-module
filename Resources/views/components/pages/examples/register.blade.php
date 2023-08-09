@@ -18,14 +18,14 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+        <a href="{{route('lte.pages.dashboard2')}}"><b>Admin</b>LTE</a>
     </div>
 
     <div class="card">
         <div class="card-body register-card-body">
             <p class="login-box-msg">Register a new membership</p>
 
-            <form action="../../index.html" method="post">
+            <form action="{{route('lte.pages.dashboard1')}}" method="post">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Full name">
                     <div class="input-group-append">
@@ -87,7 +87,7 @@
                 </a>
             </div>
 
-            <a href="login.html" class="text-center">I already have a membership</a>
+            <a href="{{route('lte.pages.examples.login')}}" class="text-center">I already have a membership</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->

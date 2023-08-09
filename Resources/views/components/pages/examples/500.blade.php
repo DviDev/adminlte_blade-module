@@ -9,7 +9,8 @@
 
                     <p>
                         We will work on fixing that right away.
-                        Meanwhile, you may <a href="../../index.html">return to dashboard</a> or try using the search
+                        Meanwhile, you may <a href="{{route('lte.pages.dashboard1')}}">return to dashboard</a> or try
+                        using the search
                         form.
                     </p>
 

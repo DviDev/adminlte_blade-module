@@ -19,11 +19,11 @@
 <div class="login-box">
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+            <a href="{{route('lte.pages.dashboard2')}}" class="h1">{{config('app.name')}}</a>
         </div>
         <div class="card-body">
             <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
-            <form action="recover-password.html" method="post">
+            <form action="{{route('lte.pages.examples.recover-password')}}" method="post">
                 <div class="input-group mb-3">
                     <input type="email" class="form-control" placeholder="Email">
                     <div class="input-group-append">
@@ -40,7 +40,7 @@
                 </div>
             </form>
             <p class="mt-3 mb-1">
-                <a href="login.html">Login</a>
+                <a href="{{route('lte.pages.examples.login')}}">Login</a>
             </p>
         </div>
         <!-- /.login-card-body -->
