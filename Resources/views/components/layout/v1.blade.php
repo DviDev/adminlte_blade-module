@@ -58,9 +58,10 @@
         <!-- Brand Logo -->
         <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link">
             @if($app_logo)
-                <div class="">
-                    <img src="{{asset($app_logo)}}" height="40px" style="opacity: .8">
-                    <div class="brand-text font-weight-light text-sm">
+                <div class="flex flex-column justify-content-center">
+                    <img src="{{asset($app_logo)}}" height="35px" width="180px" style="opacity: .8"
+                         class="rounded mx-auto">
+                    <div class="brand-text font-weight-light text-sm mx-auto">
                         {{config('app.description')}}
                     </div>
                 </div>

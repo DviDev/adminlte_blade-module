@@ -17,14 +17,22 @@
     </div>
 
     <!-- Sidebar Menu -->
-    <nav class="mt-2 pb-4">
+    <nav class="mt-2 pb-10">
 
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column pb-4" data-widget="treeview" role="menu"
+            data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
+
             @foreach($items as $key => $menuItems)
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link">
+                @php
+                    $active = collect($menuItems)->map(fn($i) => $i['url'])->contains(Request::fullUrl());
+                @endphp
+                <li @class([
+                    "nav-item",
+                    "menu-open" => $active,
+                    ])>
+                    <a href="#" @class(["nav-link", "active" => $active])>
                         <i class="nav-icon fas fa-user-shield"></i>
                         <p>
                             {{$key}}
@@ -35,7 +43,7 @@
                         @foreach($menuItems as $item)
                             <li class="nav-item">
                                 <a href="{{$item['url']}}"
-                                    @class(["nav-link", "active" => $item['active'] ?? false])>
+                                    @class(["nav-link", "active" => Request::fullUrl() == $item['url']])>
                                     <i class="nav-icon {{$item['icon']}} text-xs"></i>
                                     <p>{{$item['label']}}</p>
                                 </a>
@@ -114,6 +122,14 @@
                     </ul>
                 </li>
             @endif
+
+            <li class="nav-item">
+                <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
+                    <i class="nav-icon fas fa-file"></i>
+                    <p>Page Examples</p>
+                </a>
+            </li>
+
             @if(\Illuminate\Support\Facades\Route::has('logout'))
                 <li class="nav-item">
                     <form method="POST" action="{{ route('logout') }}">
@@ -126,7 +142,6 @@
                     </form>
                 </li>
             @endif
-
         </ul>
     </nav>
     <!-- /.sidebar-menu -->

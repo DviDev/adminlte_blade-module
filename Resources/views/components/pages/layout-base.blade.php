@@ -49,10 +49,10 @@
                 'container-fluid' => !$layout_top_nav
             ])>
             @if($sidebar_collapse && $layout_top_nav)
-                <a href="{{route('lte.pages.dashboard3')}}" class="navbar-brand">
+                <a href="{{route('home')}}" class="navbar-brand">
                     <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
                          class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">{{config('app.name')}}</span>
+                    <span class="brand-text font-weight-light">{{config('app.name')}} blaa</span>
                 </a>
             @endif
             <ul class="navbar-nav">
@@ -245,7 +245,7 @@
         "main-sidebar-custom" => $use_sidebar_custom,
         ])>
         <!-- Brand Logo -->
-        <a href="{{route('lte.pages.dashboard1')}}" class="brand-link">
+        <a href="{{route('home')}}" class="brand-link">
             <img src="{{asset('/dist/img/AdminLTELogo.png')}}"
                  alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">{{config('app.name')}}</span>
