@@ -20,6 +20,7 @@
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset("plugins/fontawesome-free/css/all.min.css")}}">
+    {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>--}}
     <!-- iCheck -->
     <link rel="stylesheet" href="{{asset("plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
     <!-- Theme style -->
@@ -31,13 +32,17 @@
 
     @if($tailwind_css)
         @if($use_vite)
-            @vite('resources/css/app.css', 'resources/js/app.js')
+            @vite('resources/css/app.css')
+            @vite('resources/js/app.js')
         @else
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+        rel="stylesheet"/>
     {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
-    {{--    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
 
     <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
@@ -129,6 +134,8 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{--<script src="{{asset("dist/js/pages/dashboard.js")}}"></script>--}}
 <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
+
+{{--<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
 
 <script>
     function toastrDispatch(obj) {
