@@ -2,8 +2,11 @@
 
 namespace Modules\Lte\Providers;
 
+use App\Features\User\ProfileActivity;
+use App\Features\User\ProfileTimeline;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Pennant\Feature;
 use Livewire\Livewire;
 use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
 use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
@@ -64,8 +67,9 @@ class LteServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
-
         $this->registerComponents();
+        Feature::define(ProfileActivity::class);
+        Feature::define(ProfileTimeline::class);
     }
 
     /**

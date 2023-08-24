@@ -1,5 +1,11 @@
 <?php
 
 return [
-    'name' => 'Lte'
+    'name' => 'Lte',
+    'user' => [
+        'profile' => [
+            'activity' => false,
+            'timeline' => false,
+        ]
+    ]
 ];
