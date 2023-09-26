@@ -39,4 +39,15 @@
             </script>
         @endpush
     @endif
+@elseif(session()->has('info'))
+    @if(!$only_toastr)
+        <div class="alert alert-info">{!! session('info') !!}</div>
+    @endif
+    @if($toastr || $only_toastr)
+        @push('scripts')
+            <script>
+                toastrDispatch({type: 'info', 'msg': '{!! session('info') !!}'})
+            </script>
+        @endpush
+    @endif
 @endif

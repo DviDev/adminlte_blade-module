@@ -4,6 +4,13 @@
     'label' => null,
     'required' => false
 ])
+@php
+    $field = collect($attributes)
+        ->first(function($value, $key) {
+            return str($key)->contains('wire:model') ?? $attributes['id'] ?? $attributes['name'] ?? $label;
+        });
+    $id = $id ?? $field;
+@endphp
 @pushonce('styles')
     <link rel="stylesheet" href="{{asset("plugins/summernote/summernote-bs4.min.css")}}">
 @endpushonce
@@ -45,5 +52,5 @@
               {{$attributes}}
     ></textarea>
     </div>
-    <x-lte::error field="{{$id}}"/>
+    <x-lte::error field="{{$field}}"/>
 </div>

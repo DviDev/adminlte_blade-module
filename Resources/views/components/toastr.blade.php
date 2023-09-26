@@ -5,6 +5,7 @@
     <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
     <script>
         window.addEventListener('toastr', event => {
+            console.log('called via toastr component')
             const msg = event.detail.msg
             const type = event.detail.type
             if (type === 'success') toastr.success(msg)

@@ -11,6 +11,9 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+use Modules\App\Models\ConfigModel;
+
 Route::prefix('lte')->group(function () {
     if (config('app.env') == 'local') {
         Route::get('pages/dashboard/v1', fn() => view('lte::components.pages.dashboard1'))->name('lte.pages.dashboard1');
@@ -84,4 +87,12 @@ Route::prefix('lte')->group(function () {
         Route::get('pages/kanban', fn() => view('lte::components.pages.kanban'))->name('lte.pages.kanban');
         Route::get('pages/widgets', fn() => view('lte::components.pages.widgets'))->name('lte.pages.widgets');
     }
+});
+
+Route::prefix('admin')->group(function () {
+    Route::prefix('config')->group(function () {
+        Route::get('configs', fn() => view('lte::pages.config.config_list_page'))->name('admin.configs');
+        Route::get('config/{config?}', fn(ConfigModel $config) => view('lte::pages.config.config_form_page',
+            compact('config')))->name('admin.config');
+    });
 });

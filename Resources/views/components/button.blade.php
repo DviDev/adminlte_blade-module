@@ -19,6 +19,7 @@
     'md' => false,
     'lg' => false,
     'xs' => false,
+    'loading' => false,
 ])
 @php
     $id = $id ?? rand(1000, 2000);
@@ -29,14 +30,14 @@
     $md = $md || $classes->has('btn-md');
     $lg = $lg || $classes->has('btn-lg');
 @endphp
-    @if($confirmation)
-        <div>
-            <x-lte::modal id="{{$id}}"
-                          wire:click.prevent="{{$action}}" :msg="$confirm_msg ?? $title"
-                          :info="$confirm_type === 'info' || $info"
-                          :danger="$confirm_type === 'danger' || $danger"/>
-    @endif
-            <button {{$attributes->class([
+@if($confirmation)
+    <div>
+        <x-lte::modal id="{{$id}}"
+                      wire:click.prevent="{{$action}}" :msg="$confirm_msg ?? $title"
+                      :info="$confirm_type === 'info' || $info"
+                      :danger="$confirm_type === 'danger' || $danger"/>
+        @endif
+        <button {{$attributes->class([
             'btn',
             'bg-gray-200' => $attributes->has('disabled'),
             'btn-sm' => $sm && (!$xs && !$md && !$lg),
@@ -49,49 +50,50 @@
             'bg-green-600 text-white' => $success,
             'bg-light border' => !$info && !$danger && !$warning && !$success && !$attributes->has('disabled'),
         ])}}
+                @if($confirm)
+                    data-toggle="modal" data-target="#modal-{{$id}}"
+                @endif
+                wire:loading.attr="disabled"
+                @if($action)
                     @if($confirm)
-                        data-toggle="modal" data-target="#modal-{{$id}}"
-                    @endif
-                    wire:loading.attr="disabled"
-                    @if($action)
-                        @if($confirm)
-                            wire:target="{{$action}}"
-                    @else
-                        wire:click="{{$action}}"
-                    @endif
-                    @endif
-                    title="{{$title}}"
-                {{$attributes}}
-            >
-                <div wire:loading.remove wire:target="{{$action}}">
-                    @if($prepend_icon)
-                        <i @class([
-                    "fas fa-$prepend_icon",
-                    "mr-1" => $icon || $label || $append_icon
-                ])></i>
-                    @endif
+                        wire:target="{{$action}}"
+                @else
+                    wire:click="{{$action}}"
+                @endif
+                @endif
+                title="{{$title}}"
+            {{$attributes}}
+        >
+            <div wire:loading.remove wire:target="{{$action}}">
+                @if($prepend_icon)
+                    <i @class([
+                        "fas fa-$prepend_icon",
+                        "mr-1" => $icon || $label || $append_icon
+                    ])></i>
+                @endif
 
-                    @if($icon)
-                        <i @class([
-                    "fas fa-$icon",
-                     "mr-1" => $label || $append_icon,
-                     "mx-1" => !$label && !$append_icon
-                ])></i>
-                    @endif
+                @if($icon)
+                    <i @class([
+                        "fas fa-$icon",
+                         "mr-1" => $label || $append_icon,
+                         "mx-1" => !$label && !$append_icon
+                    ])></i>
+                @endif
 
-                    {{$label}}
+                {{$label}}
 
-                    {{$slot}}
+                {{$slot}}
 
-                    @if($append_icon)
-                        <i class="ml-1 fas fa-{{$append_icon}}"
-                           wire:loading.remove wire:target="{{$action}}"></i>
-                    @endif
-                </div>
+                @if($append_icon)
+                    <i class="ml-1 fas fa-{{$append_icon}}" wire:loading.remove wire:target="{{$action}}"></i>
+                @endif
+            </div>
+            @if($loading)
                 <span wire:loading wire:target="{{$action}}" class="flex justify-center items-center">
-            <x-lte::loading/>
-        </span>
-            </button>
-            @if($confirmation)
-        </div>
-    @endif
+                    <x-lte::loading/>
+                </span>
+            @endif
+        </button>
+        @if($confirmation)
+    </div>
+@endif

@@ -38,15 +38,15 @@
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
+    @livewireStyles
 
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
         rel="stylesheet"/>
     {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
 
-    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
-    @livewireStyles
+{{--    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>--}}
+{{--    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>--}}
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
@@ -161,34 +161,38 @@
         if (obj.type === 'info') toastr.info(obj.msg)
         if (obj.type === 'warning') toastr.warning(obj.msg)
         if (obj.type === 'error') toastr.error(obj.msg)
+
     }
 
     window.addEventListener('toastr', event => {
+        console.log(event)
+
         let obj = {
             options: {
-                'closeButton': event.detail.closeButton,
-                'debug': event.detail.debug,
-                'newestOnTop': event.detail.newestOnTop,
-                'progressBar': event.detail.progressBar,
-                'positionClass': event.detail.positionClass,
-                'preventDuplicates': event.detail.preventDuplicates,
-                'onclick': event.detail.onclick,
-                'showDuration': event.detail.showDuration,
-                'hideDuration': event.detail.hideDuration,
-                'timeOut': event.detail.timeOut,
-                'extendedTimeOut': event.detail.extendedTimeOut,
-                'showEasing': event.detail.showEasing,
-                'hideEasing': event.detail.hideEasing,
-                'showMethod': event.detail.showMethod,
-                'hideMethod': event.detail.hideMethod
+                'closeButton': event.detail[0].closeButton,
+                'debug': event.detail[0].debug,
+                'newestOnTop': event.detail[0].newestOnTop,
+                'progressBar': event.detail[0].progressBar,
+                'positionClass': event.detail[0].positionClass,
+                'preventDuplicates': event.detail[0].preventDuplicates,
+                'onclick': event.detail[0].onclick,
+                'showDuration': event.detail[0].showDuration,
+                'hideDuration': event.detail[0].hideDuration,
+                'timeOut': event.detail[0].timeOut,
+                'extendedTimeOut': event.detail[0].extendedTimeOut,
+                'showEasing': event.detail[0].showEasing,
+                'hideEasing': event.detail[0].hideEasing,
+                'showMethod': event.detail[0].showMethod,
+                'hideMethod': event.detail[0].hideMethod
             },
-            msg: event.detail.msg,
-            type: event.detail.type
+            msg: event.detail[0].msg,
+            type: event.detail[0].type
         }
         toastrDispatch(obj)
     })
 </script>
 @stack('scripts')
-@livewireScripts
+{{--@livewireScripts--}}
+@livewireScriptConfig
 </body>
 </html>
