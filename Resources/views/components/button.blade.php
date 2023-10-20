@@ -64,7 +64,7 @@
                 title="{{$title}}"
             {{$attributes}}
         >
-            <div wire:loading.remove wire:target="{{$action}}">
+            <div>
                 @if($prepend_icon)
                     <i @class([
                         "fas fa-$prepend_icon",
