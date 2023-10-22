@@ -626,7 +626,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><a href="{{route('invopages.examples.invoice')}}">OR7429</a></td>
+                                            <td><a href="{{route('lte.pages.examples.invoice')}}">OR7429</a></td>
                                             <td>Samsung Smart TV</td>
                                             <td><span class="badge badge-info">Processing</span></td>
                                             <td>
