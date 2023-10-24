@@ -6,6 +6,7 @@
 ])
 
 <div @class([
+        'w-full',
         "form-group" => $label
         ])>
     <x-lte::input
