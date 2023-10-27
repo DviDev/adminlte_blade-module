@@ -48,7 +48,7 @@
     x-data="{ tab: '', tab_name: '{{$tab_name}}' }"
     x-init="tab = tryGetStorage('{{$tab_name}}', '{{$tab_default}}')"
     {{$attributes->class([
-    'card mb-0',
+    'card mb-0 grow flex flex-col',
     'card-outline' => $outline,
     'card-outline_tabs' => $tabs,
     'card-light' => $light,
@@ -92,6 +92,7 @@
     @endif
 
     {{$slot}}
+
     <script>
         function setStorage(key, value) {
             window.localStorage.setItem('{{config('app.name')}}.' + key, value)

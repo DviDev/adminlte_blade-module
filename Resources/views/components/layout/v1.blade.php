@@ -80,7 +80,7 @@
         @endif
     </aside>
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper p-2">
+    <div class="content-wrapper p-2 flex flex-column">
         {{$slot}}
     </div>
     <!-- content-wrapper -->

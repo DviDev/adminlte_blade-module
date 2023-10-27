@@ -25,7 +25,7 @@
                 <ul class="nav nav-treeview">
                     @foreach($menuItems as $item)
                         <li class="nav-item">
-                            <a href="{{$item['url']}}"
+                            <a wire:navigate.hover href="{{$item['url']}}"
                                 @class(["nav-link", "active" => Request::fullUrl() == $item['url']])>
                                 {!! $item['icon'] !!}
                                 <p>{{$item['label']}}</p>
@@ -37,19 +37,16 @@
         @endforeach
 
         @if(isset($items['admin']))
+            @dd('identificar e remover se necessário')
             <li class="nav-item menu-open">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-user-shield"></i>
-                    <p>
-                        Admin
-                        <i class="right fas fa-angle-left"></i>
-                    </p>
+                    <p>Admin <i class="right fas fa-angle-left"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     @foreach($items['admin']??[] as $item)
                         <li class="nav-item">
-                            <a href="{{$item['url']}}"
-                                @class(["nav-link", "active" => $item['active'] ?? false])>
+                            <a href="{{$item['url']}}" @class(["nav-link", "active" => isset($item['active'])])>
                                 <i class="nav-icon {{$item['icon']}}"></i>
                                 <p>{{$item['label']}}</p>
                             </a>
@@ -63,10 +60,7 @@
             <li class="nav-item menu-open">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-user-shield"></i>
-                    <p>
-                        Store
-                        <i class="right fas fa-angle-left"></i>
-                    </p>
+                    <p>Store <i class="right fas fa-angle-left"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
                     @foreach($items['store']??[] as $item)
@@ -83,6 +77,8 @@
         @endif
 
         @if(isset($items['devops']))
+
+            @dd('devops')
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-user-shield"></i>
@@ -109,7 +105,7 @@
         <li class="nav-item">
             <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
-                <p>Page Examples</p>
+                <p>{{trans('Page Examples')}}</p>
             </a>
         </li>
 
