@@ -105,7 +105,6 @@
 
         function tryGetStorage(tab_name, value) {
             let val = getStorage(tab_name)
-            console.log(val, value, tab_name)
             return val ? val : setStorage(tab_name, value)
         }
     </script>
