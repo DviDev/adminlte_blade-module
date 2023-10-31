@@ -1,8 +1,9 @@
 @props([
     'title',
+    'name' => null
 ])
 @php
-    $name = strtolower($title);
+    $name = $name ?: strtolower($title);
 @endphp
 <li class="nav-item">
     <a :class="tab === '{{$name}}' ? 'nav-link active' : 'nav-link'"
