@@ -2,7 +2,7 @@
     'title' => null,
     'navs' => true
 ])
-<div {{$attributes->class([
+<div x-cloak {{$attributes->class([
     'card-header',
     'px-2 pt-2 pb-0 border-bottom-0' => $navs
     ])}}>

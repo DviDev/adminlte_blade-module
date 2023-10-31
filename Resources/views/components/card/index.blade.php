@@ -38,15 +38,15 @@
 ])
 @if(!isset($card_id))
     @php
-        $card_id = 'card_'.random_int(1000, 2000);
+        $card_id = ($header ? $header.'_' : '').random_int(1000, 2000);
     @endphp
 @endif
 @php
-    $tab_name = 'tab_'.strtolower($card_id);
+    $tab_name = 'card_tab_'.strtolower($card_id);
 @endphp
 <div
     x-data="{ tab: '', tab_name: '{{$tab_name}}' }"
-    x-init="tab = tryGetStorage('{{$tab_name}}', '{{$tab_default}}')"
+    x-init="tab = tryGetStorage('{{request('tab') ?: $tab_name}}', '{{$tab_default}}')"
     {{$attributes->class([
     'card mb-0 grow flex flex-col',
     'card-outline' => $outline,
@@ -105,6 +105,7 @@
 
         function tryGetStorage(tab_name, value) {
             let val = getStorage(tab_name)
+            console.log(val, value, tab_name)
             return val ? val : setStorage(tab_name, value)
         }
     </script>
