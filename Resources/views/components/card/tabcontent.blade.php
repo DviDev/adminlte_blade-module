@@ -10,6 +10,7 @@
      x-show="tab === '{{strtolower($name)}}'"
      id="{{'custom-tabs-'.$name}}-home" role="tabpanel"
      aria-labelledby="{{'custom-tabs-'.$name.'-tab'}}"
+     {{$attributes}}
 >
     {{$slot}}
 </div>
