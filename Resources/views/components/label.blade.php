@@ -6,8 +6,8 @@
 <label {{ $attributes->class([
     'block font-medium',
     'text-gray-700' => !$errors->has($for),
-    'text-danger' => $errors->has($for)
-    ])}} for="{{$for}}">
+    'text-danger' => $errors->has($for),
+    ])}} for="{{$for}}" style="border-bottom: none !important; margin-bottom: 0 !important;">
     @if(isset($value) || isset($slot))
         <span @if($attributes->has('required')) style="float: left" title="{{__('required')}}"@endif>
         {{ $value ?? $slot }}

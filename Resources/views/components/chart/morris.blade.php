@@ -92,8 +92,7 @@
                     ticks: {
                         @if(isset($scales_yaxes_ticks_stepsize))
                         stepSize: {{$scales_yaxes_ticks_stepsize}},
-                        @endif
-                        @if(isset($scales_yaxes_gridlines_color))
+                        @elseif(isset($scales_yaxes_gridlines_color))
                         fontColor: '{{$scales_yaxes_gridlines_color}}'
                         @endif
                     },
@@ -101,8 +100,7 @@
                         display: {{$scales_yaxes_gridlines_display ? 'true' : 'false'}},
                         @if(isset($scales_yaxes_gridlines_color))
                         color: '{{$scales_yaxes_gridlines_color}}',
-                        @endif
-                        @if(isset($scales_yaxes_gridlines_drawborder))
+                        @elseif(isset($scales_yaxes_gridlines_drawborder))
                         drawBorder: {{$scales_yaxes_gridlines_drawborder ? 'true' : 'false'}}
                         @endif
                     }

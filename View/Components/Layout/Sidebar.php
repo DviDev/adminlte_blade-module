@@ -3,17 +3,10 @@
 namespace Modules\Lte\View\Components\Layout;
 
 use Illuminate\View\Component;
+use Modules\AppBuilder\Domains\MenuDomain;
 
 class Sidebar extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-    }
 
     /**
      * Get the view / contents that represent the component.
@@ -22,6 +15,12 @@ class Sidebar extends Component
      */
     public function render()
     {
-        return view('lte::components.layout.sidebar');
+        $items = $this->getSidebarMenuItems();
+        return view('lte::components.layout.sidebar', compact('items'));
+    }
+
+    public function getSidebarMenuItems(): array
+    {
+        return MenuDomain::list();
     }
 }

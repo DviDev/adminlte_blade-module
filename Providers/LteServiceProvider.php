@@ -2,9 +2,14 @@
 
 namespace Modules\Lte\Providers;
 
-use Illuminate\Database\Eloquent\Factory;
+use App\Features\User\ProfileActivity;
+use App\Features\User\ProfileTimeline;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Pennant\Feature;
+use Livewire\Livewire;
+use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
+use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
 use Modules\Lte\View\Components\Box;
 use Modules\Lte\View\Components\Button;
 use Modules\Lte\View\Components\Card\Body;
@@ -62,8 +67,9 @@ class LteServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
-
         $this->registerComponents();
+        Feature::define(ProfileActivity::class);
+        Feature::define(ProfileTimeline::class);
     }
 
     /**
@@ -73,6 +79,9 @@ class LteServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        Livewire::component('lte::dashboard.v1', DashboardV1::class);
+        Livewire::component('lte::layout.navbar.notifications', Notifications::class);
+        Livewire::component('lte::page', \Modules\Lte\Http\Livewire\Page\Page::class);
         $this->app->register(RouteServiceProvider::class);
     }
 
@@ -148,6 +157,11 @@ class LteServiceProvider extends ServiceProvider
 
     private function registerComponents()
     {
+
+        Livewire::component('lte::dashboard.darshboard-v1', DashboardV1::class);
+        Livewire::component('lte::layout.navbar.notifications', Notifications::class);
+        Livewire::component('lte::page', Page::class);
+
         Blade::component('lte::card', Card::class);
         Blade::component('lte::card.header', Header::class);
         Blade::component('lte::card.body', Body::class);
@@ -164,7 +178,7 @@ class LteServiceProvider extends ServiceProvider
         Blade::component('lte::form.date-mask', DateMask::class);
         Blade::component('lte::form.summernote', Summernote::class);
         Blade::component('lte::layout.navbar', Navbar::class);
-        Blade::component('lte::layout.page', Page::class);
+        Blade::component('lte::layout.page-card', Page::class);
         Blade::component('lte::layout.sidebar', Sidebar::class);
         Blade::component('lte::layout.v1', V1::class);
         Blade::component('lte::nav.tab', \Modules\Lte\View\Components\Nav\Tab\Tab::class);

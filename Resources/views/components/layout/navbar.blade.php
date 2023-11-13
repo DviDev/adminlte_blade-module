@@ -46,9 +46,9 @@
         <li class="nav-item dropdown">
             @if($show_cart_icon)
                 @php
-                    $course = request('course');
+                    $product = request('product');
                 @endphp
-                <livewire:store.cart.cart-icon-items :course="$course"/>
+                <livewire:store::cart.cart-icon-items :product="$product"/>
             @endif
         </li>
         <!-- Messages Dropdown Menu -->
@@ -115,7 +115,7 @@
         <!-- Notifications Dropdown Menu -->
         @if($show_notifications)
             <li class="nav-item dropdown">
-                <livewire:lte.navbar.notifications/>
+                <livewire:lte::layout.navbar.notifications/>
             </li>
         @endif
         <li class="nav-item">

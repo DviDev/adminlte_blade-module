@@ -18,6 +18,8 @@
     'sm' => false,
     'md' => false,
     'lg' => false,
+    'xs' => false,
+    'loading' => false,
 ])
 @php
     $id = $id ?? rand(1000, 2000);
@@ -33,49 +35,50 @@
         <x-lte::modal id="{{$id}}"
                       wire:click.prevent="{{$action}}" :msg="$confirm_msg ?? $title"
                       :info="$confirm_type === 'info' || $info"
-                      :danger="$confirm_type === 'danger' || $danger"
-        />
+                      :danger="$confirm_type === 'danger' || $danger"/>
     @endif
     <button {{$attributes->class([
             'btn',
             'bg-gray-200' => $attributes->has('disabled'),
-            'btn-sm' => $sm && (!$md && !$lg),
-            'btn-md' => $md && (!$sm && !$lg),
-            'btn-lg' => $lg && (!$sm && !$md),
+            'btn-sm' => $sm && (!$xs && !$md && !$lg),
+            'btn-md' => $md && (!$xs && !$sm && !$lg),
+            'btn-lg' => $lg && (!$xs && !$sm && !$md),
+            'btn-xs' => $xs && (!$sm && !$md && !$lg),
             'btn-primary' => $info,
             "btn-danger bg-red-500" => $danger,
             'bg-orange-500 text-white' => $warning,
             'bg-green-600 text-white' => $success,
             'bg-light border' => !$info && !$danger && !$warning && !$success && !$attributes->has('disabled'),
         ])}}
-        @if($confirm)
-            data-toggle="modal" data-target="#modal-{{$id}}"
-        @endif
-        wire:loading.attr="disabled"
-        @if($action)
             @if($confirm)
-            wire:target="{{$action}}"
-            @else
-            wire:click="{{$action}}"
+                data-toggle="modal" data-target="#modal-{{$id}}"
             @endif
-        @endif
-        title="{{$title}}"
+            wire:loading.attr="disabled"
+            @if($action)
+                @if($confirm)
+                    wire:target="{{$action}}"
+            @else
+                wire:click="{{$action}}"
+            @endif
+            @endif
+            title="{{$title}}"
         {{$attributes}}
     >
-        <div wire:loading.remove wire:target="{{$action}}">
+        {{--BUTTON CONTENT--}}
+        <div>
             @if($prepend_icon)
                 <i @class([
-                    "fas fa-$prepend_icon",
-                    "mr-1" => $icon || $label || $append_icon
-                ])></i>
+                        "fas fa-$prepend_icon",
+                        "mr-1" => $icon || $label || $append_icon
+                    ])></i>
             @endif
 
             @if($icon)
                 <i @class([
-                    "fas fa-$icon",
-                     "mr-1" => $label || $append_icon,
-                     "mx-1" => !$label && !$append_icon
-                ])></i>
+                        "fas fa-$icon",
+                         "mr-1" => $label || $append_icon,
+                         "mx-1" => !$label && !$append_icon
+                    ])></i>
             @endif
 
             {{$label}}
@@ -83,12 +86,13 @@
             {{$slot}}
 
             @if($append_icon)
-                <i class="ml-1 fas fa-{{$append_icon}}"
-                   wire:loading.remove wire:target="{{$action}}"></i>
+                <i class="ml-1 fas fa-{{$append_icon}}" wire:loading.remove wire:target="{{$action}}"></i>
             @endif
         </div>
-        <span wire:loading wire:target="{{$action}}" class="flex justify-center items-center">
-            <x-lte::loading/>
-        </span>
+        @if($loading)
+            <span wire:loading wire:target="{{$action}}" class="flex justify-center items-center">
+                    <x-lte::loading/>
+                </span>
+        @endif
     </button>
 </div>

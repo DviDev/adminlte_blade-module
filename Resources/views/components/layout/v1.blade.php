@@ -20,11 +20,12 @@
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset("plugins/fontawesome-free/css/all.min.css")}}">
+    {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>--}}
     <!-- iCheck -->
     <link rel="stylesheet" href="{{asset("plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
-    <title>{{ $header ?? config('app.name') }} | Dashboard</title>
+    <title>{{ $header ?? config('app.name') }} | Welcome</title>
     @stack('header_libs')
     @stack('styles')
     @stack('scripts_head')
@@ -32,20 +33,26 @@
     @if($tailwind_css)
         @if($use_vite)
             @vite('resources/css/app.css')
+            @vite('resources/js/app.js')
         @else
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
-    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     @livewireStyles
-    @powerGridStyles
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+        rel="stylesheet"/>
+    {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
+
+{{--    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>--}}
+{{--    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>--}}
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
     <!-- Preloader -->
     {{--  <div class="preloader flex-column justify-content-center align-items-center">--}}
-    {{--    <img class="animation__shake" src="{{asset("dist/img/singular_logo.jpg")}}" alt="SingularLogo" height="60" width="60">--}}
+    {{--    <img class="animation__shake" src="{{asset("{{dist/img/app_logo.jpg}}")}}" alt="{{config('app.name')}}" height="60" width="60">--}}
     {{--  </div>--}}
 
     @if(isset($navbar))
@@ -56,14 +63,15 @@
         <!-- Brand Logo -->
         <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link">
             @if($app_logo)
-                <div class="">
-                    <img src="{{asset($app_logo)}}" width="90%" style="opacity: .8">
-                    <div class="brand-text font-weight-light text-sm">
+                <div class="flex flex-column justify-content-center">
+                    <img src="{{asset($app_logo)}}" height="35px" width="180px" style="opacity: .8"
+                         class="rounded mx-auto">
+                    <div class="brand-text font-weight-light text-sm mx-auto">
                         {{config('app.description')}}
                     </div>
                 </div>
             @else
-                <i class="fas fa-user-circle-o fa-2x brand-image img-circle elevation-3" style="opacity: .8"></i>
+                <x-dvui::icon.user.circle class="brand-image img-circle elevation-3 w-5"/>
                 <span class="brand-text font-weight-light">{{config('app.name')}}</span>
             @endif
         </a>
@@ -72,7 +80,7 @@
         @endif
     </aside>
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper p-2">
+    <div class="content-wrapper p-2 flex flex-column">
         {{$slot}}
     </div>
     <!-- content-wrapper -->
@@ -127,8 +135,10 @@
 {{--<script src="{{asset("dist/js/pages/dashboard.js")}}"></script>--}}
 <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
 
+{{--<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
+
 <script>
-    function toastrDispatch (obj) {
+    function toastrDispatch(obj) {
         toastr.options = {
             'closeButton': obj.options?.closeButton ?? true,
             'debug': obj.options?.debug ?? false,
@@ -151,35 +161,38 @@
         if (obj.type === 'info') toastr.info(obj.msg)
         if (obj.type === 'warning') toastr.warning(obj.msg)
         if (obj.type === 'error') toastr.error(obj.msg)
+
     }
 
     window.addEventListener('toastr', event => {
+        console.log(event)
+
         let obj = {
             options: {
-                'closeButton': event.detail.closeButton,
-                'debug': event.detail.debug,
-                'newestOnTop': event.detail.newestOnTop,
-                'progressBar': event.detail.progressBar,
-                'positionClass': event.detail.positionClass,
-                'preventDuplicates': event.detail.preventDuplicates,
-                'onclick': event.detail.onclick,
-                'showDuration': event.detail.showDuration,
-                'hideDuration': event.detail.hideDuration,
-                'timeOut': event.detail.timeOut,
-                'extendedTimeOut': event.detail.extendedTimeOut,
-                'showEasing': event.detail.showEasing,
-                'hideEasing': event.detail.hideEasing,
-                'showMethod': event.detail.showMethod,
-                'hideMethod': event.detail.hideMethod
+                'closeButton': event.detail[0].closeButton,
+                'debug': event.detail[0].debug,
+                'newestOnTop': event.detail[0].newestOnTop,
+                'progressBar': event.detail[0].progressBar,
+                'positionClass': event.detail[0].positionClass,
+                'preventDuplicates': event.detail[0].preventDuplicates,
+                'onclick': event.detail[0].onclick,
+                'showDuration': event.detail[0].showDuration,
+                'hideDuration': event.detail[0].hideDuration,
+                'timeOut': event.detail[0].timeOut,
+                'extendedTimeOut': event.detail[0].extendedTimeOut,
+                'showEasing': event.detail[0].showEasing,
+                'hideEasing': event.detail[0].hideEasing,
+                'showMethod': event.detail[0].showMethod,
+                'hideMethod': event.detail[0].hideMethod
             },
-            msg: event.detail.msg,
-            type: event.detail.type
+            msg: event.detail[0].msg,
+            type: event.detail[0].type
         }
         toastrDispatch(obj)
     })
 </script>
 @stack('scripts')
-@livewireScripts
-@powerGridScripts
+{{--@livewireScripts--}}
+@livewireScriptConfig
 </body>
 </html>

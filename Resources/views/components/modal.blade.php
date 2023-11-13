@@ -36,12 +36,12 @@
                             'bg-light border' => !$danger && !$info && !$success
                         ])}}
                         data-dismiss="modal"
-                        {{$attributes->filter(fn($value, $key) => $key == 'wire:click')}}
-                        >
+                    {{$attributes->filter(fn($value, $key) => $key == 'wire:click')}}
+                >
                     @if(!$confirm_label)
                         Confirmar
                     @else
-                    {{$confirm_label}}
+                        {{$confirm_label}}
                     @endif
                 </button>
             </div>

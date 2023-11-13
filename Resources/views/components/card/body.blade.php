@@ -1,4 +1,4 @@
-<div {{$attributes->class(['card-body'])}}>
+<div {{$attributes->class(['card-body flex flex-col'])}}>
     @if(isset($tabs))
         <div {{$tabs->attributes->class(["tab-content"])}} id="custom-tabs-two-tabContent">
             {{$tabs}}

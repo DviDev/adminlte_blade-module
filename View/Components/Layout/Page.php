@@ -23,6 +23,6 @@ class Page extends Component
      */
     public function render()
     {
-        return view('lte::components.layout.page');
+        return view('lte::components.layout.page-card');
     }
 }
