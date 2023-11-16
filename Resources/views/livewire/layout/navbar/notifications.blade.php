@@ -1,7 +1,7 @@
 @php
     $notifications = $this->notifications();
-    $count = $notifications->whereNull('read_at')->count();
-    $list= $notifications->limit(10)->get();
+    $count = $notifications?->whereNull('read_at')->count();
+    $list= $notifications?->limit(10)->get() ?? [];
 @endphp
 <div>
     <a class="nav-link" data-toggle="dropdown" href="#">
