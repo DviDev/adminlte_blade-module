@@ -20,6 +20,6 @@ class Notifications extends Component
      */
     public function notifications()
     {
-        return auth()->user()->notifications();
+        return auth()->user()?->notifications();
     }
 }
