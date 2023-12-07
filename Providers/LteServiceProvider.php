@@ -10,6 +10,7 @@ use Laravel\Pennant\Feature;
 use Livewire\Livewire;
 use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
 use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
+use Modules\Lte\Livewire\Layout\SidebarMenu;
 use Modules\Lte\View\Components\Box;
 use Modules\Lte\View\Components\Button;
 use Modules\Lte\View\Components\Card\Body;
@@ -160,6 +161,7 @@ class LteServiceProvider extends ServiceProvider
 
         Livewire::component('lte::dashboard.darshboard-v1', DashboardV1::class);
         Livewire::component('lte::layout.navbar.notifications', Notifications::class);
+        Livewire::component('lte::layout.sidebar-menu', SidebarMenu::class);
         Livewire::component('lte::page', Page::class);
 
         Blade::component('lte::card', Card::class);
