@@ -15,5 +15,6 @@
             @endauth
         </div>
     </div>
-    <x-lte::layout.sidebar-menu :items="$items"/>
+    <livewire:lte::layout.sidebar-menu :items="$items"/>
+    {{--<x-lte::layout.sidebar-menu :items="$items"/>--}}
 </div>
