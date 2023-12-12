@@ -1,39 +1,51 @@
 @props([
-    'id',
     'rows' => 3,
-    'label' => null,
-    'required' => false
 ])
 @php
-    $field = collect($attributes)
-        ->first(function($value, $key) {
-            return str($key)->contains('wire:model') ?? $attributes['id'] ?? $attributes['name'] ?? $label;
-        });
-    $id = $id ?? $field;
+    $attr = collect($attr);
+    $array = $attr->merge($attributes->getAttributes())->all();
+    if (isset($array['placeholder'])){
+        $array['placeholder'] = trans($array['placeholder']);
+    }
+    if (isset($array['label'])){
+        $array['label'] = ucfirst(trans(strtolower($array['label'])));
+    }
+    $wire_model = $attributes->get('wire:model');
+    $field = $wire_model ?? $id ?? $attributes->get('name') ?? $attributes->get('label');
+    $array['id'] = $id ?? $field;
+    $attributes->setAttributes($array);
 @endphp
-@pushonce('styles')
+@push('styles')
+    {{--SUMMERNOTE--}}
     <link rel="stylesheet" href="{{asset("plugins/summernote/summernote-bs4.min.css")}}">
-@endpushonce
+@endpush
 @push('scripts')
-    <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+    {{--SUMMERNOTE--}}
+    <script src="{{asset("plugins/summernote/summernote-bs4.min.js")}}"></script>
 
     <script>
-        $(function () {
-            $('#{{$id}}').summernote({
-                height: 200,
-                callbacks: {
-                    onChange: function (contents, $editable) {
-                        @this.
-                        set('{{collect($attributes)
-                            ->first(fn($value, $key) => str($key)->contains('wire:model'))}}', contents)
-                    }
+        $('#{{$attributes->get('id')}}').summernote({
+            height: {{$attributes->get('height', 200)}},
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ],
+            callbacks: {
+                onChange: function (contents, $editable) {
+                    @this.
+                    set('{{$wire_model}}', contents)
                 }
-            })
-        })
+            }
+        });
     </script>
 @endpush
 
-<div class="form-group">
+<div class="form-group w-full">
     @if($label)
         <label for="{{$id}}" title="{{ $required ? __('validation.required', ['attribute' => $label]) : $label}}">
             {{$label}}
@@ -44,13 +56,12 @@
             @endif
         </label>
     @endif
-    <div wire:ignore>
-        <textarea class="form-control"
-                  rows="{{$rows}}"
-                  id="{{$id}}"
-
-              {{$attributes}}
-    ></textarea>
+    <div wire:ignore x-cloak>{{----}}
+        <textarea id="{{$attributes->get('id')}}"
+                  wire:model="{{$wire_model}}"
+                  {!! $attributes->toHtml() !!}>
+            {{$attributes->get('value')}}
+        </textarea>
     </div>
     <x-lte::error field="{{$field}}"/>
 </div>

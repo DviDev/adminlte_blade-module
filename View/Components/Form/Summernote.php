@@ -2,25 +2,21 @@
 
 namespace Modules\Lte\View\Components\Form;
 
-use Illuminate\View\Component;
+use Modules\DvUi\View\BaseBladeComponent;
 
-class Summernote extends Component
+class Summernote extends BaseBladeComponent
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function __construct(
+        public array|null      $attr = null,
+        public string|int|null $id = null,
+        public string|null     $label = null,
+        public bool            $required = false,
+        public bool            $validate = false
+    )
     {
-        //
+        parent::__construct($attr, $label, $required, $validate);
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\View\View|string
-     */
     public function render()
     {
         return view('lte::components.form.summernote');

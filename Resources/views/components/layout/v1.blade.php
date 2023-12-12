@@ -24,7 +24,11 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="{{asset("plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
+    @if(config('app.env') == 'local')
+        <link rel="stylesheet" href="{{asset("dist/css/adminlte.css")}}">
+    @else
+        <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
+    @endif
     <title>{{ $header ?? config('app.name') }} | Welcome</title>
     @stack('header_libs')
     @stack('styles')
@@ -123,8 +127,6 @@
 <script src="{{asset("plugins/daterangepicker/daterangepicker.js")}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{asset("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js")}}"></script>
-<!-- Summernote -->
-{{--<script src="{{asset("plugins/summernote/summernote-bs4.min.js")}}"></script>--}}
 <!-- overlayScrollbars -->
 <script src="{{asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js")}}"></script>
 <!-- AdminLTE App -->
