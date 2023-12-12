@@ -1,24 +1,19 @@
 @props([
-    'id',
     'rows' => 3,
-    'label' => null,
-    'required' => false
 ])
 @php
-    if ($attr) {
-        $array = collect($attr)->merge($attributes->getAttributes())->all();
-
-        if (isset($array['placeholder'])){
-            $array['placeholder'] = trans($array['placeholder']);
-        }
-        if (isset($array['label'])){
-            $array['label'] = ucfirst(trans(strtolower($array['label'])));
-        }
-        $attributes->setAttributes($array);
+    $attr = collect($attr);
+    $array = $attr->merge($attributes->getAttributes())->all();
+    if (isset($array['placeholder'])){
+        $array['placeholder'] = trans($array['placeholder']);
+    }
+    if (isset($array['label'])){
+        $array['label'] = ucfirst(trans(strtolower($array['label'])));
     }
     $wire_model = $attributes->get('wire:model');
-    $field = $wire_model ?? $attributes['id'] ?? $attributes['name'] ?? $label;
-    $id = $attributes->get('id') ?? $field;
+    $field = $wire_model ?? $id ?? $attributes->get('name') ?? $attributes->get('label');
+    $array['id'] = $id ?? $field;
+    $attributes->setAttributes($array);
 @endphp
 @push('styles')
     {{--SUMMERNOTE--}}
