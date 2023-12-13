@@ -167,7 +167,6 @@
     }
 
     window.addEventListener('toastr', event => {
-        console.log(event)
 
         let obj = {
             options: {
