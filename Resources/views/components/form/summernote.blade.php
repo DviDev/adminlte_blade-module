@@ -11,6 +11,7 @@
         $array['label'] = ucfirst(trans(strtolower($array['label'])));
     }
     $wire_model = $attributes->get('wire:model');
+
     $field = $wire_model ?? $id ?? $attributes->get('name') ?? $attributes->get('label');
 //    $array['id'] = $id ?? $attributes->get('name') ?? $field;
     $attributes->setAttributes($array);
