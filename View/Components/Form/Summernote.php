@@ -11,10 +11,11 @@ class Summernote extends BaseBladeComponent
         public string|int|null $id = null,
         public string|null     $label = null,
         public bool            $required = false,
-        public bool            $validate = false
+        public bool            $validate = false,
+        public             $value = null,
     )
     {
-        parent::__construct($attr, $label, $required, $validate);
+        parent::__construct($attr, $label, $required, $validate, $value);
     }
 
     public function render()
