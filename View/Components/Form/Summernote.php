@@ -15,7 +15,7 @@ class Summernote extends BaseBladeComponent
         public             $value = null,
     )
     {
-        parent::__construct($attr, $label, $required, $validate, $value);
+        parent::__construct($attr, $label, $required, $validate, $value, $id);
     }
 
     public function render()
