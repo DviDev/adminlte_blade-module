@@ -38,7 +38,7 @@
 ])
 @if(!isset($card_id))
     @php
-        $card_id = ($header ? $header.'_' : '').random_int(1000, 2000);
+        $card_id = random_int(1000, 2000);
     @endphp
 @endif
 @php
@@ -80,13 +80,15 @@
     'card-yellow' => $yellow,
     ])}}>
     @if($header)
-        <div class="card-header">
-            <h3 @class([
-                "card-title",
-                "p-2" => isset($tools)
-            ])>{{$header}}</h3>
+        <div {{$header->attributes->class(["card-header py-2 flex justify-between"])}}>
+            <div>
+                <h3 @class(["card-title", "p-2" => isset($tools)])>{{$header}}</h3>
+            </div>
+            <div class="grow"></div>
             @if(isset($tools))
-                <div class="card-tools">{{$tools}}</div>
+                <div {{$tools->attributes->class(["my-auto"])}}>
+                    {{$tools}}
+                </div>
             @endif
         </div>
     @endif
