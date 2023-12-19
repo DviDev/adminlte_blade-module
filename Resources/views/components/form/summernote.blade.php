@@ -12,8 +12,9 @@
     }
     $wire_model = $attributes->get('wire:model');
 
+    $array['id'] = $array['id'] ?: $wire_model;
+
     $field = $wire_model ?? $id ?? $attributes->get('name') ?? $attributes->get('label');
-//    $array['id'] = $id ?? $attributes->get('name') ?? $field;
     $attributes->setAttributes($array);
 @endphp
 @push('styles')
