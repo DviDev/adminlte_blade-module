@@ -29,7 +29,7 @@
     @else
         <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
     @endif
-    <title>{{ $header ?? config('app.name') }} | Welcome</title>
+    <title>{{ $header ?? config('app.name') }}</title>
     @stack('header_libs')
     @stack('styles')
     @stack('scripts_head')
