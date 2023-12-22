@@ -79,8 +79,14 @@
     'card-white' => $white,
     'card-yellow' => $yellow,
     ])}}>
-    @if($header && !is_string($header))
-        <div {{$header->attributes->class(["card-header py-2 flex justify-between"])}}>
+    @if($header )
+        <div
+            @if(!is_string($header))
+                {{$header->attributes->class(["card-header py-2 flex justify-between"])}}
+            @else
+                class="card-header py-2 flex justify-between"
+            @endif
+            >
             <div>
                 <h3 @class(["card-title", "p-2" => isset($tools)])>{{$header}}</h3>
             </div>
