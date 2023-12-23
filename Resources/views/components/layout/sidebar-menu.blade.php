@@ -2,7 +2,6 @@
     'items' => []
 ])
 <nav class="mt-2 pb-10">
-
     <ul class="nav nav-pills nav-sidebar flex-column pb-4" data-widget="treeview" role="menu"
         data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class

@@ -15,12 +15,12 @@ class Sidebar extends Component
      */
     public function render()
     {
-        $items = $this->getSidebarMenuItems();
+        $items = MenuDomain::list();
         return view('lte::components.layout.sidebar', compact('items'));
     }
 
-    public function getSidebarMenuItems(): array
+    /*public function getSidebarMenuItems(): array
     {
         return MenuDomain::list();
-    }
+    }*/
 }
