@@ -16,8 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    {{--<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">--}}
+
+
+    <!-- Google Font: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset("plugins/fontawesome-free/css/all.min.css")}}">
     {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>--}}
@@ -31,6 +38,12 @@
     @endif
     <title>{{ $header ?? config('app.name') }}</title>
     @stack('header_libs')
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+        }
+    </style>
     @stack('styles')
     @stack('scripts_head')
 
@@ -44,9 +57,9 @@
     @endif
     @livewireStyles
 
-    <link
+    {{--<link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
-        rel="stylesheet"/>
+        rel="stylesheet"/>--}}
     {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
 
 {{--    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>--}}
