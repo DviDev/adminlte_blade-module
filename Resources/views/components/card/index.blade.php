@@ -48,7 +48,7 @@
     x-data="{ tab: '', tab_name: '{{$tab_name}}' }"
     x-init="tab = tryGetStorage('{{request('tab') ?: $tab_name}}', '{{$tab_default}}')"
     {{$attributes->class([
-    'card mb-0 grow flex flex-col',
+    'card divide-y mb-0 grow flex flex-col',
     'card-outline' => $outline,
     'card-outline_tabs' => $tabs,
     'card-light' => $light,

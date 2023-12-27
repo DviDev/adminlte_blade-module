@@ -26,13 +26,13 @@
     :primary="$primary"
     :use_vite="$use_vite"
 >
-    @if(isset($header))
+    {{--@if(isset($header))
         <x-slot:card_header>
-            <x-lte::card.header :title="$title" :navs="false">
+            <x-lte::card.header :title="$header" :navs="false">
                 {{$header}}
             </x-lte::card.header>
         </x-slot:card_header>
-    @endif
+    @endif--}}
     @if(isset($body))
         <x-slot:body class="{{$body->attributes->get('class')}}">
             {{$body}}
