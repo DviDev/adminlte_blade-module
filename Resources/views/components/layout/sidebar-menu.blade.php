@@ -99,7 +99,7 @@
             </li>
         @endif
 
-        @if(auth()->user()->isSuperAdmin())
+        @if(auth()->check() && auth()->user()->isSuperAdmin())
             <li class="nav-item">
                 <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
                     <i class="nav-icon fas fa-file"></i>

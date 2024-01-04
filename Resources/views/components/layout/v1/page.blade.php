@@ -16,7 +16,7 @@
 @endphp
 <x-lte::layout.page-card
     :tailwind_css="$tailwind_css"
-    :header="$header ? null : $title"
+    :header="$header"
     :sidebar_menu_items="[]"
     :show_cart_icon="auth()->user()?->isCustomer()"
     :show_right_sidebar_icon="auth()->user()?->isCustomer()"
@@ -26,13 +26,13 @@
     :primary="$primary"
     :use_vite="$use_vite"
 >
-    @if(isset($header))
+    {{--@if(isset($header))
         <x-slot:card_header>
-            <x-lte::card.header :title="$title" :navs="false">
+            <x-lte::card.header :title="$header" :navs="false">
                 {{$header}}
             </x-lte::card.header>
         </x-slot:card_header>
-    @endif
+    @endif--}}
     @if(isset($body))
         <x-slot:body class="{{$body->attributes->get('class')}}">
             {{$body}}
