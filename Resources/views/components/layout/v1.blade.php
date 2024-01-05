@@ -1,5 +1,5 @@
 @props([
-    'header' => '',
+    'title' => '',
     'tailwind_css' => true,
     'use_vite' => false,
     'app_logo' => null,
@@ -36,7 +36,7 @@
     @else
         <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
     @endif
-    <title>{{ $header ?? config('app.name') }}</title>
+    <title>{{ config('app.name') . ($title ? " - $title" : '') }}</title>
     @stack('header_libs')
     <style>
         body {

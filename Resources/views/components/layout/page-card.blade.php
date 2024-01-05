@@ -28,7 +28,7 @@
 @endonce
 
 <x-lte::layout.v1
-    :header="$header"
+    :title="$title"
     :tailwind_css="$tailwind_css"
     :app_logo="$app_logo"
     :use_vite="$use_vite"
