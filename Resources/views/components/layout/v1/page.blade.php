@@ -16,6 +16,7 @@
 @endphp
 <x-lte::layout.page-card
     :tailwind_css="$tailwind_css"
+    :title="$title"
     :header="$header"
     :sidebar_menu_items="[]"
     :show_cart_icon="auth()->user()?->isCustomer()"
