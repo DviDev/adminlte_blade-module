@@ -4,12 +4,13 @@
     'required' => false
 ])
 <label {{ $attributes->class([
-    'block font-medium',
+    'block',
+    'font-medium' => $required,
     'text-gray-700' => !$errors->has($for),
     'text-danger' => $errors->has($for),
     ])}} for="{{$for}}" style="border-bottom: none !important; margin-bottom: 0 !important;"
     @if($errors->has($for))
-        title="{{$errors->get($for)[0]}}"
+        title="{{collect($errors->get($for))->first()}}"
     @endif
 >
     @if(isset($value) || isset($slot))
