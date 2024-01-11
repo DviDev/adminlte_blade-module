@@ -14,7 +14,7 @@
             <x-lte::label :for="$field" :value="$label" :required="$required"/>
         @endif
         <select {{$attributes->class([
-            "form-control"
+            "form-control h-[35px]"
         ])}}
             @required($required) @disabled($disable) {{$attributes}}>
             @if($slot)
