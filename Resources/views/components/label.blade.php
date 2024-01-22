@@ -15,9 +15,9 @@
         title="{{collect($errors->get($for))->first()}}"
     @endif
 >
-    @if(isset($value) || isset($slot))
+    @if(!empty($value) || isset($slot))
         <span @if($attributes->has('required')) style="float: left" title="{{__('required')}}" @endif>
-            {{ $value ?? $slot }}
+            {!! !empty($value) ? $value : $slot !!}
         </span>
         @if($required)
             <sup style="font-size: 20px" class="">
