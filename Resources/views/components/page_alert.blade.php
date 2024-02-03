@@ -11,22 +11,22 @@
         <div class="alert alert-danger">{!! session('error') !!}</div>
     @endif
     @if($toastr || $only_toastr)
-        @push('scripts')
+        @pushonce('scripts')
             <script>
                 toastrDispatch({type: 'danger', 'msg': '{!! session('error') !!}'})
             </script>
-        @endpush
+        @endpushonce
     @endif
 @elseif(session()->has('success'))
     @if(!$only_toastr)
         <div class="alert alert-success">{!! session('success') !!}</div>
     @endif
     @if($toastr || $only_toastr)
-        @push('scripts')
+        @pushonce('scripts')
             <script>
                 toastrDispatch({type: 'success', 'msg': '{!! session('success') !!}'})
             </script>
-        @endpush
+        @endpushonce
     @endif
 @elseif(session()->has('warning'))
     @if(!$only_toastr)
