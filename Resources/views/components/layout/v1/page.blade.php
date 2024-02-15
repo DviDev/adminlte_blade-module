@@ -11,7 +11,7 @@
 @php
     use Modules\App\Models\ConfigModel;
     use Modules\App\Entities\Config\ConfigEntityModel;
-
+    //Todo cache ...
     $app_logo = ConfigModel::whereFn(fn(ConfigEntityModel $c) => [[$c->name, 'app_logo']])->first()->value;
 @endphp
 <x-lte::layout.page-card
@@ -49,6 +49,8 @@
             {{$footer}}
         </x-slot:footer>
     @else
-        <page_footer></page_footer>
+        <page_footer>
+            {{now()->year}}@ - {{config('app.name')}}
+        </page_footer>
     @endif
 </x-lte::layout.page-card>
