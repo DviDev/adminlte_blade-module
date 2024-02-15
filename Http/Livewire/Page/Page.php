@@ -18,7 +18,7 @@ class Page extends Component
     public function getItems(): array
     {
         $items = [];
-        if (auth()->user()->isAdmin() || auth()->user()->isAdmin()) {
+        if (auth()->user()->type->enum() == UserType::SUPER_ADMIN || auth()->user()->type->enum() == UserType::ADMIN) {
             $items[] = ['label' => 'Início', 'url' => route('home')];
         }
 
@@ -41,7 +41,7 @@ class Page extends Component
             }
             $items[] = ['label' => 'Status', 'url' => '#'];
         }
-        if (auth()->user()->isAdmin()) {
+        if (auth()->user()->type->enum() == UserType::ADMIN) {
 //            if (Route::is('admin.product')) {
             $items[] = ['label' => 'Produtos', 'url' => route('admin.products')];
 //            }
@@ -60,12 +60,12 @@ class Page extends Component
     public function getSidebarMenuItems(): array
     {
         $menu = [];
-        if (auth()->user()->isAdmin() || auth()->user()->isAdmin()) {
+        if (auth()->user()->type->enum() == UserType::ADMIN || auth()->user()->type->enum() == UserType::ADMIN) {
             $menu['root'][] = ['label' => 'Dashboard', 'url' => route('dashboard'), 'icon' => 'far fa-chart-pie', 'active' => Request::is('dashboard')];
         }
 
         $menu['root'][] = [
-            'label' => auth()->user()->isAdmin() || auth()->user()->isAdmin()
+            'label' => auth()->user()->type->enum() == UserType::ADMIN || auth()->user()->type->enum() == UserType::ADMIN
                 ? 'Pedidos' : 'Pedidos / Matrículas',
             'url' => route('orders'),
             'icon' => 'far fa-shopping-bag',
