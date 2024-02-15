@@ -3,9 +3,9 @@
 namespace Modules\Lte\Database\Seeders;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Seeder;
+use Modules\Base\Database\Seeders\BaseSeeder;
 
-class LteDatabaseSeeder extends Seeder
+class LteDatabaseSeeder extends BaseSeeder
 {
     /**
      * Run the database seeds.
