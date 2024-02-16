@@ -69,8 +69,8 @@ class LteServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
         $this->registerComponents();
-        Feature::define(ProfileActivity::class);
-        Feature::define(ProfileTimeline::class);
+        /*Feature::define(ProfileActivity::class);
+        Feature::define(ProfileTimeline::class);*/
     }
 
     /**
