@@ -25,9 +25,7 @@
        @endif
        placeholder="{{$placeholder ?? ($txt == $label || !$label || $label == 'false' ? $txt : $label)}}"
 
-    {{$attributes->class([
-         "form-control", 'rounded-sm', 'border-gray-300'
-     ])}}
+    {{$attributes->class(["form-control", 'rounded-sm', 'border-gray-200'])}}
     {{--       value="{{old(collect($attributes)->first(fn($value, $key) => str($key)->contains('wire:model'))--}}
     {{--                ?? $attributes['id'] ?? $attributes['name'] ?? $txt)}}"--}}
 
