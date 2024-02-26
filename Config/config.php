@@ -7,5 +7,8 @@ return [
             'activity' => false,
             'timeline' => false,
         ]
-    ]
+    ],
+    'theme' => [
+        'dark_mode' => false,
+    ],
 ];
