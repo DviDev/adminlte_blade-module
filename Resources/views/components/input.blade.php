@@ -11,7 +11,7 @@
                 ?? collect($attributes)->first(fn($value, $key) => str($key)->contains('wire:model'))
                 ?? strtolower($txt);
 @endphp
-@if($label !== false && $label !== 'false')
+@if(!empty($label))
     <x-lte::label for="{{$field}}" :required="$required" :value="$label ?? ucfirst($txt)"/>
 @endif
 
@@ -25,7 +25,10 @@
        @endif
        placeholder="{{$placeholder ?? ($txt == $label || !$label || $label == 'false' ? $txt : $label)}}"
 
-    {{$attributes->class(["form-control", 'rounded-sm', 'border-gray-200'])}}
+    {{$attributes->class([
+        "form-control",
+        'rounded-sm' => false,
+        'border-gray-200'])}}
     {{--       value="{{old(collect($attributes)->first(fn($value, $key) => str($key)->contains('wire:model'))--}}
     {{--                ?? $attributes['id'] ?? $attributes['name'] ?? $txt)}}"--}}
 
