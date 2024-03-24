@@ -10,20 +10,20 @@
     use \Illuminate\Support\Facades\Route;
 @endphp
     <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => config('lte.theme.dark_mode')])
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Google Font: Source Sans Pro -->
-    {{--<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">--}}
 
-
-    <!-- Google Font: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Google Font: Roboto -->
+    {{--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">--}}
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset("plugins/fontawesome-free/css/all.min.css")}}">
@@ -38,6 +38,7 @@
     @endif
     <title>{{ config('app.name') . ($title ? " - $title" : '') }}</title>
     @stack('header_libs')
+    @stack('header_libs2')
     <style>
         body {
             font-family: 'Roboto', sans-serif;
