@@ -38,6 +38,7 @@
     @endif
     <title>{{ config('app.name') . ($title ? " - $title" : '') }}</title>
     @stack('header_libs')
+    @stack('header_libs2')
     <style>
         body {
             font-family: 'Roboto', sans-serif;
