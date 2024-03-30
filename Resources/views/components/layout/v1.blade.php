@@ -56,8 +56,26 @@
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
-    @livewireStyles
-
+    {{--    <script src="https://cdn.tailwindcss.com/3.3.0"></script>--}}
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"/>
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
     {{--<link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
         rel="stylesheet"/>--}}
@@ -65,13 +83,14 @@
 
 {{--    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>--}}
 {{--    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>--}}
+    @livewireStyles
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
     <!-- Preloader -->
-    {{--  <div class="preloader flex-column justify-content-center align-items-center">--}}
-    {{--    <img class="animation__shake" src="{{asset("{{dist/img/app_logo.jpg}}")}}" alt="{{config('app.name')}}" height="60" width="60">--}}
-    {{--  </div>--}}
+    {{--  <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="{{asset($app_logo)}}" alt="{{config('app.name')}}" height="60" width="60">
+    </div>--}}
 
     @if(isset($navbar))
         {{$navbar}}
@@ -79,7 +98,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link">
+        <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link p-0">
             @if($app_logo)
                 <div class="flex flex-column justify-content-center">
                     <img src="{{asset($app_logo)}}" height="35px" width="180px" style="opacity: .8"
