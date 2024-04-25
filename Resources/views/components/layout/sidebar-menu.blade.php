@@ -100,12 +100,14 @@
         @endif
 
         @if(auth()->check() && auth()->user()->isSuperAdmin())
-            <li class="nav-item">
-                <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
-                    <i class="nav-icon fas fa-file"></i>
-                    <p>{{trans('Page Examples')}}</p>
-                </a>
-            </li>
+            @env('local')
+                <li class="nav-item">
+                    <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>{{trans('Page Examples')}}</p>
+                    </a>
+                </li>
+            @endenv
         @endif
 
         @if(\Illuminate\Support\Facades\Route::has('logout'))
