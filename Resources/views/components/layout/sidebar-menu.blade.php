@@ -24,7 +24,9 @@
                 <ul class="nav nav-treeview">
                     @foreach($menuItems as $item)
                         <li class="nav-item">
-                            <a wire:navigate.hover href="{{$item['url']}}"
+                            <a
+                                {{--                                wire:navigate.hover--}}
+                                href="{{$item['url']}}"
                                 @class(["nav-link", "active" => Request::fullUrl() == $item['url']])>
                                 {!! $item['icon'] !!}
                                 <p>{{$item['label']}}</p>
