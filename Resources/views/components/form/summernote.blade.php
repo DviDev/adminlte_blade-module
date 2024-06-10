@@ -47,8 +47,9 @@
 @endpush
 
 <div class="form-group w-full">
-    @if($label)
-        <label for="{{$attributes->get('id')}}" title="{{ $required ? __('validation.required', ['attribute' => $label]) : $label}}">
+    @if($label = $attributes->get('label'))
+        <label for="{{$attributes->get('id')}}"
+               title="{{ $required ? __('validation.required', ['attribute' => $label]) : $label}}">
             {{$label}}
             @if($required)
                 <sup style="font-size: 20px">
