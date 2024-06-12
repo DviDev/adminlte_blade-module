@@ -26,6 +26,9 @@
 
     <script>
         $('#{{$attributes->get('id')}}').summernote({
+
+            {{$airmode ? 'airMode: true,' : ''}}
+
             height: {{$attributes->get('height', 200)}},
             toolbar: [
                 ['style', ['style']],
