@@ -56,10 +56,7 @@
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
-    {{--    <script src="https://cdn.tailwindcss.com/3.3.0"></script>--}}
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"/>
+
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
     <script>
         tailwind.config = {
@@ -76,13 +73,6 @@
             },
         };
     </script>
-    {{--<link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
-        rel="stylesheet"/>--}}
-    {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />--}}
-
-{{--    <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>--}}
-{{--    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>--}}
     @livewireStyles
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
@@ -100,8 +90,8 @@
         <!-- Brand Logo -->
         <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link p-0">
             @if($app_logo)
-                <div class="flex flex-column justify-content-center">
-                    <img src="{{asset($app_logo)}}" height="35px" width="180px" style="opacity: .8"
+                <div class="flex flex-column justify-content-center h-[60px]">
+                    <img src="{{asset($app_logo)}}" height="auto" width="180px" style="opacity: .8"
                          class="rounded mx-auto">
                     <div class="brand-text font-weight-light text-sm mx-auto">
                         {{config('app.description')}}
@@ -124,8 +114,9 @@
     <footer class="main-footer">
         <strong>Copyright &copy; 2022
             <a href="{{config('app.url')}}">
-                {{config('app.name')}}
-            </a>.</strong>
+                {{config('app.name')}}.
+            </a>
+        </strong>
         Todos os direitos reservados.
         <div class="float-right d-none d-sm-inline-block">
             <b>Version</b> 0.0.1
