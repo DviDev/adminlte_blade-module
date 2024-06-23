@@ -56,7 +56,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
@@ -116,7 +116,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
@@ -170,7 +170,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
@@ -227,7 +227,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
@@ -287,7 +287,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
@@ -344,7 +344,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
@@ -458,7 +458,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
@@ -515,7 +515,7 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar.png')}}">
+                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
                                         <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
