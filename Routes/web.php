@@ -91,7 +91,7 @@ Route::prefix('lte')->group(function () {
 
 Route::prefix('admin')->group(function () {
     Route::prefix('config')->group(function () {
-        Route::get('configs', fn() => view('lte::pages.config.config_list_page'))->name('admin.configs');
+        Route::get('configs', fn() => view('lte::components.pages.config.config_list_page'))->name('admin.configs');
         Route::get('config/{config?}', fn(ConfigModel $config) => view('lte::pages.config.config_form_page',
             compact('config')))->name('admin.config');
     });
