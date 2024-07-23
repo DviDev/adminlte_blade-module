@@ -11,8 +11,7 @@
 @php
     use Modules\App\Models\ConfigModel;
     use Modules\App\Entities\Config\ConfigEntityModel;
-    //Todo cache ...
-    $app_logo = ConfigModel::whereFn(fn(ConfigEntityModel $c) => [[$c->name, 'app_logo']])->first()->value;
+    $app_logo = ConfigModel::byValue('app_logo');
 @endphp
 <x-lte::layout.page-card
     :tailwind_css="$tailwind_css"
