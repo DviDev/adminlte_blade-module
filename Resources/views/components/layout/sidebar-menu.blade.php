@@ -102,7 +102,7 @@
             </li>
         @endif
 
-        @if(auth()->check() && auth()->user()->isSuperAdmin())
+        @if(auth()?->user()?->isDeveloper())
             @env('local')
                 <li class="nav-item">
                     <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
