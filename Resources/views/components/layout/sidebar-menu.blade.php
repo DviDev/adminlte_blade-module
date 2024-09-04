@@ -7,6 +7,7 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
         @foreach($items as $key => $menuItems)
+            @continue(count($menuItems) == 0)
             @php
                 $active = collect($menuItems)->map(fn($i) => $i['url'])->contains(Request::fullUrl());
             @endphp
