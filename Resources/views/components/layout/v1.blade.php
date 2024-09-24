@@ -26,10 +26,11 @@
     {{--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">--}}
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset("plugins/fontawesome-free/css/all.min.css")}}">
+    @stack('fontawesome_free_css')
+
     {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>--}}
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{asset("plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
+    @stack('icheck-bootstrap_css')
     <!-- Theme style -->
     @if(config('app.env') == 'local')
         <link rel="stylesheet" href="{{asset("dist/css/adminlte.css")}}">
@@ -39,14 +40,19 @@
     <title>{{ config('app.name') . ($title ? " - $title" : '') }}</title>
     @stack('header_libs')
     @stack('header_libs2')
+    @stack('styles')
+    @stack('scripts_head')
+    @stack('ionicons_2.0.1_css')
+    @stack('jqvmap_css')
+    @stack('overlayScrollbars_css')
+    @stack('daterangepicker_css')
+    @stack('toastr_css')
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 14px;
         }
     </style>
-    @stack('styles')
-    @stack('scripts_head')
 
     @if($tailwind_css)
         @if($use_vite)
@@ -129,7 +135,6 @@
     <!-- control-sidebar -->
 </div>
 <!-- ./wrapper -->
-<!-- jQuery -->
 <script src="{{asset("plugins/jquery/jquery.min.js")}}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset("plugins/jquery-ui/jquery-ui.min.js")}}"></script>
@@ -138,84 +143,24 @@
     $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
+@stack('bootstrap_4_js')
 <script src="{{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
-<!-- ChartJS -->
-<script src="{{asset("plugins/chart.js/Chart.min.js")}}"></script>
-<!-- Sparkline -->
-<script src="{{asset("plugins/sparklines/sparkline.js")}}"></script>
-<!-- JQVMap -->
-<script src="{{asset("plugins/jqvmap/jquery.vmap.min.js")}}"></script>
-<script src="{{asset("plugins/jqvmap/maps/jquery.vmap.usa.js")}}"></script>
-<!-- daterangepicker -->
-<script src="{{asset("plugins/moment/moment.min.js")}}"></script>
-<script src="{{asset("plugins/daterangepicker/daterangepicker.js")}}"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="{{asset("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js")}}"></script>
-<!-- overlayScrollbars -->
-<script src="{{asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js")}}"></script>
-<!-- AdminLTE App -->
+@stack('chart_js')
+@stack('sparkline_js')
+@stack('jqvmap_js')
+@stack('moment_js')
+@stack('daterangepicker')
+@stack('tempusdominus-bootstrap-4_js')
+@stack('overlayScrollbars_js')
+@stack('toastr_js')
+
 <script src="{{asset("dist/js/adminlte.min.js")}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset("dist/js/demo.js")}}"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{--<script src="{{asset("dist/js/pages/dashboard.js")}}"></script>--}}
-<script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
 
-{{--<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>--}}
-
-<script>
-    function toastrDispatch(obj) {
-        toastr.options = {
-            'closeButton': obj.options?.closeButton ?? true,
-            'debug': obj.options?.debug ?? false,
-            'newestOnTop': obj.options?.newestOnTop ?? true,
-            'progressBar': obj.options?.progressBar ?? true,
-            'positionClass': obj.options?.positionClass ?? 'toast-top-right',
-            'preventDuplicates': obj.options?.preventDuplicates ?? true,
-            'onclick': obj.options?.onclick ?? null,
-            'showDuration': obj.options?.showDuration ?? '300',
-            'hideDuration': obj.options?.hideDuration ?? '1000',
-            'timeOut': obj.options?.timeOut ?? '5000',
-            'extendedTimeOut': obj.options?.extendedTimeOut ?? '1000',
-            'showEasing': obj.options?.showEasing ?? 'swing',
-            'hideEasing': obj.options?.hideEasing ?? 'linear',
-            'showMethod': obj.options?.showMethod ?? 'fadeIn',
-            'hideMethod': obj.options?.hideMethod ?? 'fadeOut'
-        }
-
-        if (obj.type === 'success') toastr.success(obj.msg)
-        if (obj.type === 'info') toastr.info(obj.msg)
-        if (obj.type === 'warning') toastr.warning(obj.msg)
-        if (obj.type === 'error') toastr.error(obj.msg)
-
-    }
-
-    window.addEventListener('toastr', event => {
-
-        let obj = {
-            options: {
-                'closeButton': event.detail[0].closeButton,
-                'debug': event.detail[0].debug,
-                'newestOnTop': event.detail[0].newestOnTop,
-                'progressBar': event.detail[0].progressBar,
-                'positionClass': event.detail[0].positionClass,
-                'preventDuplicates': event.detail[0].preventDuplicates,
-                'onclick': event.detail[0].onclick,
-                'showDuration': event.detail[0].showDuration,
-                'hideDuration': event.detail[0].hideDuration,
-                'timeOut': event.detail[0].timeOut,
-                'extendedTimeOut': event.detail[0].extendedTimeOut,
-                'showEasing': event.detail[0].showEasing,
-                'hideEasing': event.detail[0].hideEasing,
-                'showMethod': event.detail[0].showMethod,
-                'hideMethod': event.detail[0].hideMethod
-            },
-            msg: event.detail[0].msg,
-            type: event.detail[0].type
-        }
-        toastrDispatch(obj)
-    })
-</script>
 @stack('scripts')
 {{--@livewireScripts--}}
 @livewireScriptConfig
