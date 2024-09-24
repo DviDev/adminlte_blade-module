@@ -11,21 +11,8 @@
     'primary' => true,
     'use_vite' => true,
 ])
-@once
-    @push('header_libs')
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Tempusdominus Bootstrap 4 -->
-        <!-- JQVMap -->
-        <link rel="stylesheet" href="{{asset("plugins/jqvmap/jqvmap.min.css")}}">
-        <!-- overlayScrollbars -->
-        <link rel="stylesheet" href="{{asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css")}}">
-        <!-- Date-range picker -->
-        <link rel="stylesheet" href="{{asset("plugins/daterangepicker/daterangepicker.css")}}">
-        {{--    <link rel="stylesheet" href="{{asset("plugins/summernote/summernote-bs4.min.css")}}">--}}
-        <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
-    @endpush
-@endonce
+<x-lte::plugins.fontawesome_free/>
+<x-lte::plugin.toastr_assets/>
 
 <x-lte::layout.v1
     :title="$title"

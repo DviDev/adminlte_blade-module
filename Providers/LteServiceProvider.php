@@ -4,10 +4,7 @@ namespace Modules\Lte\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Pennant\Feature;
 use Livewire\Livewire;
-use Modules\Lte\Features\User\ProfileActivity;
-use Modules\Lte\Features\User\ProfileTimeline;
 use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
 use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
 use Modules\Lte\Livewire\Layout\SidebarMenu;
@@ -84,6 +81,7 @@ class LteServiceProvider extends ServiceProvider
         Livewire::component('lte::layout.navbar.notifications', Notifications::class);
         Livewire::component('lte::page', \Modules\Lte\Http\Livewire\Page\Page::class);
         $this->app->register(RouteServiceProvider::class);
+        $this->app->register(LteEventServiceProvider::class);
     }
 
     /**
