@@ -64,6 +64,7 @@ class LteServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
+        $this->registerAssetPath();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
         $this->registerComponents();
         /*Feature::define(ProfileActivity::class);
@@ -115,6 +116,13 @@ class LteServiceProvider extends ServiceProvider
         ], ['views', $this->moduleNameLower . '-module-views']);
 
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
+    }
+
+    private function registerAssetPath(): void
+    {
+        $assetVendorPath = public_path('assets/modules/' . $this->moduleNameLower);
+        $sourceVendorPath = module_path($this->moduleName, 'Resources/assets');
+        $this->publishes([$sourceVendorPath => $assetVendorPath], 'lte-assets');
     }
 
     /**
