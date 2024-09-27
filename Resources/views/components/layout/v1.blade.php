@@ -80,6 +80,7 @@
         };
     </script>
     @livewireStyles
+    @stack('livewire_styles')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
@@ -163,7 +164,6 @@
 {{--<script src="{{asset("assets/modules/lte/dist/js/pages/dashboard.js")}}"></script>--}}
 
 @stack('scripts')
-{{--@livewireScripts--}}
-@livewireScriptConfig
+@stack('livewire_scripts')
 </body>
 </html>
