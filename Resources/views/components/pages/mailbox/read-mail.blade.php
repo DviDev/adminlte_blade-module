@@ -215,7 +215,8 @@
                                     </li>
                                     <li>
                                         <span class="mailbox-attachment-icon has-img"><img
-                                                src="{{asset('dist/img/photo1.png')}}" alt="Attachment"></span>
+                                                src="{{asset('assets/modules/lte/dist/img/photo1.png')}}"
+                                                alt="Attachment"></span>
 
                                         <div class="mailbox-attachment-info">
                                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>
@@ -229,7 +230,8 @@
                                     </li>
                                     <li>
                                         <span class="mailbox-attachment-icon has-img"><img
-                                                src="{{asset('dist/img/photo2.png')}}" alt="Attachment"></span>
+                                                src="{{asset('assets/modules/lte/dist/img/photo2.png')}}"
+                                                alt="Attachment"></span>
 
                                         <div class="mailbox-attachment-info">
                                             <a href="#" class="mailbox-attachment-name"><i class="fas fa-camera"></i>
@@ -268,12 +270,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

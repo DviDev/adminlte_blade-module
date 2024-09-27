@@ -1,6 +1,6 @@
 <x-lte::pages.layout-base title="Calendar" breadcrumb="Calendar">
     @push('styles')
-        <link rel="stylesheet" href="{{asset('plugins/fullcalendar/main.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fullcalendar/main.css')}}">
     @endpush
     <x-slot:content>
         <section class="content">
@@ -80,18 +80,18 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- jQuery UI -->
-        <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- fullCalendar 2.2.5 -->
-        <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
-        <script src="{{asset('plugins/fullcalendar/main.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/moment/moment.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/fullcalendar/main.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

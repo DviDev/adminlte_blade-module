@@ -36,7 +36,8 @@
                             <div class="list-group-item">
                                 <div class="row">
                                     <div class="col-auto">
-                                        <img class="img-fluid" src="{{asset('dist/img/photo1.png')}}" alt="Photo"
+                                        <img class="img-fluid" src="{{asset('assets/modules/lte/dist/img/photo1.png')}}"
+                                             alt="Photo"
                                              style="max-height: 160px;">
                                     </div>
                                     <div class="col px-4">
@@ -77,12 +78,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

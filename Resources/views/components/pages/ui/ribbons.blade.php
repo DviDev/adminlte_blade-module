@@ -83,7 +83,8 @@
                                 <div class="row mt-4">
                                     <div class="col-sm-4">
                                         <div class="position-relative">
-                                            <img src="{{asset('dist/img/photo1.png')}}" alt="Photo 1" class="img-fluid">
+                                            <img src="{{asset('assets/modules/lte/dist/img/photo1.png')}}" alt="Photo 1"
+                                                 class="img-fluid">
                                             <div class="ribbon-wrapper ribbon-lg">
                                                 <div class="ribbon bg-success text-lg">
                                                     Ribbon
@@ -93,7 +94,8 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="position-relative">
-                                            <img src="{{asset('dist/img/photo2.png')}}" alt="Photo 2" class="img-fluid">
+                                            <img src="{{asset('assets/modules/lte/dist/img/photo2.png')}}" alt="Photo 2"
+                                                 class="img-fluid">
                                             <div class="ribbon-wrapper ribbon-xl">
                                                 <div class="ribbon bg-warning text-lg">
                                                     Ribbon
@@ -103,7 +105,8 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="position-relative" style="min-height: 180px;">
-                                            <img src="{{asset('dist/img/photo3.jpg')}}" alt="Photo 3" class="img-fluid">
+                                            <img src="{{asset('assets/modules/lte/dist/img/photo3.jpg')}}" alt="Photo 3"
+                                                 class="img-fluid">
                                             <div class="ribbon-wrapper ribbon-xl">
                                                 <div class="ribbon bg-danger text-xl">
                                                     Ribbon
@@ -126,17 +129,17 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- Ion Slider -->
-        <script src="{{asset('plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script>
         <!-- Bootstrap slider -->
-        <script src="{{asset('plugins/bootstrap-slider/bootstrap-slider.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap-slider/bootstrap-slider.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

@@ -25,10 +25,10 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fontawesome-free/css/all.min.css')}}">
     @stack('styles')
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/dist/css/adminlte.min.css')}}">
 </head>
 <body @class([
     "hold-transition" => true,
@@ -50,7 +50,7 @@
             ])>
             @if($sidebar_collapse && $layout_top_nav)
                 <a href="{{route('home')}}" class="navbar-brand">
-                    <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
+                    <img src="{{asset('assets/modules/lte/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
                          class="brand-image img-circle elevation-3" style="opacity: .8">
                     <span class="brand-text font-weight-light">{{config('app.name')}} blaa</span>
                 </a>

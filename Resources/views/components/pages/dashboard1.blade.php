@@ -134,7 +134,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -151,7 +152,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -168,7 +170,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -185,7 +188,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -204,7 +208,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -221,7 +225,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user7-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user7-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -238,7 +242,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -255,7 +259,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user5-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user5-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -272,7 +276,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user6-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user6-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -289,7 +293,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -615,53 +619,56 @@
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <!-- Tempusdominus Bootstrap 4 -->
         <link rel="stylesheet"
-              href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+              href="{{asset('assets/modules/lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
         <!-- iCheck -->
-        <link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
         <!-- JQVMap -->
-        <link rel="stylesheet" href="{{asset('plugins/jqvmap/jqvmap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/jqvmap/jqvmap.min.css')}}">
 
         <!-- overlayScrollbars -->
-        <link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('assets/modules/lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
         <!-- Daterange picker -->
-        <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/daterangepicker/daterangepicker.css')}}">
         <!-- summernote -->
-        <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/summernote/summernote-bs4.min.css')}}">
     @endpush
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- jQuery UI 1.11.4 -->
-        <script src="{{asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <script>
             $.widget.bridge('uibutton', $.ui.button)
         </script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- ChartJS -->
-        <script src="{{asset('plugins/chart.js/Chart.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/chart.js/Chart.min.js')}}"></script>
         <!-- Sparkline -->
-        <script src="{{asset('plugins/sparklines/sparkline.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/sparklines/sparkline.js')}}"></script>
         <!-- JQVMap -->
-        <script src="{{asset('plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-        <script src="{{asset('plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
         <!-- jQuery Knob Chart -->
-        <script src="{{asset('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
         <!-- daterangepicker -->
-        <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
-        <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/moment/moment.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/daterangepicker/daterangepicker.js')}}"></script>
         <!-- Tempusdominus Bootstrap 4 -->
-        <script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+        <script
+            src="{{asset('assets/modules/lte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
         <!-- Summernote -->
-        <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/summernote/summernote-bs4.min.js')}}"></script>
         <!-- overlayScrollbars -->
-        <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+        <script
+            src="{{asset('assets/modules/lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/pages/dashboard.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

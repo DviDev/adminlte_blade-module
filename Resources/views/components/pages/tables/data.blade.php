@@ -892,32 +892,37 @@
         </section>
     </x-slot:content>
     @push('styles')
-        <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-        <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
-        <link rel="stylesheet" href="{{asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('assets/modules/lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('assets/modules/lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('assets/modules/lte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
     @endpush
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- DataTables  & Plugins -->
-        <script src="{{asset('plugins/datatables/jquery.dataTables.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
-        <script src="{{asset('plugins/jszip/jszip.min.js')}}"></script>
-        <script src="{{asset('plugins/pdfmake/pdfmake.min.js')}}"></script>
-        <script src="{{asset('plugins/pdfmake/vfs_fonts.js')}}"></script>
-        <script src="{{asset('plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
-        <script src="{{asset('plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+        <script
+            src="{{asset('assets/modules/lte/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+        <script
+            src="{{asset('assets/modules/lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jszip/jszip.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/pdfmake/pdfmake.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/pdfmake/vfs_fonts.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {
