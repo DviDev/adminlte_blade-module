@@ -9,9 +9,9 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/dist/css/adminlte.min.css')}}">
 </head>
 <body>
 <div class="wrapper">
@@ -115,10 +115,10 @@
             <!-- accepted payments column -->
             <div class="col-6">
                 <p class="lead">Payment Methods:</p>
-                <img src="{{asset('dist/img/credit/visa.png')}}" alt="Visa">
-                <img src="{{asset('dist/img/credit/mastercard.png')}}" alt="Mastercard">
-                <img src="{{asset('dist/img/credit/american-express.png')}}" alt="American Express">
-                <img src="{{asset('dist/img/credit/paypal2.png')}}" alt="Paypal">
+                <img src="{{asset('assets/modules/lte/dist/img/credit/visa.png')}}" alt="Visa">
+                <img src="{{asset('assets/modules/lte/dist/img/credit/mastercard.png')}}" alt="Mastercard">
+                <img src="{{asset('assets/modules/lte/dist/img/credit/american-express.png')}}" alt="American Express">
+                <img src="{{asset('assets/modules/lte/dist/img/credit/paypal2.png')}}" alt="Paypal">
 
                 <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
                     Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem

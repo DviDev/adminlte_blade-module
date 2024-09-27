@@ -261,17 +261,17 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- jQuery Knob -->
-        <script src="{{asset('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
         <!-- Sparkline -->
-        <script src="{{asset('plugins/sparklines/sparkline.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/sparklines/sparkline.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

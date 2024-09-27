@@ -4,7 +4,7 @@
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="{{route('login')}}" class="h1">
-                    <img src="{{asset('dist/img/app_logo.png')}}" width="150px">
+                    <img src="{{asset('assets/modules/lte/dist/img/app_logo.png')}}" width="150px">
                 </a>
             </div>
             <div class="card-body">

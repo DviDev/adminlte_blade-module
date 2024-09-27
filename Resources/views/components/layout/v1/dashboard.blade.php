@@ -3,5 +3,5 @@
 </x-lte::layout.v1.page>
 
 @push('scripts')
-    <script src="{{asset("dist/js/pages/dashboard.js")}}"></script>
+    <script src="{{asset("assets/modules/lte/dist/js/pages/dashboard.js")}}"></script>
 @endpush

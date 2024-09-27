@@ -56,16 +56,20 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar2.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar3.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -116,10 +120,12 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar2.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -170,13 +176,16 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar2.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar3.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -227,16 +236,20 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar2.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar3.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -287,13 +300,16 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar5.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar5.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -344,16 +360,20 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar2.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar2.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar3.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -404,10 +424,12 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar5.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar5.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -458,13 +480,16 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar3.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -515,16 +540,20 @@
                             <td>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar1.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar1.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar3.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar3.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar4.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar4.png')}}">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="{{asset('dist/img/avatar5.png')}}">
+                                        <img alt="Avatar" class="table-avatar"
+                                             src="{{asset('assets/modules/lte/dist/img/avatar5.png')}}">
                                     </li>
                                 </ul>
                             </td>
@@ -570,12 +599,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

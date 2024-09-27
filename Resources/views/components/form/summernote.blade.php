@@ -18,11 +18,11 @@
     $attributes->setAttributes($array);
 @endphp
 @push('styles')
-    <link rel="stylesheet" href="{{asset("plugins/summernote/summernote-bs4.min.css")}}">
+    <link rel="stylesheet" href="{{asset("assets/modules/lte/plugins/summernote/summernote-bs4.min.css")}}">
 @endpush
 @push('scripts')
     <!-- summernote scripts -->
-    <script src="{{asset("plugins/summernote/summernote-bs4.min.js")}}"></script>
+    <script src="{{asset("assets/modules/lte/plugins/summernote/summernote-bs4.min.js")}}"></script>
 
     <script>
         $('#{{$attributes->get('id')}}').summernote({

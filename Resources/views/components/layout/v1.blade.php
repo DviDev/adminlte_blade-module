@@ -33,9 +33,9 @@
     @stack('icheck-bootstrap_css')
     <!-- Theme style -->
     @if(config('app.env') == 'local')
-        <link rel="stylesheet" href="{{asset("dist/css/adminlte.css")}}">
+        <link rel="stylesheet" href="{{asset("assets/modules/lte/dist/css/adminlte.css")}}">
     @else
-        <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
+        <link rel="stylesheet" href="{{asset("assets/modules/lte/dist/css/adminlte.min.css")}}">
     @endif
     <title>{{ config('app.name') . ($title ? " - $title" : '') }}</title>
     @stack('header_libs')
@@ -135,16 +135,17 @@
     <!-- control-sidebar -->
 </div>
 <!-- ./wrapper -->
-<script src="{{asset("plugins/jquery/jquery.min.js")}}"></script>
+
+<script src="{{asset("assets/modules/lte/plugins/jquery/jquery.min.js")}}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{asset("plugins/jquery-ui/jquery-ui.min.js")}}"></script>
+<script src="{{asset("assets/modules/lte/plugins/jquery-ui/jquery-ui.min.js")}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
 @stack('bootstrap_4_js')
-<script src="{{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
+<script src="{{asset("assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
 @stack('chart_js')
 @stack('sparkline_js')
 @stack('jqvmap_js')
@@ -154,12 +155,12 @@
 @stack('overlayScrollbars_js')
 @stack('toastr_js')
 
-<script src="{{asset("dist/js/adminlte.min.js")}}"></script>
+<script src="{{asset("assets/modules/lte/dist/js/adminlte.min.js")}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset("dist/js/demo.js")}}"></script>
+<script src="{{asset("assets/modules/lte/dist/js/demo.js")}}"></script>
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-{{--<script src="{{asset("dist/js/pages/dashboard.js")}}"></script>--}}
+{{--<script src="{{asset("assets/modules/lte/dist/js/pages/dashboard.js")}}"></script>--}}
 
 @stack('scripts')
 {{--@livewireScripts--}}

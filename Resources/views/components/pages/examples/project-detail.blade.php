@@ -51,7 +51,8 @@
                                     <div class="post">
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm"
-                                                 src="{{asset('dist/img/user1-128x128.jpg')}}" alt="user image">
+                                                 src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
+                                                 alt="user image">
                                             <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                         </span>
@@ -73,7 +74,8 @@
                                     <div class="post clearfix">
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm"
-                                                 src="{{asset('dist/img/user7-128x128.jpg')}}" alt="User Image">
+                                                 src="{{asset('assets/modules/lte/dist/img/user7-128x128.jpg')}}"
+                                                 alt="User Image">
                                             <span class="username">
                           <a href="#">Sarah Ross</a>
                         </span>
@@ -94,7 +96,8 @@
                                     <div class="post">
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm"
-                                                 src="{{asset('dist/img/user1-128x128.jpg')}}" alt="user image">
+                                                 src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
+                                                 alt="user image">
                                             <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                         </span>
@@ -168,12 +171,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

@@ -4,7 +4,7 @@
             <div class="card-header text-center">
                 <div>
                     <a href="{{route('home')}}" class="h1">
-                        <img src="{{asset('dist/img/app_logo.png')}}" width="100px">
+                        <img src="{{asset('assets/modules/lte/dist/img/app_logo.png')}}" width="100px">
                     </a>
                 </div>
             </div>

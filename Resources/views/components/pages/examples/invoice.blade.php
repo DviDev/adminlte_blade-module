@@ -111,10 +111,12 @@
                                 <!-- accepted payments column -->
                                 <div class="col-6">
                                     <p class="lead">Payment Methods:</p>
-                                    <img src="{{asset('dist/img/credit/visa.png')}}" alt="Visa">
-                                    <img src="{{asset('dist/img/credit/mastercard.png')}}" alt="Mastercard">
-                                    <img src="{{asset('dist/img/credit/american-express.png')}}" alt="American Express">
-                                    <img src="{{asset('dist/img/credit/paypal2.png')}}" alt="Paypal">
+                                    <img src="{{asset('assets/modules/lte/dist/img/credit/visa.png')}}" alt="Visa">
+                                    <img src="{{asset('assets/modules/lte/dist/img/credit/mastercard.png')}}"
+                                         alt="Mastercard">
+                                    <img src="{{asset('assets/modules/lte/dist/img/credit/american-express.png')}}"
+                                         alt="American Express">
+                                    <img src="{{asset('assets/modules/lte/dist/img/credit/paypal2.png')}}" alt="Paypal">
 
                                     <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
                                         Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning
@@ -177,12 +179,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>
