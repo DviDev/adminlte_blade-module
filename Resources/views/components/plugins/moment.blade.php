@@ -1,3 +1,3 @@
 @pushonce('moment_js')
-    <script src="{{asset("plugins/moment/moment.min.js")}}"></script>
+    <script src="{{asset("assets/modules/lte/plugins/moment/moment.min.js")}}"></script>
 @endpushonce

@@ -1,3 +1,3 @@
 @pushonce('sparkline_js')
-    <script src="{{asset("plugins/sparklines/sparkline.js")}}"></script>
+    <script src="{{asset("assets/modules/lte/plugins/sparklines/sparkline.js")}}"></script>
 @endpushonce

@@ -1,14 +1,14 @@
 @pushonce('toastr_css')
-    <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/toastr/toastr.min.css')}}">
 @endpushonce
 
 @pushonce('jquery_js')
     {{--jquery necessary in toastr--}}
-    {{--<script src="{{asset("plugins/jquery/jquery.min.js")}}"></script>--}}
+    {{--<script src="{{asset("assets/modules/lte/plugins/jquery/jquery.min.js")}}"></script>--}}
 @endpushonce
 
 @pushonce('toastr_js')
-    <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
+    <script src="{{asset('assets/modules/lte/plugins/toastr/toastr.min.js')}}"></script>
     <script>
         function toastrDispatch(obj) {
             toastr.options = {

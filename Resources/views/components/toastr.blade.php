@@ -1,8 +1,8 @@
 @pushonce('styles')
-    <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/toastr/toastr.min.css')}}">
 @endpushonce
 @pushonce('scripts')
-    <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
+    <script src="{{asset('assets/modules/lte/plugins/toastr/toastr.min.js')}}"></script>
     <script>
         window.addEventListener('toastr', event => {
             const msg = event.detail.msg
