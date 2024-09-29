@@ -14,4 +14,12 @@ class SidebarMenu extends Component
     {
         return view('lte::livewire.layout.sidebar-menu');
     }
+
+    public function logout(): void
+    {
+        if (auth()->check()) {
+            auth()->logout();
+            $this->redirectRoute('login');
+        }
+    }
 }
