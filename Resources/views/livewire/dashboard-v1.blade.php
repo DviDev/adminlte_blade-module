@@ -3,7 +3,7 @@
 @endphp
 <livewire:lte::page :header="'Dashboard'">
     <x-slot name="content">
-        <livewire:app::dashboard.darshboard-v1/>
+        <livewire:app::dashboard.dashboard-v1/>
     </x-slot>
 </livewire:lte::page>
 
