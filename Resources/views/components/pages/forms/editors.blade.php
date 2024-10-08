@@ -1,12 +1,12 @@
 <x-lte::pages.layout-base title="Editors" breadcrumb="Editors">
     @push('styles')
         <!-- summernote -->
-        <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/summernote/summernote-bs4.min.css')}}">
         <!-- CodeMirror -->
-        <link rel="stylesheet" href="{{asset('plugins/codemirror/codemirror.css')}}">
-        <link rel="stylesheet" href="{{asset('plugins/codemirror/theme/monokai.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/codemirror/codemirror.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/codemirror/theme/monokai.css')}}">
         <!-- SimpleMDE -->
-        <link rel="stylesheet" href="{{asset('plugins/simplemde/simplemde.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/simplemde/simplemde.min.css')}}">
     @endpush
     <x-slot:content>
         <section class="content">
@@ -74,20 +74,20 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- Summernote -->
-        <script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/summernote/summernote-bs4.min.js')}}"></script>
         <!-- CodeMirror -->
-        <script src="{{asset('plugins/codemirror/codemirror.js')}}"></script>
-        <script src="{{asset('plugins/codemirror/mode/css/css.js')}}"></script>
-        <script src="{{asset('plugins/codemirror/mode/xml/xml.js')}}"></script>
-        <script src="{{asset('plugins/codemirror/mode/htmlmixed/htmlmixed.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/codemirror/codemirror.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/codemirror/mode/css/css.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/codemirror/mode/xml/xml.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/codemirror/mode/htmlmixed/htmlmixed.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

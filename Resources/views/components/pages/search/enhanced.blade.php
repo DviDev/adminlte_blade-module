@@ -55,19 +55,19 @@
         </section>
     </x-slot:content>
     @push('styles')
-        <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/select2/css/select2.min.css')}}">
     @endpush
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- Select2 -->
-        <script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/select2/js/select2.full.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <script>
             $(function () {
                 $('.select2').select2()

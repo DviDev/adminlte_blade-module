@@ -68,7 +68,8 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <img src="{{asset('dist/img/default-150x150.png')}}" alt="Product 1"
+                                            <img src="{{asset('assets/modules/lte/dist/img/default-150x150.png')}}"
+                                                 alt="Product 1"
                                                  class="img-circle img-size-32 mr-2">
                                             Some Product
                                         </td>
@@ -88,7 +89,8 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="{{asset('dist/img/default-150x150.png')}}" alt="Product 1"
+                                            <img src="{{asset('assets/modules/lte/dist/img/default-150x150.png')}}"
+                                                 alt="Product 1"
                                                  class="img-circle img-size-32 mr-2">
                                             Another Product
                                         </td>
@@ -108,7 +110,8 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="{{asset('dist/img/default-150x150.png')}}" alt="Product 1"
+                                            <img src="{{asset('assets/modules/lte/dist/img/default-150x150.png')}}"
+                                                 alt="Product 1"
                                                  class="img-circle img-size-32 mr-2">
                                             Amazing Product
                                         </td>
@@ -128,7 +131,8 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="{{asset('dist/img/default-150x150.png')}}" alt="Product 1"
+                                            <img src="{{asset('assets/modules/lte/dist/img/default-150x150.png')}}"
+                                                 alt="Product 1"
                                                  class="img-circle img-size-32 mr-2">
                                             Perfect Item
                                             <span class="badge bg-danger">NEW</span>
@@ -258,17 +262,17 @@
     @endpush
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE -->
-        <script src="{{asset('dist/js/adminlte.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.js')}}"></script>
 
         <!-- OPTIONAL SCRIPTS -->
-        <script src="{{asset('plugins/chart.js/Chart.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/chart.js/Chart.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{asset('dist/js/pages/dashboard3.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/pages/dashboard3.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

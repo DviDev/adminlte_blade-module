@@ -9,18 +9,24 @@
                         <div class="col-12 col-sm-6">
                             <h3 class="d-inline-block d-sm-none">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
                             <div class="col-12">
-                                <img src="{{asset('dist/img/prod-1.jpg')}}" class="product-image" alt="Product Image">
+                                <img src="{{asset('assets/modules/lte/dist/img/prod-1.jpg')}}" class="product-image"
+                                     alt="Product Image">
                             </div>
                             <div class="col-12 product-image-thumbs">
-                                <div class="product-image-thumb active"><img src="{{asset('dist/img/prod-1.jpg')}}"
+                                <div class="product-image-thumb active"><img
+                                        src="{{asset('assets/modules/lte/dist/img/prod-1.jpg')}}"
                                                                              alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="{{asset('dist/img/prod-2.jpg')}}"
+                                <div class="product-image-thumb"><img
+                                        src="{{asset('assets/modules/lte/dist/img/prod-2.jpg')}}"
                                                                       alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="{{asset('dist/img/prod-3.jpg')}}"
+                                <div class="product-image-thumb"><img
+                                        src="{{asset('assets/modules/lte/dist/img/prod-3.jpg')}}"
                                                                       alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="{{asset('dist/img/prod-4.jpg')}}"
+                                <div class="product-image-thumb"><img
+                                        src="{{asset('assets/modules/lte/dist/img/prod-4.jpg')}}"
                                                                       alt="Product Image"></div>
-                                <div class="product-image-thumb"><img src="{{asset('dist/img/prod-5.jpg')}}"
+                                <div class="product-image-thumb"><img
+                                        src="{{asset('assets/modules/lte/dist/img/prod-5.jpg')}}"
                                                                       alt="Product Image"></div>
                             </div>
                         </div>
@@ -195,13 +201,13 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <script>
             $(document).ready(function () {
                 $('.product-image-thumb').on('click', function () {

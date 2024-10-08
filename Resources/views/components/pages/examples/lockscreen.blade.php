@@ -9,9 +9,9 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{config('plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{config('dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/modules/lte/dist/css/adminlte.min.css')}}">
 </head>
 <body class="hold-transition lockscreen">
 <!-- Automatic element centering -->
@@ -26,7 +26,7 @@
     <div class="lockscreen-item">
         <!-- lockscreen image -->
         <div class="lockscreen-image">
-            <img src="{{asset('dist/img/user1-128x128.jpg')}}" alt="User Image">
+            <img src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}" alt="User Image">
         </div>
         <!-- /.lockscreen-image -->
 
@@ -60,8 +60,8 @@
 <!-- /.center -->
 
 <!-- jQuery -->
-<script src="{{config('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{config('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

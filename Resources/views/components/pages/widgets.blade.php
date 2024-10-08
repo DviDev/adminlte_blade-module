@@ -1059,7 +1059,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1076,7 +1077,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1094,7 +1096,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1162,7 +1164,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1179,7 +1182,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1197,7 +1201,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1265,7 +1269,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1282,7 +1287,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1300,7 +1306,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1368,7 +1374,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1385,7 +1392,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1403,7 +1411,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1476,7 +1484,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1493,7 +1502,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1511,7 +1521,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1579,7 +1589,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1596,7 +1607,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1614,7 +1626,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1682,7 +1694,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1699,7 +1712,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1717,7 +1731,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1785,7 +1799,8 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1802,7 +1817,8 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-infos -->
-                                        <img class="direct-chat-img" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                        <img class="direct-chat-img"
+                                             src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                              alt="Message User Image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
@@ -1820,7 +1836,7 @@
                                         <li>
                                             <a href="#">
                                                 <img class="contacts-list-img"
-                                                     src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                      alt="User Avatar">
 
                                                 <div class="contacts-list-info">
@@ -1868,7 +1884,8 @@
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header bg-warning">
                                 <div class="widget-user-image">
-                                    <img class="img-circle elevation-2" src="{{asset('dist/img/user7-128x128.jpg')}}"
+                                    <img class="img-circle elevation-2"
+                                         src="{{asset('assets/modules/lte/dist/img/user7-128x128.jpg')}}"
                                          alt="User Avatar">
                                 </div>
                                 <!-- /.widget-user-image -->
@@ -1912,7 +1929,8 @@
                                 <h5 class="widget-user-desc">Founder & CEO</h5>
                             </div>
                             <div class="widget-user-image">
-                                <img class="img-circle elevation-2" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                <img class="img-circle elevation-2"
+                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                      alt="User Avatar">
                             </div>
                             <div class="card-footer">
@@ -1953,12 +1971,13 @@
                         <div class="card card-widget widget-user">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header text-white"
-                                 style="background: url({{asset('dist/img/photo1.png')}}) center center;">
+                                 style="background: url({{asset('assets/modules/lte/dist/img/photo1.png')}}) center center;">
                                 <h3 class="widget-user-username text-right">Elizabeth Pierce</h3>
                                 <h5 class="widget-user-desc text-right">Web Designer</h5>
                             </div>
                             <div class="widget-user-image">
-                                <img class="img-circle" src="{{asset('dist/img/user3-128x128.jpg')}}" alt="User Avatar">
+                                <img class="img-circle" src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
+                                     alt="User Avatar">
                             </div>
                             <div class="card-footer">
                                 <div class="row">
@@ -2002,7 +2021,8 @@
                         <div class="card card-widget">
                             <div class="card-header">
                                 <div class="user-block">
-                                    <img class="img-circle" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                    <img class="img-circle"
+                                         src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                          alt="User Image">
                                     <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
                                     <span class="description">Shared publicly - 7:30 PM Today</span>
@@ -2023,7 +2043,8 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <img class="img-fluid pad" src="{{asset('dist/img/photo2.png')}}" alt="Photo">
+                                <img class="img-fluid pad" src="{{asset('assets/modules/lte/dist/img/photo2.png')}}"
+                                     alt="Photo">
 
                                 <p>I took this photo this morning. What do you guys think?</p>
                                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i> Share
@@ -2037,7 +2058,8 @@
                             <div class="card-footer card-comments">
                                 <div class="card-comment">
                                     <!-- User image -->
-                                    <img class="img-circle img-sm" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                    <img class="img-circle img-sm"
+                                         src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                          alt="User Image">
 
                                     <div class="comment-text">
@@ -2053,7 +2075,8 @@
                                 <!-- /.card-comment -->
                                 <div class="card-comment">
                                     <!-- User image -->
-                                    <img class="img-circle img-sm" src="{{asset('dist/img/user4-128x128.jpg')}}"
+                                    <img class="img-circle img-sm"
+                                         src="{{asset('assets/modules/lte/dist/img/user4-128x128.jpg')}}"
                                          alt="User Image">
 
                                     <div class="comment-text">
@@ -2072,7 +2095,7 @@
                             <div class="card-footer">
                                 <form action="#" method="post">
                                     <img class="img-fluid img-circle img-sm"
-                                         src="{{asset('dist/img/user4-128x128.jpg')}}"
+                                         src="{{asset('assets/modules/lte/dist/img/user4-128x128.jpg')}}"
                                          alt="Alt Text">
                                     <!-- .img-push is used to add margin to elements next to floating images -->
                                     <div class="img-push">
@@ -2091,7 +2114,8 @@
                         <div class="card card-widget">
                             <div class="card-header">
                                 <div class="user-block">
-                                    <img class="img-circle" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                    <img class="img-circle"
+                                         src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                          alt="User Image">
                                     <span class="username"><a href="#">Jonathan Burke Jr.</a></span>
                                     <span class="description">Shared publicly - 7:30 PM Today</span>
@@ -2125,7 +2149,8 @@
 
                                 <!-- Attachment -->
                                 <div class="attachment-block clearfix">
-                                    <img class="attachment-img" src="{{asset('dist/img/photo1.png')}}"
+                                    <img class="attachment-img"
+                                         src="{{asset('assets/modules/lte/dist/img/photo1.png')}}"
                                          alt="Attachment Image">
 
                                     <div class="attachment-pushed">
@@ -2155,7 +2180,8 @@
                             <div class="card-footer card-comments">
                                 <div class="card-comment">
                                     <!-- User image -->
-                                    <img class="img-circle img-sm" src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                    <img class="img-circle img-sm"
+                                         src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                          alt="User Image">
 
                                     <div class="comment-text">
@@ -2171,7 +2197,8 @@
                                 <!-- /.card-comment -->
                                 <div class="card-comment">
                                     <!-- User image -->
-                                    <img class="img-circle img-sm" src="{{asset('dist/img/user5-128x128.jpg')}}"
+                                    <img class="img-circle img-sm"
+                                         src="{{asset('assets/modules/lte/dist/img/user5-128x128.jpg')}}"
                                          alt="User Image">
 
                                     <div class="comment-text">
@@ -2191,7 +2218,7 @@
                             <div class="card-footer">
                                 <form action="#" method="post">
                                     <img class="img-fluid img-circle img-sm"
-                                         src="{{asset('dist/img/user4-128x128.jpg')}}"
+                                         src="{{asset('assets/modules/lte/dist/img/user4-128x128.jpg')}}"
                                          alt="Alt Text">
                                     <!-- .img-push is used to add margin to elements next to floating images -->
                                     <div class="img-push">
@@ -2217,7 +2244,8 @@
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header bg-warning">
                                 <div class="widget-user-image">
-                                    <img class="img-circle elevation-2" src="{{asset('dist/img/user7-128x128.jpg')}}"
+                                    <img class="img-circle elevation-2"
+                                         src="{{asset('assets/modules/lte/dist/img/user7-128x128.jpg')}}"
                                          alt="User Avatar">
                                 </div>
                                 <!-- /.widget-user-image -->
@@ -2261,7 +2289,8 @@
                                 <h5 class="widget-user-desc">Founder & CEO</h5>
                             </div>
                             <div class="widget-user-image">
-                                <img class="img-circle elevation-2" src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                <img class="img-circle elevation-2"
+                                     src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                      alt="User Avatar">
                             </div>
                             <div class="card-footer">
@@ -2302,12 +2331,13 @@
                         <div class="card card-widget widget-user shadow-lg">
                             <!-- Add the bg color to the header using any of the bg-* classes -->
                             <div class="widget-user-header text-white"
-                                 style="background: url('{{asset('dist/img/photo1.png')}}') center center;">
+                                 style="background: url('{{asset('assets/modules/lte/dist/img/photo1.png')}}') center center;">
                                 <h3 class="widget-user-username text-right">Elizabeth Pierce</h3>
                                 <h5 class="widget-user-desc text-right">Web Designer</h5>
                             </div>
                             <div class="widget-user-image">
-                                <img class="img-circle" src="{{asset('dist/img/user3-128x128.jpg')}}" alt="User Avatar">
+                                <img class="img-circle" src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
+                                     alt="User Avatar">
                             </div>
                             <div class="card-footer">
                                 <div class="row">
@@ -2351,7 +2381,8 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="card mb-2 bg-gradient-dark">
-                                    <img class="card-img-top" src="{{asset('dist/img/photo1.png')}}" alt="Dist Photo 1">
+                                    <img class="card-img-top" src="{{asset('assets/modules/lte/dist/img/photo1.png')}}"
+                                         alt="Dist Photo 1">
                                     <div class="card-img-overlay d-flex flex-column justify-content-end">
                                         <h5 class="card-title text-primary text-white">Card Title</h5>
                                         <p class="card-text text-white pb-2 pt-1">Lorem ipsum dolor sit amet,
@@ -2362,7 +2393,8 @@
                             </div>
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="card mb-2">
-                                    <img class="card-img-top" src="{{asset('dist/img/photo2.png')}}" alt="Dist Photo 2">
+                                    <img class="card-img-top" src="{{asset('assets/modules/lte/dist/img/photo2.png')}}"
+                                         alt="Dist Photo 2">
                                     <div class="card-img-overlay d-flex flex-column justify-content-center">
                                         <h5 class="card-title text-white mt-5 pt-2">Card Title</h5>
                                         <p class="card-text pb-2 pt-1 text-white">
@@ -2376,7 +2408,8 @@
                             </div>
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="card mb-2">
-                                    <img class="card-img-top" src="{{asset('dist/img/photo3.jpg')}}" alt="Dist Photo 3">
+                                    <img class="card-img-top" src="{{asset('assets/modules/lte/dist/img/photo3.jpg')}}"
+                                         alt="Dist Photo 3">
                                     <div class="card-img-overlay">
                                         <h5 class="card-title text-primary">Card Title</h5>
                                         <p class="card-text pb-1 pt-1 text-white">
@@ -2396,12 +2429,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+            <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+            <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+            <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+            <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>

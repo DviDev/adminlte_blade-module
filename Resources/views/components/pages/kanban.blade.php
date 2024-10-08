@@ -1,13 +1,14 @@
 <x-lte::pages.layout-base title="Kanban Board" breadcrumb="Kanban Board">
     @push('styles')
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fontawesome-free/css/all.min.css')}}">
         <!-- Ekko Lightbox -->
-        <link rel="stylesheet" href="{{asset('plugins/ekko-lightbox/ekko-lightbox.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/ekko-lightbox/ekko-lightbox.css')}}">
         <!-- Theme style -->
-        <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/dist/css/adminlte.min.css')}}">
         <!-- overlayScrollbars -->
-        <link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('assets/modules/lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     @endpush
     <x-slot:content_wrapper>
         <x-lte::pages.layout-base-content class="kanban" :title="'Kanban Board'" breadcrumb="Kanban Board">
@@ -189,19 +190,20 @@
     </x-slot:content_wrapper>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- Ekko Lightbox -->
-        <script src="{{asset('plugins/ekko-lightbox/ekko-lightbox.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/ekko-lightbox/ekko-lightbox.min.js')}}"></script>
         <!-- overlayScrollbars -->
-        <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+        <script
+            src="{{asset('assets/modules/lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- Filterizr-->
-        <script src="{{asset('plugins/filterizr/jquery.filterizr.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

@@ -1,7 +1,7 @@
 @once
     @push('header_libs')
         <link rel="stylesheet"
-              href="{{asset("plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")}}">
+              href="{{asset("assets/modules/lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")}}">
     @endpush
 @endonce
 @props([

@@ -1,3 +1,3 @@
 @pushonce('chart_js')
-    <script src="{{asset("plugins/chart.js/Chart.min.js")}}"></script>
+    <script src="{{asset("assets/modules/lte/plugins/chart.js/Chart.min.js")}}"></script>
 @endpushonce

@@ -1,6 +1,6 @@
 <x-lte::pages.layout-base title="Gallery" breadcrumb="Gallery">
     @push('styles')
-        <link rel="stylesheet" href="{{asset('plugins/ekko-lightbox/ekko-lightbox.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/ekko-lightbox/ekko-lightbox.css')}}">
     @endpush
     <x-slot:content>
         <section class="content">
@@ -235,17 +235,17 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- Ekko Lightbox -->
-        <script src="{{asset('plugins/ekko-lightbox/ekko-lightbox.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/ekko-lightbox/ekko-lightbox.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- Filterizr-->
-        <script src="{{asset('plugins/filterizr/jquery.filterizr.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

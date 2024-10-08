@@ -147,19 +147,19 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- FLOT CHARTS -->
-        <script src="{{asset('plugins/flot/jquery.flot.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/flot/jquery.flot.js')}}"></script>
         <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-        <script src="{{asset('plugins/flot/plugins/jquery.flot.resize.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/flot/plugins/jquery.flot.resize.js')}}"></script>
         <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-        <script src="{{asset('plugins/flot/plugins/jquery.flot.pie.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/flot/plugins/jquery.flot.pie.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

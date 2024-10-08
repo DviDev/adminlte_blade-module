@@ -1,6 +1,6 @@
 <x-lte::pages.layout-base title="uPlot Charts" breadcrumb="uPlot">
     @push('styles')
-        <link rel="stylesheet" href="{{asset('plugins/uplot/uPlot.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/uplot/uPlot.min.css')}}">
     @endpush
     <x-slot:content>
         <section class="content">
@@ -57,15 +57,15 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- uPlot -->
-        <script src="{{asset('plugins/uplot/uPlot.iife.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/uplot/uPlot.iife.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {

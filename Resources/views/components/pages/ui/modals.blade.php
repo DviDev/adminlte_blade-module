@@ -1,9 +1,10 @@
 <x-lte::pages.layout-base title="Modals & Alerts" breadcrumb="Modals & Alerts">
     @push('styles')
         <!-- SweetAlert2 -->
-        <link rel="stylesheet" href="{{asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
+        <link rel="stylesheet"
+              href="{{asset('assets/modules/lte/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
         <!-- Toastr -->
-        <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/toastr/toastr.min.css')}}">
     @endpush
     <x-slot:content>
         <section class="content">
@@ -454,17 +455,17 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- SweetAlert2 -->
-        <script src="{{asset('plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
         <!-- Toastr -->
-        <script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/toastr/toastr.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
         <!-- Page specific script -->
         <script>
             $(function () {
@@ -574,7 +575,7 @@
                         body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
                         title: 'Toast Title',
                         subtitle: 'Subtitle',
-                        image: '{{asset('dist/img/user3-128x128.jpg')}}',
+                        image: '{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}',
                         imageAlt: 'User Picture',
                     })
                 });

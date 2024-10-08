@@ -1,9 +1,9 @@
 <x-lte::pages.layout-base title="Navbar & Tabs" breadcrumb="Navbar & Tabs">
     @push('styles')
         <!-- SweetAlert2 -->
-        <link rel="stylesheet" href="{{asset('plugins/sweetalert2/sweetalert2.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/sweetalert2/sweetalert2.min.css')}}">
         <!-- Toastr -->
-        <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/toastr/toastr.min.css')}}">
     @endpush
     <x-slot:content>
         <section class="content">
@@ -75,7 +75,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 mr-3 img-circle">
                                                                 <div class="media-body">
@@ -98,7 +99,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -119,7 +121,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -241,7 +244,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 mr-3 img-circle">
                                                                 <div class="media-body">
@@ -264,7 +268,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -285,7 +290,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -410,7 +416,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 mr-3 img-circle">
                                                                 <div class="media-body">
@@ -433,7 +440,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -454,7 +462,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -577,7 +586,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 mr-3 img-circle">
                                                                 <div class="media-body">
@@ -600,7 +610,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -621,7 +632,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -746,7 +758,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 mr-3 img-circle">
                                                                 <div class="media-body">
@@ -769,7 +782,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -790,7 +804,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -912,7 +927,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user1-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 mr-3 img-circle">
                                                                 <div class="media-body">
@@ -935,7 +951,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user8-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -956,7 +973,8 @@
                                                         <a href="#" class="dropdown-item">
                                                             <!-- Message Start -->
                                                             <div class="media">
-                                                                <img src="{{asset('dist/img/user3-128x128.jpg')}}"
+                                                                <img
+                                                                    src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}"
                                                                      alt="User Avatar"
                                                                      class="img-size-50 img-circle mr-3">
                                                                 <div class="media-body">
@@ -1748,12 +1766,12 @@
     </x-slot:content>
     @push('scripts')
         <!-- jQuery -->
-        <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/jquery/jquery.min.js')}}"></script>
         <!-- Bootstrap 4 -->
-        <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <!-- AdminLTE App -->
-        <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/adminlte.min.js')}}"></script>
         <!-- AdminLTE for demo purposes -->
-        <script src="{{asset('dist/js/demo.js')}}"></script>
+        <script src="{{asset('assets/modules/lte/dist/js/demo.js')}}"></script>
     @endpush
 </x-lte::pages.layout-base>
