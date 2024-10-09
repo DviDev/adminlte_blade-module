@@ -2,11 +2,9 @@
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <div>
-                    <a href="{{route('home')}}" class="h1">
-                        <img src="{{asset('assets/modules/lte/dist/img/app_logo.png')}}" width="100px">
-                    </a>
-                </div>
+                <a href="{{route('home')}}">
+                    <img src="{{asset('assets/modules/lte/dist/img/app_logo.png')}}" width="100px">
+                </a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg h5">Criar conta</p>
