@@ -115,6 +115,11 @@ class LteServiceProvider extends ServiceProvider
             $sourcePath => $viewPath
         ], ['views', $this->moduleNameLower . '-module-views']);
 
+        $this->publishes(
+            [resource_path('views/modules/lte/components/layout/v1/') => module_path('Lte', 'Resources/views/components/layout/v1/page-card')],
+            ['views', $this->moduleNameLower . '-module-views']
+        );
+
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
     }
 
