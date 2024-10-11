@@ -25,15 +25,15 @@
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                         @foreach($items as $key => $menuItems)
-                            @continue(count($menuItems) == 0)
+                            @continue(!isset($menuItems['items']) || count($menuItems['items']) == 0)
                             @php
-                                $active = collect($menuItems)->map(fn($i) => $i['url'])->contains(Request::fullUrl());
+                                $active = collect($menuItems['items'])->map(fn($i) => $i['url'])->contains(Request::fullUrl());
                             @endphp
                             <li @class([
-                    "nav-item",
-                    "menu-open" => $active,
-                    ])>
-                                <a href="#" @class(["nav-link", "active" => $active])>
+                                "nav-item",
+                                "menu-open" => $active,
+                                ])>
+                                <a href="#" @class(["nav-link", "active" => $active]) title="{{$menuItems['title'] ?? $key}}">
                                     <i class="nav-icon fas fa-user-shield"></i>
                                     <p>
                                         {{$key}}
@@ -41,7 +41,7 @@
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
-                                    @foreach($menuItems as $item)
+                                    @foreach($menuItems['items'] as $item)
                                         <li class="nav-item">
                                             <a
                                                 {{--                                wire:navigate.hover--}}
