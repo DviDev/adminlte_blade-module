@@ -79,7 +79,6 @@
             },
         };
     </script>
-    @livewireStyles
     @stack('livewire_styles')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
