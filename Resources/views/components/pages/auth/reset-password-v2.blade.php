@@ -14,6 +14,7 @@
                 <!-- Validation Errors -->
                 <form method="POST" action="{{ route('password.update') }}">
                     @csrf
+                    @method('PUT')
                     <!-- Password Reset Token -->
                     <input type="hidden" id="token" name="token" value="{{ $token }}">
                     <!-- Email Address -->
