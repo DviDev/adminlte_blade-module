@@ -1,7 +1,7 @@
 @props([
-    'title' => __('base.attention'),
+    'title' => __('attention'),
     'confirm_label' => null,
-    'msg' => __('base.Continue').'?',
+    'msg' => ucfirst(__('continue')).'?',
     'id' => 'default',
     'danger' => false,
     'info' => false,
@@ -25,7 +25,7 @@
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">
-                    {{str(__('base.cancel'))->ucfirst()}}
+                    {{str(__('cancel'))->ucfirst()}}
                 </button>
                 <button type="button"
                         {{$attributes->class([
@@ -39,7 +39,7 @@
                     {{$attributes->filter(fn($value, $key) => $key == 'wire:click')}}
                 >
                     @if(!$confirm_label)
-                    {{str(__('base.confirm'))->ucfirst()}}
+                    {{str(__('confirm'))->ucfirst()}}
                     @else
                         {{$confirm_label}}
                     @endif
