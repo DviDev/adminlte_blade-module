@@ -1,3 +1,10 @@
+@pushonce('livewire_styles')
+    @livewireStyles
+@endpushonce
+@pushonce('livewire_scripts')
+    @livewireScripts
+    @livewireScriptConfig
+@endpushonce
 <x-lte::layout.v1.page>
     <livewire:app::config.config-list/>
 </x-lte::layout.v1.page>
