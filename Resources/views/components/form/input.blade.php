@@ -2,10 +2,10 @@
     'txt' => null,
     'label' => null,
     'placeholder' => null,
-    'attr' => null
+    'attr' => []
 ])
 @php
-    if ($attr) {
+    if (count($attr) > 0) {
         $array = collect($attr)->except(['id'])->merge($attributes->getAttributes())->all();
         if (isset($array['name'])){
             $array['name'] = trans($array['name']);
@@ -18,8 +18,6 @@
         }
         $attributes->setAttributes($array);
     }
-//    $field = collect($attributes)->first(fn($value, $key) => str($key)->contains('wire:model'))
-//            ?? $attributes['id'] ?? $attributes['name'] ?? $label;
 @endphp
 <div @class([
         'w-full',
