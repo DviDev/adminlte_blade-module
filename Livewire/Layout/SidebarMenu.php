@@ -2,6 +2,8 @@
 
 namespace Modules\Lte\Livewire\Layout;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class SidebarMenu extends Component
@@ -17,9 +19,11 @@ class SidebarMenu extends Component
 
     public function logout(): void
     {
-        if (auth()->check()) {
-            auth()->logout();
-            $this->redirectRoute('login');
-        }
+        Auth::guard('web')->logout();
+
+        Session::invalidate();
+        Session::regenerateToken();
+
+        $this->redirectRoute('login');
     }
 }
