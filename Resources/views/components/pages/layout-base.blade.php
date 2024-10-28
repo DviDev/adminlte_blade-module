@@ -138,7 +138,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{asset('/dist/img/user1-128x128.jpg')}}" alt="User Avatar"
+                                <img src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}" alt="User Avatar"
                                      class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -155,7 +155,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{asset('/dist/img/user8-128x128.jpg')}}" alt="User Avatar"
+                                <img src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}" alt="User Avatar"
                                      class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -172,7 +172,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="{{asset('/dist/img/user3-128x128.jpg')}}" alt="User Avatar"
+                                <img src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}" alt="User Avatar"
                                      class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -246,7 +246,7 @@
         ])>
         <!-- Brand Logo -->
         <a href="{{route('home')}}" class="brand-link">
-            <img src="{{asset('/dist/img/AdminLTELogo.png')}}"
+            <img src="{{asset('assets/modules/lte/dist/img/AdminLTELogo.png')}}"
                  alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">{{config('app.name')}}</span>
         </a>
@@ -256,7 +256,7 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="{{asset('/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+                    <img src="{{asset('assets/modules/lte/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">Alexander Pierce</a>
