@@ -55,10 +55,13 @@
     </style>
 
     @if($tailwind_css)
+        <!-- using tailwindcss -->
         @if($use_vite)
+            <!-- using vite -->
             @vite('resources/css/app.css')
             @vite('resources/js/app.js')
         @else
+            <!-- no using vite -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         @endif
     @endif
