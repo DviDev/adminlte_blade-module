@@ -23,7 +23,7 @@ class Page extends Component
         }
 
         if (Route::is('order')) {
-            $items[] = ['label' => 'Pedidos', 'url' => route('orders')];
+            $items[] = ['label' => 'Pedidos', 'url' => route('store.store_orders.list')];
         }
 
         if (Route::is('cart')) {
@@ -67,7 +67,7 @@ class Page extends Component
         $menu['root'][] = [
             'label' => auth()->user()->type->enum() == UserType::ADMIN || auth()->user()->type->enum() == UserType::ADMIN
                 ? 'Pedidos' : 'Pedidos / Matrículas',
-            'url' => route('orders'),
+            'url' => route('store.store_orders.list'),
             'icon' => 'far fa-shopping-bag',
             'active' => Request::is('orders')
         ];

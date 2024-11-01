@@ -36,7 +36,7 @@ class Page extends Component
         }
 
         if (Route::is('order')) {
-            $items[] = ['label' => 'Pedidos', 'url' => route('orders')];
+            $items[] = ['label' => 'Pedidos', 'url' => route('store.store_orders.list')];
         }
 
         if (Route::is('cart')) {
