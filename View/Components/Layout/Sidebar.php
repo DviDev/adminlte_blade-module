@@ -3,7 +3,7 @@
 namespace Modules\Lte\View\Components\Layout;
 
 use Illuminate\View\Component;
-use Modules\AppBuilder\Domains\MenuDomain;
+use Modules\Project\Domains\MenuDomain;
 
 class Sidebar extends Component
 {
