@@ -33,7 +33,8 @@
                                 "nav-item",
                                 "menu-open" => $active,
                                 ])>
-                                <a href="#" @class(["nav-link", "active" => $active]) title="{{$menuItems['title'] ?? $key}}">
+                                <a href="#"
+                                   @class(["nav-link", "active" => $active]) title="{{$menuItems['title'] ?? $key}}">
                                     <i class="nav-icon fas fa-user-shield"></i>
                                     <p>
                                         {{$key}}
@@ -55,84 +56,6 @@
                                 </ul>
                             </li>
                         @endforeach
-
-                        @if(isset($items['admin']))
-                            <li class="nav-item menu-open">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-user-shield"></i>
-                                    <p>Admin <i class="right fas fa-angle-left"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    @foreach($items['admin']??[] as $item)
-                                        <li class="nav-item">
-                                            <a href="{{$item['url']}}" @class(["nav-link", "active" => isset($item['active'])])>
-                                                <i class="nav-icon {{$item['icon']}}"></i>
-                                                <p>{{$item['label']}}</p>
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </li>
-                        @endif
-
-                        @if(isset($items['store']))
-                            <li class="nav-item menu-open">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-user-shield"></i>
-                                    <p>Store <i class="right fas fa-angle-left"></i></p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    @foreach($items['store']??[] as $item)
-                                        <li class="nav-item">
-                                            <a href="{{$item['url']}}"
-                                                @class(["nav-link", "active" => $item['active'] ?? false])>
-                                                <i class="nav-icon {{$item['icon']}}"></i>
-                                                <p>{{$item['label']}}</p>
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </li>
-                        @endif
-
-                        @if(isset($items['devops']))
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nav-icon fas fa-user-shield"></i>
-                                    <p>
-                                        Devops
-                                        <i class="right fas fa-angle-left"></i>
-                                    </p>
-                                </a>
-                                <ul class="nav nav-treeview">
-                                    @foreach($items['devops'] as $item)
-                                        <li class="nav-item">
-                                            <a href="{{$item['url']}}"
-                                               target="{{$item['target'] ?? '_self'}}"
-                                                @class(["nav-link", "active" => $item['active'] ?? false])>
-                                                <i class="nav-icon {{$item['icon']}}"></i>
-                                                <p>{{$item['label']}}</p>
-                                            </a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </li>
-                        @endif
-
-                        @if(auth()?->user()?->isDeveloper())
-                            @env('local')
-                                <li class="nav-item">
-                                    <a href="{{route('lte.pages.dashboard1')}}" class="nav-link">
-                                        <i class="nav-icon fas fa-file"></i>
-                                        <p>{{trans('Page Examples')}}</p>
-                                    </a>
-                                </li>
-                            @endenv
-                        @endif
-
-                        {{--        @if(\Illuminate\Support\Facades\Route::has('logout'))--}}
-                        {{--        @endif--}}
                     </ul>
                 </nav>
 
