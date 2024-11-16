@@ -4,7 +4,7 @@
 
 @pushonce('jquery_js')
     {{--jquery necessary in toastr--}}
-    {{--<script src="{{asset("assets/modules/lte/plugins/jquery/jquery.min.js")}}"></script>--}}
+    <script src="{{asset("assets/modules/lte/plugins/jquery/jquery.min.js")}}"></script>
 @endpushonce
 
 @pushonce('toastr_js')
