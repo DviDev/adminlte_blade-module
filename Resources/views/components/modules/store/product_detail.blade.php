@@ -1,3 +1,3 @@
-<x-lte::layout.page>
+<x-flowbite.flowbite-page>
     <x-store::product.product_detail :product="$product"/>
-</x-lte::layout.page>
+</x-flowbite.flowbite-page>>
