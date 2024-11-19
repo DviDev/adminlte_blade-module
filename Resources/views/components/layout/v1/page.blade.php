@@ -9,22 +9,21 @@
     "use_vite" => true
 ])
 @php
-    use Modules\App\Models\ConfigModel;
-    use Modules\App\Entities\Config\ConfigEntityModel;
+    use Modules\Base\Models\ConfigModel;
     $app_logo = ConfigModel::byValue('app_logo');
 @endphp
 <x-lte::layout.page-card
-    :tailwind_css="$tailwind_css"
-    :title="$title"
-    :header="$header"
-    :sidebar_menu_items="[]"
-    :show_cart_icon="auth()->user()?->isCustomer()"
-    :show_right_sidebar_icon="auth()->user()?->isCustomer()"
-    :show_notifications="true"
-    :app_logo="$app_logo"
-    :outline="$outline"
-    :primary="$primary"
-    :use_vite="$use_vite"
+        :tailwind_css="$tailwind_css"
+        :title="$title"
+        :header="$header"
+        :sidebar_menu_items="[]"
+        :show_cart_icon="auth()->user()?->isCustomer()"
+        :show_right_sidebar_icon="auth()->user()?->isCustomer()"
+        :show_notifications="true"
+        :app_logo="$app_logo"
+        :outline="$outline"
+        :primary="$primary"
+        :use_vite="$use_vite"
 >
     {{--@if(isset($header))
         <x-slot:card_header>

@@ -9,7 +9,7 @@
         <div class="card-body">
             <p class="mb-1">
                 @php
-                    $config = \Modules\App\Models\ConfigModel::where('value', 'termo_aceite')->get()->first();
+                    $config = \Modules\Base\Models\ConfigModel::where('value', 'termo_aceite')->get()->first();
                 @endphp
                 {!! $config->description !!}
             </p>

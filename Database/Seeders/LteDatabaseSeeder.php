@@ -3,9 +3,9 @@
 namespace Modules\Lte\Database\Seeders;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\App\Entities\Config\ConfigEntityModel;
-use Modules\App\Models\ConfigModel;
 use Modules\Base\Database\Seeders\BaseSeeder;
+use Modules\Base\Entities\Config\ConfigEntityModel;
+use Modules\Base\Models\ConfigModel;
 use Modules\Person\Entities\User\UserType;
 use Modules\Person\Models\UserTypeModel;
 
