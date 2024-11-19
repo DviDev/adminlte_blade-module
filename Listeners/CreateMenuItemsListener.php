@@ -2,9 +2,8 @@
 
 namespace Modules\Lte\Listeners;
 
-use Modules\App\Entities\User\UserType;
 use Modules\Base\Entities\Actions\Actions;
-use Modules\DBMap\Models\ModuleModel;
+use Modules\Person\Entities\User\UserType;
 use Modules\Project\Entities\MenuItem\MenuItemEntityModel;
 use Modules\Project\Events\CreateMenuItemsEvent;
 use Modules\Project\Listeners\CreateMenuItemsListenerContract;

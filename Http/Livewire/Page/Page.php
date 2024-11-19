@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Livewire\Component;
-use Modules\App\Entities\User\UserType;
+use Modules\Person\Entities\User\UserType;
 
 class Page extends Component
 {

@@ -8,7 +8,7 @@
                 </a>
             </div>
             <div class="card-body">
-                <livewire:app::auth.login/>
+                <livewire:person::auth.login/>
                 <p class="mb-1">
                     {{-- <a href="{{route('forgot-password')}}">Esqueci a senha</a> --}}
                     {{--                <a href="#">Esqueci a senha</a>--}}
