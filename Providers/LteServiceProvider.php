@@ -3,8 +3,8 @@
 namespace Modules\Lte\Providers;
 
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
+use Modules\Base\Providers\BaseServiceProviderContract;
 use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
 use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
 use Modules\Lte\Livewire\Layout\SidebarMenu;
@@ -38,11 +38,13 @@ use Modules\Lte\View\Components\Modal;
 use Modules\Lte\View\Components\Nav\Tab\Content;
 use Modules\Lte\View\Components\Nav\Tab\Item;
 use Modules\Lte\View\Components\PageAlert;
+use Modules\Lte\View\Components\Pages\Examples\Invoice;
+use Modules\Lte\View\Components\Pages\LayoutBase;
 use Modules\Lte\View\Components\Scripts\Alpine\Mask;
 use Modules\Lte\View\Components\Toastr;
 use Modules\Lte\View\Components\Todo\TodoList;
 
-class LteServiceProvider extends ServiceProvider
+class LteServiceProvider extends BaseServiceProviderContract
 {
     /**
      * @var string $moduleName
@@ -59,7 +61,7 @@ class LteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->registerTranslations();
         $this->registerConfig();
@@ -76,11 +78,8 @@ class LteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-        Livewire::component('lte::dashboard.v1', DashboardV1::class);
-        Livewire::component('lte::layout.navbar.notifications', Notifications::class);
-        Livewire::component('lte::page', \Modules\Lte\Http\Livewire\Page\Page::class);
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(LteEventServiceProvider::class);
     }
@@ -90,7 +89,7 @@ class LteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerConfig()
+    protected function registerConfig(): void
     {
         $this->publishes([
             module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
@@ -105,7 +104,7 @@ class LteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerViews()
+    public function registerViews(): void
     {
         $viewPath = resource_path('views/modules/' . $this->moduleNameLower);
 
@@ -120,7 +119,8 @@ class LteServiceProvider extends ServiceProvider
             ['views', $this->moduleNameLower . '-module-views']
         );
 
-        $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
+        $paths = array_merge($this->getPublishableViewPaths(), [$sourcePath]);
+        $this->loadViewsFrom($paths, $this->moduleNameLower);
     }
 
     private function registerAssetPath(): void
@@ -135,7 +135,7 @@ class LteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerTranslations()
+    public function registerTranslations(): void
     {
         $langPath = resource_path('lang/modules/' . $this->moduleNameLower);
 
@@ -146,17 +146,7 @@ class LteServiceProvider extends ServiceProvider
         }
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [];
-    }
-
-    private function getPublishableViewPaths(): array
+    protected function getPublishableViewPaths(): array
     {
         $paths = [];
         foreach (config('view.paths') as $path) {
@@ -167,8 +157,13 @@ class LteServiceProvider extends ServiceProvider
         return $paths;
     }
 
-    private function registerComponents()
+    protected function registerComponents(): void
     {
+        $this->publishableComponent('pages.examples.invoice', Invoice::class);
+        Livewire::component('lte::dashboard.v1', DashboardV1::class);
+        Livewire::component('lte::layout.navbar.notifications', Notifications::class);
+        Livewire::component('lte::page', \Modules\Lte\Http\Livewire\Page\Page::class);
+
         Livewire::component('lte::dashboard.dashboard-v1', DashboardV1::class);
         Livewire::component('lte::layout.navbar.notifications', Notifications::class);
         Livewire::component('lte::layout.sidebar-menu', SidebarMenu::class);
@@ -193,6 +188,7 @@ class LteServiceProvider extends ServiceProvider
         Blade::component('lte::layout.page-card', Page::class);
         Blade::component('lte::layout.sidebar', Sidebar::class);
         Blade::component('lte::layout.v1', V1::class);
+        $this->publishableComponent('pages.layout-base', LayoutBase::class);
         Blade::component('lte::nav.tab', \Modules\Lte\View\Components\Nav\Tab\Tab::class);
         Blade::component('lte::nav.tab.item', Item::class);
         Blade::component('lte::nav.tab.content', Content::class);
@@ -209,5 +205,15 @@ class LteServiceProvider extends ServiceProvider
         Blade::component('lte::modal', Modal::class);
         Blade::component('lte::page_alert', PageAlert::class);
         Blade::component('lte::toastr', Toastr::class);
+    }
+
+    public function getModuleName(): string
+    {
+        return 'Lte';
+    }
+
+    public function getModuleNameLower(): string
+    {
+        return 'lte';
     }
 }
