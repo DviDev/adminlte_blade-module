@@ -2,25 +2,20 @@
 
 namespace Modules\Lte\View\Components\Pages;
 
-use Illuminate\View\Component;
 use Illuminate\View\View;
+use Modules\DvUi\View\BaseBladeComponent;
 
-class LayoutBase extends Component
+class LayoutBase extends BaseBladeComponent
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
-    }
 
     /**
      * Get the view/contents that represent the component.
      */
     public function render(): View|string
     {
+        if ($this->published('lte.pages.layout-base')) {
+            return view('components.lte.pages.layout-base');
+        }
         return view('lte::components.pages.layout-base');
-//        return view('lte::components.pages.layout-base');
     }
 }
