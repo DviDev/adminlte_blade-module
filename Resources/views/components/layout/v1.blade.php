@@ -97,7 +97,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="{{Route::has('home') ? route('home') : '#'}}" class="brand-link p-0">
+        <a href="{{Route::has('home') ? route('home') : '#'}}"
+            @class(["brand-link text-center","p-0" => $app_logo, "p-2" => !$app_logo])>
             @if($app_logo)
                 <div class="flex flex-column justify-content-center h-[60px]">
                     <img src="{{asset($app_logo)}}" height="auto" width="180px" style="opacity: .8"
@@ -107,7 +108,6 @@
                     </div>
                 </div>
             @else
-                <x-dvui::icon.user.circle class="brand-image img-circle elevation-3 w-5"/>
                 <span class="brand-text font-weight-light">{{config('app.name')}}</span>
             @endif
         </a>
