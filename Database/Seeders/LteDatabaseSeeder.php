@@ -36,8 +36,7 @@ class LteDatabaseSeeder extends BaseSeeder
         $config = ConfigEntityModel::props();
         ConfigModel::query()->firstOrCreate([$config->name => 'app_logo',], [
             $config->name => 'app_logo',
-            $config->value => 'assets/modules/lte/dist/img/app_logo.png',
-            $config->value => asset('app_logo.png'),
+            $config->value => asset('assets/img/app_logo.png'),
             $config->description => 'application_logo',
             $config->user_id => $superAdmin->id,
             $config->default => 1,
