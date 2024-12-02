@@ -10,7 +10,7 @@
 ])
 @php
     use Modules\Base\Models\ConfigModel;
-    $app_logo = ConfigModel::byValue('app_logo');
+    $app_logo = ConfigModel::byValue('app_logo') ?: 'assets/img/app_logo.png';
 @endphp
 <x-lte::layout.page-card
         :tailwind_css="$tailwind_css"
