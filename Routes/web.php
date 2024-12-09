@@ -12,7 +12,6 @@
 */
 
 use Illuminate\Support\Facades\Route;
-use Modules\App\Models\ConfigModel;
 
 Route::prefix('lte')->group(function () {
     if (config('app.env') !== 'local') {

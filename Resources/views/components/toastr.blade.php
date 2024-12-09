@@ -1,7 +1,16 @@
 @pushonce('styles')
+    @if(config('app.env') == 'local')
+        <!-- TOASTR CSS-->
+    @endif
     <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/toastr/toastr.min.css')}}">
 @endpushonce
+
 @pushonce('scripts')
+
+    @if(config('app.env') == 'local')
+        <!-- TOASTR JS-->
+    @endif
+
     <script src="{{asset('assets/modules/lte/plugins/toastr/toastr.min.js')}}"></script>
     <script>
         window.addEventListener('toastr', event => {

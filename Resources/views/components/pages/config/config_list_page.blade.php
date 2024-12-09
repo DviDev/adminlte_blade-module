@@ -6,5 +6,5 @@
     @livewireScriptConfig
 @endpushonce
 <x-lte::layout.v1.page>
-    <livewire:app::config.config-list/>
+    <livewire:base::config.config-list/>
 </x-lte::layout.v1.page>

@@ -23,7 +23,7 @@ class DashboardV1 extends Component
      */
     public function render()
     {
-        return view('app::livewire.dashboard.dashboard-v1');
+        return view('store::livewire.dashboard.dashboard-v1');
     }
 
     public function getItems()
