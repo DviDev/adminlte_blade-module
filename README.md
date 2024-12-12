@@ -24,6 +24,10 @@ To install each component separately, publish the desired component.
 ```
 publish vendor:publish --tag=lte.form.input
 ```
+Install assets
+```
+vendor:publish --tag=lte-assets
+```
 
 </fieldset>
 
