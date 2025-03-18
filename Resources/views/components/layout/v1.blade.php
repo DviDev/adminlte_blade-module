@@ -101,8 +101,8 @@
             @class(["brand-link text-center","p-0" => $app_logo, "p-2" => !$app_logo])>
             @if($app_logo)
                 <div class="flex flex-column justify-content-center h-[60px]">
-                    <img src="{{asset($app_logo)}}" height="auto" width="180px" style="opacity: .8"
-                         class="rounded mx-auto">
+                    <img src="{{asset($app_logo)}}" style="width: 100%; height: 100%; object-fit: fill;" alt="Imagem">
+
                     <div class="brand-text font-weight-light text-sm mx-auto">
                         {{config('app.description')}}
                     </div>
