@@ -1,8 +1,7 @@
 {
     "name": "dvidev/adminlte_blade-module",
-    "type": "laravel-module",
     "description": "Admin lte blade components UI",
-    "version": "1.0.0",
+    "type": "laravel-module",
     "authors": [
         {
             "name": "Davi Menezes",
