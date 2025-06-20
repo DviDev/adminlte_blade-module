@@ -35,7 +35,7 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
         $this->createMenuItem($menu);
     }
 
-    function moduleName(): string
+    public function moduleName(): string
     {
         return config('lte.name');
     }
@@ -46,6 +46,7 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
             ->create(['name' => Actions::view->name, 'title' => trans('Page Examples')]);
         $action->firstOrCreateGroup()
             ->createCondition(UserType::DEVELOPER);
+
         return $action;
     }
 
@@ -53,11 +54,11 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
     {
         return MenuModel::firstOrCreate(
             ['name' => $name],
-            ['title' => $title, 'num_order' => $order,]
+            ['title' => $title, 'num_order' => $order]
         );
     }
 
-    protected function createMenuItem(MenuModel $menuModel, ProjectModuleEntityDBModel $entity = null, $key = null): void
+    protected function createMenuItem(MenuModel $menuModel, ?ProjectModuleEntityDBModel $entity = null, $key = null): void
     {
         $p = MenuItemEntityModel::props();
         $menuModel->menuItems()->create([

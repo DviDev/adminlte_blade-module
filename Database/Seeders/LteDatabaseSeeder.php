@@ -25,7 +25,7 @@ class LteDatabaseSeeder extends BaseSeeder
 
     protected function createConfigAppLogo(): void
     {
-        if (!config('base.default_layout') == 'lte') {
+        if (! config('base.default_layout') == 'lte') {
             return;
         }
 
@@ -34,7 +34,7 @@ class LteDatabaseSeeder extends BaseSeeder
         $superAdmin = BaseSeeder::firstOrCreateUser($superAdminTypeModel);
 
         $config = ConfigEntityModel::props();
-        ConfigModel::query()->firstOrCreate([$config->name => 'app_logo',], [
+        ConfigModel::query()->firstOrCreate([$config->name => 'app_logo'], [
             $config->name => 'app_logo',
             $config->value => asset('assets/img/app_logo.png'),
             $config->description => 'application_logo',

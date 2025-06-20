@@ -42,9 +42,9 @@ class Page extends Component
             $items[] = ['label' => 'Status', 'url' => '#'];
         }
         if (auth()->user()->type->enum() == UserType::ADMIN) {
-//            if (Route::is('admin.product')) {
+            //            if (Route::is('admin.product')) {
             $items[] = ['label' => 'Produtos', 'url' => route('admin.products')];
-//            }
+            //            }
             if (Route::is('admin.config')) {
                 $items[] = ['label' => 'Configurações', 'url' => url()->previous()];
             }
@@ -69,14 +69,14 @@ class Page extends Component
                 ? 'Pedidos' : 'Pedidos / Matrículas',
             'url' => route('store.store_orders.list'),
             'icon' => 'far fa-shopping-bag',
-            'active' => Request::is('orders')
+            'active' => Request::is('orders'),
         ];
         if (Gate::check(UserType::SUPER_ADMIN->value) || Gate::check(UserType::ADMIN->value)) {
             $menu['admin'][] = [
                 'label' => 'Produtos',
                 'url' => route('admin.products'),
                 'icon' => 'far fa-list-alt',
-                'active' => request()->routeIs('admin.products') || request()->routeIs('admin.product')
+                'active' => request()->routeIs('admin.products') || request()->routeIs('admin.product'),
             ];
 
             if (Gate::check(UserType::SUPER_ADMIN->value)) {
@@ -84,34 +84,35 @@ class Page extends Component
                     'label' => 'Configurações',
                     'url' => route('admin.configs'),
                     'icon' => 'fas fa-cog',
-                    'active' => request()->routeIs('admin.configs') || request()->routeIs('admin.config')
+                    'active' => request()->routeIs('admin.configs') || request()->routeIs('admin.config'),
                 ];
                 $menu['admin'][] = [
                     'label' => 'Relatórios',
                     'url' => route('admin.reports'),
                     'icon' => 'far fa-list-alt',
-                    'active' => request()->routeIs('admin.reports')
+                    'active' => request()->routeIs('admin.reports'),
                 ];
                 $menu['admin'][] = [
                     'label' => 'Importações',
                     'url' => route('admin.import.list'),
                     'icon' => 'far fa-list-alt',
-                    'active' => request()->routeIs('admin.import.list') || request()->routeIs('admin.import.csv') || request()->routeIs('admin.import.csv')
+                    'active' => request()->routeIs('admin.import.list') || request()->routeIs('admin.import.csv') || request()->routeIs('admin.import.csv'),
                 ];
                 $menu['admin'][] = [
                     'label' => 'Pedidos Exportações',
                     'url' => route('admin.exports'),
                     'icon' => 'far fa-list-alt',
-                    'active' => request()->routeIs('admin.exports')
+                    'active' => request()->routeIs('admin.exports'),
                 ];
                 $menu['admin'][] = [
                     'label' => 'Users',
                     'url' => route('admin.users'),
                     'icon' => 'far fa-list-alt',
-                    'active' => request()->routeIs('admin.users') || request()->routeIs('admin.user')
+                    'active' => request()->routeIs('admin.users') || request()->routeIs('admin.user'),
                 ];
             }
         }
+
         return $menu;
     }
 }
