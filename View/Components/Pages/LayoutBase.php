@@ -7,7 +7,6 @@ use Modules\DvUi\View\BaseBladeComponent;
 
 class LayoutBase extends BaseBladeComponent
 {
-
     /**
      * Get the view/contents that represent the component.
      */
@@ -16,6 +15,7 @@ class LayoutBase extends BaseBladeComponent
         if ($this->published('lte.pages.layout-base')) {
             return view('components.lte.pages.layout-base');
         }
+
         return view('lte::components.pages.layout-base');
     }
 }

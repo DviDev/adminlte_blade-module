@@ -28,7 +28,8 @@ class Button extends Component
             ['color' => 'transparent', 'value' => $this->link],
             ['color' => 'light', 'value' => $this->light],
             ['color' => 'gray', 'value' => $this->dark],
-        ])->reject(fn($color) => !$color || !$color['value'])->last();
+        ])->reject(fn ($color) => ! $color || ! $color['value'])->last();
+
         return $item ? $item['color'] : null;
     }
 }

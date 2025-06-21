@@ -30,5 +30,4 @@ class DashboardV1 extends Component
     {
         return [];
     }
-
 }

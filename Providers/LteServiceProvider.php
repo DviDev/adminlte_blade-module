@@ -47,19 +47,17 @@ use Modules\Lte\View\Components\Todo\TodoList;
 class LteServiceProvider extends BaseServiceProviderContract
 {
     /**
-     * @var string $moduleName
+     * @var string
      */
     protected $moduleName = 'Lte';
 
     /**
-     * @var string $moduleNameLower
+     * @var string
      */
     protected $moduleNameLower = 'lte';
 
     /**
      * Boot the application events.
-     *
-     * @return void
      */
     public function boot(): void
     {
@@ -75,8 +73,6 @@ class LteServiceProvider extends BaseServiceProviderContract
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register(): void
     {
@@ -86,13 +82,11 @@ class LteServiceProvider extends BaseServiceProviderContract
 
     /**
      * Register config.
-     *
-     * @return void
      */
     protected function registerConfig(): void
     {
         $this->publishes([
-            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
+            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower.'.php'),
         ], 'config');
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
@@ -101,22 +95,20 @@ class LteServiceProvider extends BaseServiceProviderContract
 
     /**
      * Register views.
-     *
-     * @return void
      */
     public function registerViews(): void
     {
-        $viewPath = resource_path('views/modules/' . $this->moduleNameLower);
+        $viewPath = resource_path('views/modules/'.$this->moduleNameLower);
 
         $sourcePath = module_path($this->moduleName, 'Resources/views');
 
         $this->publishes([
-            $sourcePath => $viewPath
-        ], ['views', $this->moduleNameLower . '-module-views']);
+            $sourcePath => $viewPath,
+        ], ['views', $this->moduleNameLower.'-module-views']);
 
         $this->publishes(
             [resource_path('views/modules/lte/components/layout/v1/') => module_path('Lte', 'Resources/views/components/layout/v1/page-card')],
-            ['views', $this->moduleNameLower . '-module-views']
+            ['views', $this->moduleNameLower.'-module-views']
         );
 
         $paths = array_merge($this->getPublishableViewPaths(), [$sourcePath]);
@@ -125,19 +117,17 @@ class LteServiceProvider extends BaseServiceProviderContract
 
     private function registerAssetPath(): void
     {
-        $assetVendorPath = public_path('assets/modules/' . $this->moduleNameLower);
+        $assetVendorPath = public_path('assets/modules/'.$this->moduleNameLower);
         $sourceVendorPath = module_path($this->moduleName, 'Resources/assets');
         $this->publishes([$sourceVendorPath => $assetVendorPath], 'lte-assets');
     }
 
     /**
      * Register translations.
-     *
-     * @return void
      */
     public function registerTranslations(): void
     {
-        $langPath = resource_path('lang/modules/' . $this->moduleNameLower);
+        $langPath = resource_path('lang/modules/'.$this->moduleNameLower);
 
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
@@ -150,10 +140,11 @@ class LteServiceProvider extends BaseServiceProviderContract
     {
         $paths = [];
         foreach (config('view.paths') as $path) {
-            if (is_dir($path . '/modules/' . $this->moduleNameLower)) {
-                $paths[] = $path . '/modules/' . $this->moduleNameLower;
+            if (is_dir($path.'/modules/'.$this->moduleNameLower)) {
+                $paths[] = $path.'/modules/'.$this->moduleNameLower;
             }
         }
+
         return $paths;
     }
 

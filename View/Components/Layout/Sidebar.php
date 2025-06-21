@@ -7,7 +7,6 @@ use Modules\Project\Domains\MenuDomain;
 
 class Sidebar extends Component
 {
-
     /**
      * Get the view / contents that represent the component.
      *
@@ -16,6 +15,7 @@ class Sidebar extends Component
     public function render()
     {
         $items = MenuDomain::list();
+
         return view('lte::components.layout.sidebar', compact('items'));
     }
 

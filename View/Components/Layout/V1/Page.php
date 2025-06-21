@@ -25,6 +25,7 @@ class Page extends Component
     public function render()
     {
         $navbar_menu_items = $this->getItems();
+
         return view('lte::components.layout.v1.page', compact('navbar_menu_items'));
     }
 
@@ -56,7 +57,6 @@ class Page extends Component
         }
         if (auth()->user()->isAdmin()) {
 
-
             if (Route::is('admin.user')) {
                 $items[] = ['label' => 'Usuários', 'url' => route('admin.users')];
             }
@@ -68,9 +68,10 @@ class Page extends Component
     protected function getItems1(bool $condition, string $label1, string $label2): array
     {
         $contains = str(url()->previous())->contains(route($condition));
+
         return [
             'label' => $contains ? $label1 : $label2,
-            'url' => $contains ? url()->previous() : route('admin.products')
+            'url' => $contains ? url()->previous() : route('admin.products'),
         ];
     }
 }
