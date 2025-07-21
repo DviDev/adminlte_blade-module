@@ -98,7 +98,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="{{Route::has('home') ? route('home') : '#'}}"
-            @class(["brand-link text-center","p-0" => $app_logo, "p-2" => !$app_logo])>
+            @class(["brand-link", "text-center p-0" => $app_logo, "p-2" => !$app_logo])>
             @if($app_logo)
                 <div class="flex flex-column justify-content-center h-[60px]">
                     <img src="{{asset($app_logo)}}" style="width: 100%; height: 100%; object-fit: fill;" alt="Imagem">
@@ -108,7 +108,15 @@
                     </div>
                 </div>
             @else
-                <span class="brand-text font-weight-light">{{config('app.name')}}</span>
+                <div class="h-[50px] flex items-center">
+                    <img src="{{asset("assets/modules/lte/dist/img/AdminLTELogo.png")}}"
+                         alt="AdminLTE Logo"
+                         class="brand-image img-circle elevation-3"
+                         style="opacity: .8">
+                    <span class="brand-text font-weight-light">
+                        {{config('app.name')}}
+                    </span>
+                </div>
             @endif
         </a>
         @if(isset($sidebar))

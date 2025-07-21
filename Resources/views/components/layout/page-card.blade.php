@@ -1,3 +1,4 @@
+@php use Modules\Base\Models\ConfigModel; @endphp
 @props([
     'title' => null,
     'header' => null,
@@ -13,7 +14,9 @@
 ])
 <x-lte::plugins.fontawesome_free/>
 <x-lte::plugin.toastr_assets/>
-
+@php
+    $app_logo = $app_logo ?? ConfigModel::byValue('app_logo');
+@endphp
 <x-lte::layout.v1
     :title="$title"
     :tailwind_css="$tailwind_css"
