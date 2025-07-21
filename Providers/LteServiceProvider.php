@@ -78,6 +78,8 @@ class LteServiceProvider extends BaseServiceProviderContract
     {
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(LteEventServiceProvider::class);
+
+        $this->app->tag(static::class, 'dvui_component_suite_tag');
     }
 
     /**
