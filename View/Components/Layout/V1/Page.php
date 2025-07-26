@@ -2,26 +2,14 @@
 
 namespace Modules\Lte\View\Components\Layout\V1;
 
+use DvUi\Traits\DevResources;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\Component;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 
 class Page extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
+    use DevResources;
     public function render()
     {
         $navbar_menu_items = $this->getItems();
@@ -73,5 +61,10 @@ class Page extends Component
             'label' => $contains ? $label1 : $label2,
             'url' => $contains ? url()->previous() : route('admin.products'),
         ];
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::LayoutV1Page;
     }
 }

@@ -2,27 +2,20 @@
 
 namespace Modules\Lte\View\Components\Chart\Morris;
 
+use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 
 class Donut extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\View\View|string
-     */
+    use DevResources;
     public function render()
     {
         return view('lte::components.chart/morris/donut');
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::MorrisDonut;
     }
 }

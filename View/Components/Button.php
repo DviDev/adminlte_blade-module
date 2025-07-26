@@ -2,15 +2,13 @@
 
 namespace Modules\Lte\View\Components;
 
+use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 
 class Button extends Component
 {
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\View\View|string
-     */
+    use DevResources;
     public function render()
     {
         return view('lte::components.button');
@@ -31,5 +29,10 @@ class Button extends Component
         ])->reject(fn ($color) => ! $color || ! $color['value'])->last();
 
         return $item ? $item['color'] : null;
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::Button;
     }
 }

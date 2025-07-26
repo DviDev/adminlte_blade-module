@@ -2,15 +2,13 @@
 
 namespace Modules\Lte\View\Components\Pages;
 
+use DvUi\Traits\DevResources;
 use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\View\BaseBladeComponent;
 
 class LayoutBase extends BaseBladeComponent
 {
-    /**
-     * Get the view/contents that represent the component.
-     */
     public function render(): View|string
     {
         if ($this->published('lte.pages.layout-base')) {

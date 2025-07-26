@@ -2,16 +2,14 @@
 
 namespace Modules\Lte\View\Components\Layout;
 
+use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\Project\Domains\MenuDomain;
 
 class Sidebar extends Component
 {
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\View\View|string
-     */
+    use DevResources;
     public function render()
     {
         $items = MenuDomain::list();
@@ -19,8 +17,8 @@ class Sidebar extends Component
         return view('lte::components.layout.sidebar', compact('items'));
     }
 
-    /*public function getSidebarMenuItems(): array
+    public function componentAlias(): DvuiComponentAlias
     {
-        return MenuDomain::list();
-    }*/
+        return DvuiComponentAlias::LayoutSidebar;
+    }
 }
