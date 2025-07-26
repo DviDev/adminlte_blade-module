@@ -2,6 +2,7 @@
 
 namespace Modules\Lte\View\Components\Form;
 
+use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\View\BaseBladeComponent;
 
 class Summernote extends BaseBladeComponent
@@ -21,5 +22,10 @@ class Summernote extends BaseBladeComponent
     public function render()
     {
         return view('lte::components.form.summernote');
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::FormSummernote;
     }
 }
