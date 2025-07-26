@@ -3,22 +3,14 @@
 namespace Modules\Lte\View\Components\Layout\V1;
 
 use Closure;
+use DvUi\Traits\DevResources;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 
 class Dashboard extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Get the view / contents that represent the component.
-     */
+    use DevResources;
     public function render(): View|Closure|string
     {
         return view('lte::components.layout.v1.dashboard');
@@ -27,5 +19,10 @@ class Dashboard extends Component
     public function getItems()
     {
         return [];
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::Dashboard;
     }
 }

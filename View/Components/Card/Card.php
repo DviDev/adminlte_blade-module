@@ -2,27 +2,25 @@
 
 namespace Modules\Lte\View\Components\Card;
 
+use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 
 class Card extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
+    use DevResources;
     public function __construct(public ?array $attr = null)
     {
         //
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\View\View|string
-     */
     public function render()
     {
         return view('lte::components.card.index');
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::Card;
     }
 }

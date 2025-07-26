@@ -2,24 +2,21 @@
 
 namespace Modules\Lte\View\Components\Pages\Examples;
 
+use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
 use Illuminate\View\View;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 
 class Invoice extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Get the view/contents that represent the component.
-     */
+    use DevResources;
     public function render(): View|string
     {
         return view('lte::components.pages/examples/invoice');
+    }
+
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::pagesExamplesInvoice;
     }
 }
