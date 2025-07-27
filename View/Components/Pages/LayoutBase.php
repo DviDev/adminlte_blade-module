@@ -2,7 +2,6 @@
 
 namespace Modules\Lte\View\Components\Pages;
 
-use DvUi\Traits\DevResources;
 use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\View\BaseBladeComponent;

@@ -2,9 +2,9 @@
 
 namespace Modules\Lte\View\Components\Layout\V1;
 
-use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
 use Modules\DvUi\Enums\DvuiComponentAlias;
+use Modules\DvUi\Traits\DevResources;
 
 class DashboardV1 extends Component
 {

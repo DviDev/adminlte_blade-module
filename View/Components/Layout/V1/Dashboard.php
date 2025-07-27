@@ -3,10 +3,10 @@
 namespace Modules\Lte\View\Components\Layout\V1;
 
 use Closure;
-use DvUi\Traits\DevResources;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use Modules\DvUi\Enums\DvuiComponentAlias;
+use Modules\DvUi\Traits\DevResources;
 
 class Dashboard extends Component
 {
