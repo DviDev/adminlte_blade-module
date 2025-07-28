@@ -2,14 +2,16 @@
 
 namespace Modules\Lte\View\Components\Form;
 
-use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
+use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
+use Modules\DvUi\Traits\DevResources;
 
 class DateMask extends Component
 {
     use DevResources;
-    public function render()
+
+    public function render(): View
     {
         return view('lte::components.form.date-mask');
     }

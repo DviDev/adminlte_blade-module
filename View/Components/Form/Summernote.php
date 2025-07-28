@@ -19,7 +19,7 @@ class Summernote extends BaseBladeComponent
         parent::__construct($attr, $label, $required, $validate, $value, $id);
     }
 
-    public function render()
+    public function render(): View
     {
         return view('lte::components.form.summernote');
     }

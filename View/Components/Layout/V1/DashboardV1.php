@@ -2,14 +2,16 @@
 
 namespace Modules\Lte\View\Components\Layout\V1;
 
-use DvUi\Traits\DevResources;
 use Illuminate\View\Component;
+use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
+use Modules\DvUi\Traits\DevResources;
 
 class DashboardV1 extends Component
 {
     use DevResources;
-    public function render()
+
+    public function render(): View
     {
         return view('store::livewire.dashboard.dashboard-v1');
     }
