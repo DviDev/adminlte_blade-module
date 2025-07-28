@@ -9,6 +9,7 @@ use Modules\DvUi\Traits\DevResources;
 class DashboardV1 extends Component
 {
     use DevResources;
+
     public function render()
     {
         return view('store::livewire.dashboard.dashboard-v1');

@@ -9,6 +9,7 @@ use Modules\DvUi\Traits\DevResources;
 class Input extends Component
 {
     use DevResources;
+
     public function render()
     {
         return view('lte::components.form.input');

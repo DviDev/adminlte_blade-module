@@ -8,7 +8,6 @@ use Modules\Lte\View\Components\Layout\Page;
 
 class ComponentMap implements DvuiComponentSuiteContract
 {
-
     public function getSuiteIdentifier(): string
     {
         return 'lte';

@@ -10,6 +10,7 @@ use Modules\DvUi\Traits\DevResources;
 class Page extends Component
 {
     use DevResources;
+
     public function render()
     {
         $navbar_menu_items = $this->getItems();

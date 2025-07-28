@@ -10,6 +10,7 @@ use Modules\DvUi\Traits\DevResources;
 class Invoice extends Component
 {
     use DevResources;
+
     public function render(): View|string
     {
         return view('lte::components.pages/examples/invoice');

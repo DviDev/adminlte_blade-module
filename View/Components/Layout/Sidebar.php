@@ -10,6 +10,7 @@ use Modules\Project\Domains\MenuDomain;
 class Sidebar extends Component
 {
     use DevResources;
+
     public function render()
     {
         $items = MenuDomain::list();

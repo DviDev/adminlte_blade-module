@@ -9,6 +9,7 @@ use Modules\DvUi\Traits\DevResources;
 class Chat extends Component
 {
     use DevResources;
+
     public function render()
     {
         return view('lte::components.chat');

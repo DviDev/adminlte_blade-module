@@ -11,6 +11,7 @@ use Modules\DvUi\Traits\DevResources;
 class Dashboard extends Component
 {
     use DevResources;
+
     public function render(): View|Closure|string
     {
         return view('lte::components.layout.v1.dashboard');

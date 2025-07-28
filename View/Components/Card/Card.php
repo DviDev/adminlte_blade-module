@@ -9,6 +9,7 @@ use Modules\DvUi\Traits\DevResources;
 class Card extends Component
 {
     use DevResources;
+
     public function __construct(public ?array $attr = null)
     {
         //
