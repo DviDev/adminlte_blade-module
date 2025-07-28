@@ -3,6 +3,7 @@
 namespace Modules\Lte\View\Components\Layout;
 
 use Illuminate\View\Component;
+use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 use Modules\Project\Domains\MenuDomain;
@@ -11,7 +12,7 @@ class Sidebar extends Component
 {
     use DevResources;
 
-    public function render()
+    public function render(): View
     {
         $items = MenuDomain::list();
 

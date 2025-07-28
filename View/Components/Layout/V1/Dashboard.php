@@ -3,8 +3,8 @@
 namespace Modules\Lte\View\Components\Layout\V1;
 
 use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 
@@ -17,7 +17,7 @@ class Dashboard extends Component
         return view('lte::components.layout.v1.dashboard');
     }
 
-    public function getItems()
+    public function getItems(): array
     {
         return [];
     }
