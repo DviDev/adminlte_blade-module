@@ -14,9 +14,9 @@ class Sidebar extends Component
 
     public function render(): View
     {
-        $items = MenuDomain::list();
-
-        return view('lte::components.layout.sidebar', compact('items'));
+        return view('lte::components.layout.sidebar', [
+            'items' => MenuDomain::list()
+        ]);
     }
 
     public function componentAlias(): DvuiComponentAlias
