@@ -13,17 +13,11 @@ use Modules\Project\Models\ProjectModuleEntityDBModel;
 
 class CreateMenuItemsListener extends CreateMenuItemsListenerContract
 {
-    /**
-     * Create the event listener.
-     */
     public function __construct()
     {
         //
     }
 
-    /**
-     * Handle the event.
-     */
     public function handle(CreateMenuItemsEvent $event): void
     {
         if (MenuModel::query()->where('name', $this->moduleName())->exists()) {
@@ -54,7 +48,7 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
     {
         return MenuModel::firstOrCreate(
             ['name' => $name],
-            ['title' => $title, 'num_order' => $order]
+            ['title' => $title, 'num_order' => $order, 'active' => true]
         );
     }
 
@@ -66,7 +60,7 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
             $p->num_order => 1,
             $p->title => trans('Page Examples'),
             $p->icon => '<i class="nav-icon fas fa-circle fa-xs text-xs"></i>',
-            $p->route => route('lte.pages.dashboard1'),
+            $p->url => route('lte.pages.dashboard1'),
             $p->active => true,
             $p->action_id => $this->getAction()->id,
         ]);
