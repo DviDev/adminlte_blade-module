@@ -2,7 +2,6 @@
 
 namespace Modules\Lte\Providers;
 
-use Illuminate\Support\Facades\Blade;
 use Livewire\Livewire;
 use Modules\Base\Providers\BaseServiceProviderContract;
 use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
@@ -162,42 +161,42 @@ class LteServiceProvider extends BaseServiceProviderContract
         Livewire::component('lte::layout.sidebar-menu', SidebarMenu::class);
         Livewire::component('lte::page', Page::class);
 
-        Blade::component('lte::card', Card::class);
-        Blade::component('lte::card.header', Header::class);
-        Blade::component('lte::card.body', Body::class);
-        Blade::component('lte::card.footer', Footer::class);
-        Blade::component('lte::card.tab', Tab::class);
-        Blade::component('lte::card.tabcontent', TabContent::class);
-        Blade::component('lte::chart.morris.donut', Donut::class);
-        Blade::component('lte::chart.morris', Morris::class);
-        Blade::component('lte::chart.sparkline', Sparkline::class);
-        Blade::component('lte::chart.word', Word::class);
-        Blade::component('lte::form.imput.date', Date::class);
-        Blade::component('lte::form.input', Input::class);
-        Blade::component('lte::form.select', Select::class);
-        Blade::component('lte::form.date-mask', DateMask::class);
-        Blade::component('lte::form.summernote', Summernote::class);
-        Blade::component('lte::layout.navbar', Navbar::class);
-        Blade::component('lte::layout.page-card', Page::class);
-        Blade::component('lte::layout.sidebar', Sidebar::class);
-        Blade::component('lte::layout.v1', V1::class);
+        $this->publishableComponent('card', Card::class);
+        $this->publishableComponent('card.header', Header::class);
+        $this->publishableComponent('card.body', Body::class);
+        $this->publishableComponent('card.footer', Footer::class);
+        $this->publishableComponent('card.tab', Tab::class);
+        $this->publishableComponent('card.tabcontent', TabContent::class);
+        $this->publishableComponent('chart.morris.donut', Donut::class);
+        $this->publishableComponent('chart.morris', Morris::class);
+        $this->publishableComponent('chart.sparkline', Sparkline::class);
+        $this->publishableComponent('chart.word', Word::class);
+        $this->publishableComponent('form.imput.date', Date::class);
+        $this->publishableComponent('form.input', Input::class);
+        $this->publishableComponent('form.select', Select::class);
+        $this->publishableComponent('form.date-mask', DateMask::class);
+        $this->publishableComponent('form.summernote', Summernote::class);
+        $this->publishableComponent('layout.navbar', Navbar::class);
+        $this->publishableComponent('layout.page-card', Page::class);
+        $this->publishableComponent('layout.sidebar', Sidebar::class);
+        $this->publishableComponent('layout.v1', V1::class);
         $this->publishableComponent('pages.layout-base', LayoutBase::class);
-        Blade::component('lte::nav.tab', \Modules\Lte\View\Components\Nav\Tab\Tab::class);
-        Blade::component('lte::nav.tab.item', Item::class);
-        Blade::component('lte::nav.tab.content', Content::class);
-        Blade::component('lte::scripts.alpine.mask', Mask::class);
-        Blade::component('lte::todo.todolist', TodoList::class);
-        Blade::component('lte::box', Box::class);
-        Blade::component('lte::button', Button::class);
-        Blade::component('lte::chat', Chat::class);
-        Blade::component('lte::error', Error::class);
-        Blade::component('lte::form', Form::class);
-        Blade::component('lte::input', \Modules\Lte\View\Components\Input::class);
-        Blade::component('lte::label', Label::class);
-        Blade::component('lte::loading', Loading::class);
-        Blade::component('lte::modal', Modal::class);
-        Blade::component('lte::page_alert', PageAlert::class);
-        Blade::component('lte::toastr', Toastr::class);
+        $this->publishableComponent('nav.tab', \Modules\Lte\View\Components\Nav\Tab\Tab::class);
+        $this->publishableComponent('nav.tab.item', Item::class);
+        $this->publishableComponent('nav.tab.content', Content::class);
+        $this->publishableComponent('scripts.alpine.mask', Mask::class);
+        $this->publishableComponent('todo.todolist', TodoList::class);
+        $this->publishableComponent('box', Box::class);
+        $this->publishableComponent('button', Button::class);
+        $this->publishableComponent('chat', Chat::class);
+        $this->publishableComponent('error', Error::class);
+        $this->publishableComponent('form', Form::class);
+        $this->publishableComponent('input', \Modules\Lte\View\Components\Input::class);
+        $this->publishableComponent('label', Label::class);
+        $this->publishableComponent('loading', Loading::class);
+        $this->publishableComponent('modal', Modal::class);
+        $this->publishableComponent('page_alert', PageAlert::class);
+        $this->publishableComponent('toastr', Toastr::class);
     }
 
     public function getModuleName(): string
