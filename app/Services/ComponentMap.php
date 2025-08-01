@@ -4,6 +4,7 @@ namespace Modules\Lte\Services;
 
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Interfaces\DvuiComponentSuiteContract;
+use Modules\Lte\View\Components\Form\Input;
 use Modules\Lte\View\Components\Layout\Page;
 
 class ComponentMap implements DvuiComponentSuiteContract
@@ -17,6 +18,7 @@ class ComponentMap implements DvuiComponentSuiteContract
     {
         return [
             DvuiComponentAlias::LayoutAdminPage->value => Page::class,
+            DvuiComponentAlias::FormInput->value => Input::class,
         ];
     }
 }

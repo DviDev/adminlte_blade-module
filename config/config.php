@@ -2,6 +2,7 @@
 
 return [
     'name' => 'Lte',
+    'name_lower' => 'lte',
     'user' => [
         'profile' => [
             'activity' => env('MODULE_LTE_USER_PROFILE_ACTIVITY', false),

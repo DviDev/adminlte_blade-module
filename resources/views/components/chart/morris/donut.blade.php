@@ -40,4 +40,7 @@
         })
     </script>
 @endpush
-<canvas id="{{$id}}-chart-canvas" height="300" style="height: 300px;"></canvas>
+<div>
+    <x-lte::dev.info :alias="$componentAlias->value"/>
+    <canvas id="{{$id}}-chart-canvas" height="300" style="height: 300px;"></canvas>
+</div>

@@ -13,7 +13,7 @@
     'use_vite' => true,
 ])
 <x-lte::plugins.fontawesome_free/>
-<x-lte::plugin.toastr_assets/>
+<x-lte::plugins.toastr_assets/>
 @php
     $app_logo = $app_logo ?? ConfigModel::byValue('app_logo');
 @endphp

@@ -6,6 +6,7 @@
     'card-header' => false,
     'px-2 pb-0 py-1' => $navs
     ])}} style="border-bottom: solid 1px #ccc">
+    <x-lte::dev.info :alias="$componentAlias->value"/>
     @if($slot && $navs)
         <ul class="nav nav-tabs" id="custom-tabs-two-tab" role="tablist">
             @if($title)

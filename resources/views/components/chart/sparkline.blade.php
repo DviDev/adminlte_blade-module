@@ -16,4 +16,7 @@
         }).draw([{{$data}}])
     </script>
 @endpush
-<div id="{{$id}}"></div>
+<div>
+    <x-lte::dev.info :alias="$componentAlias->value"/>
+    <div id="{{$id}}"></div>
+</div>

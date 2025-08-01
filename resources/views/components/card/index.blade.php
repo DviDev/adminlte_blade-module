@@ -79,7 +79,8 @@
     'card-white' => $white,
     'card-yellow' => $yellow,
     ])}}>
-    @if($header )
+    <x-lte::dev.info :alias="$componentAlias->value"/>
+    @if($header)
         <div
             @if(!is_string($header))
                 {{$header->attributes->class(["card-header py-2 flex justify-between"])}}

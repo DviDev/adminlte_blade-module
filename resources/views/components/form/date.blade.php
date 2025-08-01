@@ -9,6 +9,7 @@
 <div class="input-group date"
      data-target-input="nearest"
 >
+    <x-lte::dev.info :alias="$componentAlias->value"/>
     <input type="text" class="form-control datetimepicker-input"
            data-target="#{{$attributes->get('id')}}" {{$attributes}}/>
     <div class="input-group-append" data-target="#{{$attributes->get('id')}}" data-toggle="datetimepicker">

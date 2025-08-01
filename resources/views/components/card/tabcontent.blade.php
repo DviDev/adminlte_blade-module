@@ -12,5 +12,6 @@
      aria-labelledby="{{'custom-tabs-'.$name.'-tab'}}"
     {{$attributes}}
 >
+    <x-lte::dev.info :alias="$componentAlias->value"/>
     {{$slot}}
 </div>

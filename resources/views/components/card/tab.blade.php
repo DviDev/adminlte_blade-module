@@ -6,6 +6,7 @@
     $name = $name ?: strtolower($title);
 @endphp
 <li class="nav-item">
+    <x-lte::dev.info :alias="$componentAlias->value"/>
     <a :class="tab === '{{$name}}' ? 'nav-link active' : 'nav-link'"
        x-on:click="tab = '{{$name}}'; setStorage(tab_name, '{{$name}}')"
        id="custom-tabs-{{$name}}-tab" data-toggle="pill"
