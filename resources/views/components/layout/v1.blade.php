@@ -81,7 +81,7 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
-    @if(config('dvui.preloader'))
+    @if(config('lte.preloader'))
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="{{asset($app_logo)}}" alt="{{config('app.name')}}" height="60"
                  width="60">
