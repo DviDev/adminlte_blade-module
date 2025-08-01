@@ -81,10 +81,13 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
-    <!-- Preloader -->
-    {{--  <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="{{asset($app_logo)}}" alt="{{config('app.name')}}" height="60" width="60">
-    </div>--}}
+    @if(config('dvui.preloader'))
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="{{asset($app_logo)}}" alt="{{config('app.name')}}" height="60"
+                 width="60">
+            <div class="p-3 mt-2 rounded full bg-primary">Apoie o projeto</div>
+        </div>
+    @endif
 
     @if(isset($navbar))
         {{$navbar}}
