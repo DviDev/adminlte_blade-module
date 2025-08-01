@@ -12,4 +12,6 @@ return [
     'theme' => [
         'dark_mode' => env('MODULE_LTE_THEME_DARK_MODE', false),
     ],
+    'preloader' => env('LTE_PRELOADER', true),
+
 ];
