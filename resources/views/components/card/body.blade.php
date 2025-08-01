@@ -1,4 +1,4 @@
-<div {{$attributes->class(['card-body flex flex-col'])}}>
+<div {{$attributes->class(['card-body'])}}>
     <x-lte::dev.info :alias="$componentAlias->value"/>
     @if(isset($tabs))
         <div {{$tabs->attributes->class(["tab-content"])}} id="custom-tabs-two-tabContent">
