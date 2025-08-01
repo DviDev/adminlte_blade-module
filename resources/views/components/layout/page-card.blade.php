@@ -1,4 +1,4 @@
-@php use Modules\Base\Models\ConfigModel; @endphp
+@use(Modules\Base\Models\ConfigModel)
 @props([
     'title' => null,
     'header' => null,
@@ -43,7 +43,9 @@
                 {{$body}}
             </x-lte::card.body>
         @elseif($slot)
-            <x-lte::card.body class="p-0">{{$slot}}</x-lte::card.body>
+                <x-lte::card.body class="p-0">
+                    {{$slot}}
+                </x-lte::card.body>
         @endif
         @if(isset($footer))
             <x-lte::card.footer>{{$footer}}</x-lte::card.footer>
