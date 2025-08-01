@@ -149,13 +149,7 @@
 <!-- ./wrapper -->
 
 <script src="{{asset("assets/modules/lte/plugins/jquery/jquery.min.js")}}"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="{{asset("assets/modules/lte/plugins/jquery-ui/jquery-ui.min.js")}}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
+@stack('jquery_ui_js')
 @stack('bootstrap_4_js')
 <script src="{{asset("assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
 @stack('chart_js')
