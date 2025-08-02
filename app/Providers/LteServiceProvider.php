@@ -63,7 +63,7 @@ class LteServiceProvider extends BaseServiceProviderContract
         $this->registerConfig();
         $this->registerViews();
         $this->registerAssetPath();
-        $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
+        $this->loadMigrationsFrom(module_path($this->moduleName, 'database/Migrations'));
         $this->registerComponents();
         /*Feature::define(ProfileActivity::class);
         Feature::define(ProfileTimeline::class);*/
