@@ -1,4 +1,8 @@
-<x-lte::pages.layout-base title="ChartJs" breadcrumb="Chartjs">
+<x-lte::pages.layout-base
+    title="ChartJs"
+    breadcrumb="Chartjs"
+    :use_sidebar="true"
+>
     <x-slot:content_wrapper>
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->

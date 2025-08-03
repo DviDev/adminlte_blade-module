@@ -1,6 +1,7 @@
 <x-lte::pages.layout-base
     title="Language Menu" breadcrumb="Language Menu"
     :use_language_menu="true"
+    :use_sidebar="true"
 >
     <x-slot:content>
         <section class="content">

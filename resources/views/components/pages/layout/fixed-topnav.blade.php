@@ -1,6 +1,7 @@
 <x-lte::pages.layout-base
     title="Fixed Navbar Layout" breadcrumb="Fixed Navbar Layout"
-    :sidebar_mini="true" :layout_navbar_fixed="true">
+    :use_sidebar="true" :sidebar_mini="true" :sidebar_collapse="true"
+    :layout_navbar_fixed="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Project Detail" breadcrumb="Project Detail">
+<x-lte::pages.layout-base title="Project Detail" breadcrumb="Project Detail" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
 

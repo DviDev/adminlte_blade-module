@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="jsGrid" breadcrumb="jsGrid">
+<x-lte::pages.layout-base title="jsGrid" breadcrumb="jsGrid" :use_sidebar="true">
     @push('styles')
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/jsgrid/jsgrid.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/jsgrid/jsgrid-theme.min.css')}}">

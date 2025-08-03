@@ -1,6 +1,7 @@
 <x-lte::pages.layout-base
     title="Dashboard 1"
     breadcrumb="Dashboard 1"
+    :use_sidebar="true"
 >
     <x-slot:content>
         <section class="content">

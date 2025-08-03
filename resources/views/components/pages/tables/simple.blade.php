@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Simple Tables" breadcrumb="Simple Tables">
+<x-lte::pages.layout-base title="Simple Tables" breadcrumb="Simple Tables" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

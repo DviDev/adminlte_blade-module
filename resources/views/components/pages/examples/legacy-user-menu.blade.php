@@ -1,6 +1,7 @@
 <x-lte::pages.layout-base
     title="Legacy User Menu" breadcrumb="Legacy User Menu"
     :use_user_menu="true"
+    :use_sidebar="true"
 >
     <x-slot:content>
         <section class="content">

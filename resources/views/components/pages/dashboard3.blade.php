@@ -1,4 +1,8 @@
-<x-lte::pages.layout-base title="Dashboard 3" breadcrumb="Dashboard 3">
+<x-lte::pages.layout-base
+    title="Dashboard 3"
+    breadcrumb="Dashboard 3"
+    :use_sidebar="true"
+>
     <x-slot:content>
         <div class="content">
             <div class="container-fluid">

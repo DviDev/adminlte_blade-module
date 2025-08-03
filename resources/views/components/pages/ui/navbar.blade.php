@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Navbar & Tabs" breadcrumb="Navbar & Tabs">
+<x-lte::pages.layout-base title="Navbar & Tabs" breadcrumb="Navbar & Tabs" :use_sidebar="true">
     @push('styles')
         <!-- SweetAlert2 -->
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/sweetalert2/sweetalert2.min.css')}}">

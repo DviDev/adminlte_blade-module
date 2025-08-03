@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="General UI" breadcrumb="General">
+<x-lte::pages.layout-base title="General UI" breadcrumb="General" :use_sidebar="true">
     @push('styles')
         <style>
             .color-palette {

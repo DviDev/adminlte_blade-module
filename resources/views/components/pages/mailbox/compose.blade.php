@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Compose Message" breadcrumb="Compose Message">
+<x-lte::pages.layout-base title="Compose Message" breadcrumb="Compose Message" :use_sidebar="true">
     @push('styles')
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/summernote/summernote-bs4.min.css')}}">
     @endpush

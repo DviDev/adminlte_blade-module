@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="404 Error Page" breadcrumb="404 Error Page">
+<x-lte::pages.layout-base title="404 Error Page" breadcrumb="404 Error Page" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="error-page">

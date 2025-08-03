@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="General Form" breadcrumb="General Form">
+<x-lte::pages.layout-base title="General Form" breadcrumb="General Form" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

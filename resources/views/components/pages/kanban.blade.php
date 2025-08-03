@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Kanban Board" breadcrumb="Kanban Board">
+<x-lte::pages.layout-base title="Kanban Board" breadcrumb="Kanban Board" :use_sidebar="true">
     @push('styles')
         <!-- Font Awesome -->
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fontawesome-free/css/all.min.css')}}">

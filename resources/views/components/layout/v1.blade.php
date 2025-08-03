@@ -99,9 +99,11 @@
             @class(["brand-link", "text-center p-0" => $app_logo, "p-2" => !$app_logo])>
             @if($app_logo)
                 <div class="flex flex-column justify-content-center h-[60px]">
-                    <div class="flex items-center space-x-2 ml-3 mr-2">
-                        <img src="{{asset($app_logo)}}" style="width: 55px; height: 55px;" alt="{{config('app.name')}}">
-                        <span class="uppercase">{{config('app.name')}}</span>
+                    <div class="flex items-center py-2 ml-3 mr-2">
+                        <div class="border border-gray-500 rounded-full p-[3px]">
+                            <img src="{{asset($app_logo)}}" style="width: 40px; height: 40px;" alt="{{config('app.name')}}">
+                        </div>
+                        <span class="uppercase text-md border-y border-r border-gray-600 rounded-r-full pl-1.5 pr-3">{{config('app.name')}}</span>
                     </div>
                 </div>
             @else

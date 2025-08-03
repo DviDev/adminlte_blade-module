@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Invoice" breadcrumb="Invoice">
+<x-lte::pages.layout-base title="Invoice" breadcrumb="Invoice" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

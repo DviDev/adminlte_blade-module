@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Buttons" breadcrumb="Buttons">
+<x-lte::pages.layout-base title="Buttons" breadcrumb="Buttons" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Blank Page" breadcrumb="Blank Page">
+<x-lte::pages.layout-base title="Blank Page" breadcrumb="Blank Page" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
 

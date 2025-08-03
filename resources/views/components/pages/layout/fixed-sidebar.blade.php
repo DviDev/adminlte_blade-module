@@ -1,6 +1,6 @@
 <x-lte::pages.layout-base
     title="Fixed Sidebar" breadcrumb="Fixed Sidebar"
-    :sidebar_mini="true" :layout_fixed="true">
+    :use_sidebar="true" :sidebar_mini="true" :layout_fixed="true">
     <x-slot:content>
         <section class="content">
 

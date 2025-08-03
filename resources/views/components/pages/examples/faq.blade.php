@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="FAQ" breadcrumb="FAQ">
+<x-lte::pages.layout-base title="FAQ" breadcrumb="FAQ" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="row">

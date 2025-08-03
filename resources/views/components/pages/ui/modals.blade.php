@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Modals & Alerts" breadcrumb="Modals & Alerts">
+<x-lte::pages.layout-base title="Modals & Alerts" breadcrumb="Modals & Alerts" :use_sidebar="true">
     @push('styles')
         <!-- SweetAlert2 -->
         <link rel="stylesheet"

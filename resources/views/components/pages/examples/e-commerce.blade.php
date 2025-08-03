@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="E-commerce" breadcrumb="E-commerce">
+<x-lte::pages.layout-base title="E-commerce" breadcrumb="E-commerce" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
 
