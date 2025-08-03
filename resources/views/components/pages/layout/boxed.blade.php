@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Boxed Layout" breadcrumb="Boxed Layout" :layout_boxed="true">
+<x-lte::pages.layout-base title="Boxed Layout" breadcrumb="Boxed Layout" :layout_boxed="true" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

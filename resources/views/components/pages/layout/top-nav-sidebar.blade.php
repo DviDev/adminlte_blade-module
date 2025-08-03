@@ -1,9 +1,10 @@
 <x-lte::pages.layout-base
     title="Top Navigation + Sidebar"
     breadcrumb="Top Navigation + Sidebar"
+    :use_sidebar="true"
+    :sidebar_mini="true"
     :sidebar_collapse="true"
     :layout_top_nav="true"
-    :use_sidebar="true"
 >
     <x-slot:content>
         <div class="content">

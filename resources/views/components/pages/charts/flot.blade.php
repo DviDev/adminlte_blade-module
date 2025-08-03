@@ -1,4 +1,8 @@
-<x-lte::pages.layout-base title="Flot Charts" breadcrumb="Flot">
+<x-lte::pages.layout-base
+    title="Flot Charts"
+    breadcrumb="Flot"
+    :use_sidebar="true"
+>
     <x-slot:content>
         <!-- Main content -->
         <section class="content">

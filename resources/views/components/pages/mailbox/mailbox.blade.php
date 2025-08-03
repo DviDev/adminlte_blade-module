@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Mailbox" breadcrumb="Mailbox">
+<x-lte::pages.layout-base title="Mailbox" breadcrumb="Mailbox" :use_sidebar="true">
     @push('styles')
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     @endpush

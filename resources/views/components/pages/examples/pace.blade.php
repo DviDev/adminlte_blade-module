@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Pace" breadcrumb="Pace">
+<x-lte::pages.layout-base title="Pace" breadcrumb="Pace" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
 

@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="DataTables" breadcrumb="DataTables">
+<x-lte::pages.layout-base title="DataTables" breadcrumb="DataTables" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

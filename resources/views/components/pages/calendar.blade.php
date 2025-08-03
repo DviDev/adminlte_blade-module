@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Calendar" breadcrumb="Calendar">
+<x-lte::pages.layout-base title="Calendar" breadcrumb="Calendar" :use_sidebar="true">
     @push('styles')
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/fullcalendar/main.css')}}">
     @endpush

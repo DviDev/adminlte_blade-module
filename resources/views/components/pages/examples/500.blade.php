@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="500 Error" breadcrumb="500 Error">
+<x-lte::pages.layout-base title="500 Error" breadcrumb="500 Error" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="error-page">

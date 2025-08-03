@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="UI Ribbons" breadcrumb="UI Ribbons">
+<x-lte::pages.layout-base title="UI Ribbons" breadcrumb="UI Ribbons" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

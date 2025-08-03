@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="General Form" breadcrumb="General Form">
+<x-lte::pages.layout-base title="General Form" breadcrumb="General Form" :use_sidebar="true">
     @push('styles')
         <!-- daterange picker -->
         <link rel="stylesheet" href="{{asset("assets/modules/lte/plugins/daterangepicker/daterangepicker.css")}}">

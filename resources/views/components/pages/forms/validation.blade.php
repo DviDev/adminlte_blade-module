@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Form Validation" breadcrumb="Form validation">
+<x-lte::pages.layout-base title="Form Validation" breadcrumb="Form validation" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

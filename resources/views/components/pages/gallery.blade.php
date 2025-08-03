@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Gallery" breadcrumb="Gallery">
+<x-lte::pages.layout-base title="Gallery" breadcrumb="Gallery" :use_sidebar="true">
     @push('styles')
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/ekko-lightbox/ekko-lightbox.css')}}">
     @endpush

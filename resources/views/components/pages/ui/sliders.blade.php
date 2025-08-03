@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="UI Sliders" breadcrumb="Sliders">
+<x-lte::pages.layout-base title="UI Sliders" breadcrumb="Sliders" :use_sidebar="true">
     @push('styles')
         <!-- Ion Slider -->
         <link rel="stylesheet"

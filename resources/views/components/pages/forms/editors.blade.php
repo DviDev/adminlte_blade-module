@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Editors" breadcrumb="Editors">
+<x-lte::pages.layout-base title="Editors" breadcrumb="Editors" :use_sidebar="true">
     @push('styles')
         <!-- summernote -->
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/summernote/summernote-bs4.min.css')}}">

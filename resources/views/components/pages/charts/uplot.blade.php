@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="uPlot Charts" breadcrumb="uPlot">
+<x-lte::pages.layout-base title="uPlot Charts" breadcrumb="uPlot" :use_sidebar="true">
     @push('styles')
         <link rel="stylesheet" href="{{asset('assets/modules/lte/plugins/uplot/uPlot.min.css')}}">
     @endpush

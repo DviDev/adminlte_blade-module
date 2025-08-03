@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="User Profile" breadcrumb="User Profile">
+<x-lte::pages.layout-base title="User Profile" breadcrumb="User Profile" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

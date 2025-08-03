@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Read Mail" breadcrumb="Read Mail">
+<x-lte::pages.layout-base title="Read Mail" breadcrumb="Read Mail" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

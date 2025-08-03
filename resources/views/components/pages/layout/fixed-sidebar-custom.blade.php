@@ -1,6 +1,6 @@
 <x-lte::pages.layout-base
     title="Fixed Sidebar" breadcrumb="Fixed Sidebar"
-    :sidebar_mini="true" :layout_fixed="true" use_sidebar_custom>
+    :use_sidebar="true" :sidebar_mini="true" :layout_fixed="true" use_sidebar_custom>
 
     <x-slot:main_sidebar_custom>
         <a href="#" class="btn btn-link"><i class="fas fa-cogs"></i></a>

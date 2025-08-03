@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Simple Search Form" breadcrumb="Simple Search Form">
+<x-lte::pages.layout-base title="Simple Search Form" breadcrumb="Simple Search Form" :use_sidebar="true">
     <x-slot:content_wrapper>
         <div class="content-wrapper">
             <!-- Main content -->

@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="UI Timeline" breadcrumb="UI Timeline">
+<x-lte::pages.layout-base title="UI Timeline" breadcrumb="UI Timeline" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

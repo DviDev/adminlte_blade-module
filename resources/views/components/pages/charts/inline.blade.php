@@ -1,4 +1,8 @@
-<x-lte::pages.layout-base title="Inline Charts" breadcrumb="Inline">
+<x-lte::pages.layout-base
+    title="Inline Charts"
+    breadcrumb="Inline"
+    :use_sidebar="true"
+>
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

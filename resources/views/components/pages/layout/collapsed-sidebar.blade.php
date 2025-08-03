@@ -1,5 +1,9 @@
-<x-lte::pages.layout-base title="Collapsed Sidebar" breadcrumb="Collapsed Sidebar" :sidebar_mini="true"
-                          :sidebar_collapse="true">
+<x-lte::pages.layout-base
+    title="Collapsed Sidebar"
+    readcrumb="Collapsed Sidebar"
+    :sidebar_mini="true"
+    :sidebar_collapse="true"
+    :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

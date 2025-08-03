@@ -1,4 +1,4 @@
-<x-lte::pages.layout-base title="Icons" breadcrumb="Icons">
+<x-lte::pages.layout-base title="Icons" breadcrumb="Icons" :use_sidebar="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

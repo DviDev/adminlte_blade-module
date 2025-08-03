@@ -1,5 +1,7 @@
-<x-lte::pages.layout-base title="Fixed Footer Layout" breadcrumb="Fixed Footer Layout"
-                          :sidebar_mini="true" :footer_fixed="true">
+<x-lte::pages.layout-base
+    title="Fixed Footer Layout" breadcrumb="Fixed Footer Layout"
+    :use_sidebar="true" :sidebar_mini="true" :sidebar_collapse="true"
+    :footer_fixed="true">
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">
