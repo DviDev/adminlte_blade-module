@@ -47,6 +47,7 @@
 @endpush
 
 <div class="form-group w-full">
+    <x-lte::dev.info :alias="$componentAlias->value"/>
     @if($label = $attributes->get('label'))
         <label for="{{$attributes->get('id')}}"
                title="{{ $required ? __('validation.required', ['attribute' => $label]) : $label}}">

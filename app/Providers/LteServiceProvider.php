@@ -63,7 +63,7 @@ class LteServiceProvider extends BaseServiceProviderContract
         $this->registerConfig();
         $this->registerViews();
         $this->registerAssetPath();
-        $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
+        $this->loadMigrationsFrom(module_path($this->moduleName, 'database/Migrations'));
         $this->registerComponents();
         /*Feature::define(ProfileActivity::class);
         Feature::define(ProfileTimeline::class);*/
@@ -77,7 +77,6 @@ class LteServiceProvider extends BaseServiceProviderContract
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(LteEventServiceProvider::class);
 
-        $this->app->tag(static::class, 'dvui_component_suite_tag');
     }
 
     /**

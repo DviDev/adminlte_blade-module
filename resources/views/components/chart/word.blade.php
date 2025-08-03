@@ -42,4 +42,7 @@
         })
     </script>
 @endpush
-<div id="world-map" style="height: 250px; width: 100%;"></div>
+<div>
+    <x-lte::dev.info :alias="$componentAlias->value"/>
+    <div id="world-map" style="height: 250px; width: 100%;"></div>
+</div>

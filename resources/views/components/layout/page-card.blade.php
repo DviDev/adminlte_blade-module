@@ -1,4 +1,4 @@
-@php use Modules\Base\Models\ConfigModel; @endphp
+@use(Modules\Base\Models\ConfigModel)
 @props([
     'title' => null,
     'header' => null,
@@ -13,7 +13,7 @@
     'use_vite' => true,
 ])
 <x-lte::plugins.fontawesome_free/>
-<x-lte::plugin.toastr_assets/>
+<x-lte::plugins.toastr_assets/>
 @php
     $app_logo = $app_logo ?? ConfigModel::byValue('app_logo');
 @endphp
@@ -43,7 +43,9 @@
                 {{$body}}
             </x-lte::card.body>
         @elseif($slot)
-            <x-lte::card.body class="p-0">{{$slot}}</x-lte::card.body>
+                <x-lte::card.body class="p-0">
+                    {{$slot}}
+                </x-lte::card.body>
         @endif
         @if(isset($footer))
             <x-lte::card.footer>{{$footer}}</x-lte::card.footer>

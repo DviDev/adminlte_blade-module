@@ -1,25 +1,32 @@
 <x-lte::plugins.tempusdominus/>
-@props([
-    'attr' => null
-])
+<x-lte::plugins.daterangepicker/>
+
 @php
     use Modules\Base\View\Components\Form\BaseFormBladeComponent;
-    BaseFormBladeComponent::prepare($attr, $attributes);
+    BaseFormBladeComponent::prepare($attributes);
 @endphp
-<div class="input-group date"
-     data-target-input="nearest"
->
-    <input type="text" class="form-control datetimepicker-input"
-           data-target="#{{$attributes->get('id')}}" {{$attributes}}/>
-    <div class="input-group-append" data-target="#{{$attributes->get('id')}}" data-toggle="datetimepicker">
-        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+<div>
+    <div class="form-group">
+        <x-lte::dev.info :alias="$componentAlias->value"/>
+        @if($label)
+            <label>{{$label}}</label>
+        @endif
+        <div class="input-group date" id="{{$attributes->get('id')}}" data-target-input="nearest">
+            <input type="text" class="form-control datetimepicker-input"
+                   data-target="#{{$attributes->get('id')}}"/>
+            <div class="input-group-append" data-target="#{{$attributes->get('id')}}" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+        </div>
     </div>
+
 </div>
+
 @push('scripts')
-    <script type="text/javascript">
+    <script>
         $(function () {
             $('#{{$attributes->get('id')}}').datetimepicker({
-                locale: '{{config('app.locale')}}'
+                format: 'L'
             });
         });
     </script>

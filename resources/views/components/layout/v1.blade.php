@@ -10,7 +10,7 @@
     use \Illuminate\Support\Facades\Route;
 @endphp
     <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => config('lte.theme.dark_mode')])
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => config('lte.theme.dark_mode')])>
 
 <head>
     <meta charset="utf-8">
@@ -31,12 +31,7 @@
     {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>--}}
     <!-- iCheck -->
     @stack('icheck-bootstrap_css')
-    <!-- Theme style -->
-    @if(config('app.env') == 'local')
-        <link rel="stylesheet" href="{{asset("assets/modules/lte/dist/css/adminlte.css")}}">
-    @else
-        <link rel="stylesheet" href="{{asset("assets/modules/lte/dist/css/adminlte.min.css")}}">
-    @endif
+
     <title>{{ config('app.name') . ($title ? " - $title" : '') }}</title>
     @stack('header_libs')
     @stack('header_libs2')
@@ -47,12 +42,12 @@
     @stack('overlayScrollbars_css')
     @stack('daterangepicker_css')
     @stack('toastr_css')
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-        }
-    </style>
+    <!-- Theme style -->
+    @if(config('app.env') == 'local')
+        <link rel="stylesheet" href="{{asset("assets/modules/lte/dist/css/adminlte.css")}}">
+    @else
+        <link rel="stylesheet" href="{{asset("assets/modules/lte/dist/css/adminlte.min.css")}}">
+    @endif
 
     @if($tailwind_css)
         <!-- using tailwindcss -->
@@ -86,10 +81,13 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
-    <!-- Preloader -->
-    {{--  <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="{{asset($app_logo)}}" alt="{{config('app.name')}}" height="60" width="60">
-    </div>--}}
+    @if(config('lte.preloader'))
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="{{asset($app_logo)}}" alt="{{config('app.name')}}" height="60"
+                 width="60">
+            <div class="p-3 mt-2 rounded full bg-primary">Apoie o projeto</div>
+        </div>
+    @endif
 
     @if(isset($navbar))
         {{$navbar}}
@@ -101,10 +99,9 @@
             @class(["brand-link", "text-center p-0" => $app_logo, "p-2" => !$app_logo])>
             @if($app_logo)
                 <div class="flex flex-column justify-content-center h-[60px]">
-                    <img src="{{asset($app_logo)}}" style="width: 100%; height: 100%; object-fit: fill;" alt="Imagem">
-
-                    <div class="brand-text font-weight-light text-sm mx-auto">
-                        {{config('app.description')}}
+                    <div class="flex items-center space-x-2 ml-3 mr-2">
+                        <img src="{{asset($app_logo)}}" style="width: 55px; height: 55px;" alt="{{config('app.name')}}">
+                        <span class="uppercase">{{config('app.name')}}</span>
                     </div>
                 </div>
             @else
@@ -125,7 +122,11 @@
     </aside>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper p-2 flex flex-column">
-        {{$slot}}
+        <div class="content">
+            <div class="container-fluid">
+                {{$slot}}
+            </div>
+        </div>
     </div>
     <!-- content-wrapper -->
     <footer class="main-footer">
@@ -148,13 +149,7 @@
 <!-- ./wrapper -->
 
 <script src="{{asset("assets/modules/lte/plugins/jquery/jquery.min.js")}}"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="{{asset("assets/modules/lte/plugins/jquery-ui/jquery-ui.min.js")}}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
+@stack('jquery_ui_js')
 @stack('bootstrap_4_js')
 <script src="{{asset("assets/modules/lte/plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
 @stack('chart_js')
@@ -167,11 +162,6 @@
 @stack('toastr_js')
 
 <script src="{{asset("assets/modules/lte/dist/js/adminlte.min.js")}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset("assets/modules/lte/dist/js/demo.js")}}"></script>
-
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-{{--<script src="{{asset("assets/modules/lte/dist/js/pages/dashboard.js")}}"></script>--}}
 
 @stack('scripts')
 @stack('livewire_scripts')

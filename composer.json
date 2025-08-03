@@ -18,8 +18,8 @@
     "autoload": {
         "psr-4": {
             "Modules\\Lte\\": "app/",
-            "Modules\\Insur\\Database\\Factories\\": "database/factories/",
-            "Modules\\Insur\\Database\\Seeders\\": "database/seeders/"
+            "Modules\\Lte\\Database\\Migrations\\": "database/Migrations/",
+            "Modules\\Lte\\Database\\Seeders\\": "database/Seeders/"
         }
     }
 }

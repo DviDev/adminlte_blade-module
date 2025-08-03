@@ -37,8 +37,10 @@
             {{$body}}
         </x-slot:body>
     @else
-        <x-slot:body class="p-0 border-b flex flex-col">
-            {{$slot}}
+        <x-slot:body>
+            <div class="grow flex flex-col">
+                {{$slot}}
+            </div>
         </x-slot:body>
     @endif
 

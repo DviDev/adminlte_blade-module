@@ -23,6 +23,7 @@
         'w-full',
         "form-group" => $label
         ])>
+    <x-lte::dev.info :alias="$componentAlias->value"/>
     <x-lte::input
         :txt="$txt ?? $label"
         :label="$label"

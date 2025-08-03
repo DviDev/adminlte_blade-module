@@ -4,9 +4,8 @@
     'show_right_sidebar_icon' => true,
     'show_notifications' => false,
 ])
-@php
-    use Illuminate\Support\Facades\Route;
-@endphp
+@use(Illuminate\Support\Facades\Route)
+@use(Modules\Chat\Models\ChatCategoryChannelTopicModel)
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -51,67 +50,49 @@
                 <livewire:store::cart.cart-icon-items :product="$product"/>
             @endif
         </li>
-        <!-- Messages Dropdown Menu -->
-        {{--<li class="nav-item dropdown">
+        <!-- Todo - Verificar se seria legal incluir aqui o Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
                 <i class="far fa-comments"></i>
-                <span class="badge badge-danger navbar-badge">3</span>
+                @php
+                    $messagesQuery = ChatCategoryChannelTopicModel::query()
+                        ->where('user_id', auth()->user()->id);
+
+                    /**@var \Illuminate\Support\Collection|ChatCategoryChannelTopicModel[] $messages*/
+                @endphp
+                <span class="badge badge-danger navbar-badge">{{$messagesQuery->count()}}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}" alt="User Avatar"
-                             class="img-size-50 mr-3 img-circle">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Brad Diesel
-                                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">Call me whenever you can...</p>
-                            <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+               @php
+                   $messages = $messagesQuery->limit(5)->get()->all();
+               @endphp
+                @foreach($messages as $message)
+                    <a href="#" class="dropdown-item">
+                        <!-- Message Start -->
+                        <div class="media">
+                            {{--<img src="{{asset('assets/modules/lte/dist/img/user1-128x128.jpg')}}" alt="User Avatar"
+                                 class="img-size-50 mr-3 img-circle">--}}
+                            <div class="bg-gray-100 rounded-full border h-[50px] w-[50px] mr-3 flex items-center justify-center shadow-sm text-blue-300">
+                                <x-dvui::icon.user s8 fill/>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="dropdown-item-title">
+                                    {{str($message->user->name)->words(2, '')}}
+                                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                </h3>
+                                <p class="text-sm">{{str($message->title)->words(4)}}...</p>
+                                <p class="text-sm text-muted">
+                                    <i class="far fa-clock mr-1"></i> {{$message->created_at->diffForHumans()}}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="{{asset('assets/modules/lte/dist/img/user8-128x128.jpg')}}" alt="User Avatar"
-                             class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                John Pierce
-                                <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">I got your message bro</p>
-                            <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="{{asset('assets/modules/lte/dist/img/user3-128x128.jpg')}}" alt="User Avatar"
-                             class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Nora Silvester
-                                <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">The subject goes here</p>
-                            <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
+                        <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                @endforeach
                 <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
             </div>
-        </li>--}}
+        </li>
         <!-- Notifications Dropdown Menu -->
         @if($show_notifications)
             <li class="nav-item dropdown">

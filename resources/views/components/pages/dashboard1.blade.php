@@ -1,4 +1,7 @@
-<x-lte::pages.layout-base title="Dashboard 1" breadcrumb="Dashboard 1">
+<x-lte::pages.layout-base
+    title="Dashboard 1"
+    breadcrumb="Dashboard 1"
+>
     <x-slot:content>
         <section class="content">
             <div class="container-fluid">

@@ -17,6 +17,7 @@
             "form-control"
         ])}}
             @required($required) @disabled($disable) {{$attributes}}>
+            <x-lte::dev.info :alias="$componentAlias->value"/>
             @if($slot)
                 {{$slot}}
             @endif

@@ -2,12 +2,12 @@
 
 namespace Modules\Lte\View\Components\Form;
 
-use Illuminate\View\Component;
 use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
+use Modules\DvUi\View\BaseBladeComponent;
 
-class Date extends Component
+class Date extends BaseBladeComponent
 {
     use DevResources;
 
