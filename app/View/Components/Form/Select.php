@@ -2,12 +2,12 @@
 
 namespace Modules\Lte\View\Components\Form;
 
-use Illuminate\View\Component;
 use Illuminate\View\View;
+use Modules\Base\View\Components\Form\BaseFormBladeComponent;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 
-class Select extends Component
+class Select extends BaseFormBladeComponent
 {
     use DevResources;
 
