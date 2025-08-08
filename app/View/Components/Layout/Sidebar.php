@@ -15,7 +15,7 @@ class Sidebar extends Component
     public function render(): View
     {
         return view('lte::components.layout.sidebar', [
-            'items' => MenuDomain::list()
+            'items' => MenuDomain::list(),
         ]);
     }
 

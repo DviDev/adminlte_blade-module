@@ -49,6 +49,7 @@ class LteServiceProvider extends BaseServiceProviderContract
      * @var string
      */
     protected $moduleName = 'Lte';
+
     /**
      * @var string
      */
