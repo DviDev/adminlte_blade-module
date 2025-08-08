@@ -2,6 +2,7 @@
 
 namespace Modules\Lte\View\Components\Form;
 
+use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\View\BaseBladeComponent;
 
