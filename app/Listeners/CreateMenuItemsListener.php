@@ -2,13 +2,14 @@
 
 namespace Modules\Lte\Listeners;
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Base\Entities\Actions\Actions;
+use Modules\Permission\Models\PermissionActionModel;
 use Modules\Person\Entities\User\UserType;
 use Modules\Project\Entities\MenuItem\MenuItemEntityModel;
 use Modules\Project\Events\CreateMenuItemsEvent;
 use Modules\Project\Listeners\CreateMenuItemsListenerContract;
 use Modules\Project\Models\MenuModel;
-use Modules\Project\Models\ProjectActionModel;
 use Modules\Project\Models\ProjectModuleEntityDBModel;
 
 class CreateMenuItemsListener extends CreateMenuItemsListenerContract
@@ -34,9 +35,9 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
         return config('lte.name');
     }
 
-    protected function getAction(): ProjectActionModel
+    protected function getAction(): PermissionActionModel
     {
-        $action = ProjectActionModel::query()
+        $action = PermissionActionModel::query()
             ->create(['name' => Actions::view->name, 'title' => trans('Page Examples')]);
         $action->firstOrCreateGroup()
             ->createCondition(UserType::DEVELOPER);
@@ -44,6 +45,7 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
         return $action;
     }
 
+    /**@return MenuModel|Model */
     protected function createMenu($name, $title, $order = 1): MenuModel
     {
         return MenuModel::firstOrCreate(
