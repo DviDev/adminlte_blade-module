@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Base\Database\Seeders\BaseSeeder;
 use Modules\Base\Entities\Config\ConfigEntityModel;
 use Modules\Base\Models\ConfigModel;
-use Modules\Person\Entities\User\UserType;
+use Modules\Person\Enums\UserType;
 use Modules\Person\Models\UserTypeModel;
 
 class LteDatabaseSeeder extends BaseSeeder
