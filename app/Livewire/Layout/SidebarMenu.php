@@ -9,6 +9,7 @@ use Livewire\Component;
 class SidebarMenu extends Component
 {
     public $items = [];
+
     protected $listeners = ['menuItemUpdated' => '$refresh'];
 
     public function render()

@@ -25,7 +25,7 @@ class LteDatabaseSeeder extends BaseSeeder
 
     protected function createConfigAppLogo(): void
     {
-        if (!config('base.default_layout') == 'lte') {
+        if (! config('base.default_layout') == 'lte') {
             return;
         }
 
