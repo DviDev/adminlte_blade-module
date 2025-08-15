@@ -1,15 +1,27 @@
 <x-lte::plugins.tempusdominus/>
 <x-lte::plugins.daterangepicker/>
-
+@props([
+    'attr' => [],
+])
 @php
     use Modules\Base\View\Components\Form\BaseFormBladeComponent;
+
+    $array = collect($attr)->except('id')->merge($attributes->getAttributes())->all();
+    $attributes->setAttributes($array);
     BaseFormBladeComponent::prepare($attributes);
 @endphp
 <div>
     <div class="form-group">
         <x-lte::dev.info :alias="$componentAlias->value"/>
-        @if($label)
-            <label>{{$label}}</label>
+        @if($attributes->get('label'))
+            @php
+                $field = $attributes['id']
+                            ?? $attributes['name']
+                            ?? collect($attributes)->first(fn($value, $key) => str($key)->contains('wire:model'));
+            @endphp
+            @if($attributes->has('label'))
+                <x-lte::label for="{{$field}}" :required="$attributes->get('required')" :value="$attributes->get('label')"/>
+            @endif
         @endif
         <div class="input-group date" id="{{$attributes->get('id')}}" data-target-input="nearest">
             <input type="text" class="form-control datetimepicker-input"
