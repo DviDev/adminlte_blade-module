@@ -3,7 +3,7 @@
 namespace Modules\Lte\Providers;
 
 use Livewire\Livewire;
-use Modules\Base\Providers\BaseServiceProviderContract;
+use Modules\Base\Contracts\BaseServiceProviderContract;
 use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
 use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
 use Modules\Lte\Livewire\Layout\SidebarMenu;
