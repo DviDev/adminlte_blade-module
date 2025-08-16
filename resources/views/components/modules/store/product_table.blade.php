@@ -2,7 +2,7 @@
     'products'
 ])
 <x-lte::layout.page>
-    <x-lte::card :card_id="'page_'.random_int(1000, 2000)" :outline="true" :primary="true">
+    <x-lte::card :card_id="'page_'.now()->timestamp.\Str::random(5)" :outline="true" :primary="true">
         <x-lte::card.header title="Products" :navs="false">
             <div class="flex">
                 <a href="{{url()->previous()}}" class="border rounded border-gray-200 px-2 py-1">
