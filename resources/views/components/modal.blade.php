@@ -17,8 +17,8 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <p>{{$msg}}</p>
+            <div class="modal-body text-center">
+                <div>{{$msg}}</div>
                 @if(isset($slot))
                     {{$slot}}
                 @endif
