@@ -34,7 +34,7 @@
         <x-lte::layout.sidebar/>
     </x-slot:sidebar>
     <x-lte::page_alert toastr/>
-    <x-lte::card :card_id="'page_'.random_int(1000, 2000)" :header="$header" :outline="$outline" :primary="$primary">
+    <x-lte::card :card_id="'page_'.now()->timestamp.\Str::random(5)" :header="$header" :outline="$outline" :primary="$primary">
         @if(isset($card_header))
             {{$card_header}}
         @endif

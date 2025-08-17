@@ -38,7 +38,7 @@
 ])
 @if(!isset($card_id))
     @php
-        $card_id = random_int(1000, 2000);
+        $card_id = now()->timestamp.\Str::random(5);
     @endphp
 @endif
 @php
