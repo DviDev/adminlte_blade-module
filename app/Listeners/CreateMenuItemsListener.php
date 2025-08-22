@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Permission\Enums\Actions;
 use Modules\Permission\Models\PermissionActionModel;
 use Modules\Person\Enums\UserType;
-use Modules\Project\Entities\MenuItem\MenuItemEntityModel;
+use Modules\Project\Contracts\CreateMenuItemsListenerContract;
+use Modules\Project\Entities\ProjectModuleMenuItem\ProjectModuleMenuItemEntityModel;
 use Modules\Project\Events\CreateMenuItemsEvent;
-use Modules\Project\Listeners\CreateMenuItemsListenerContract;
-use Modules\Project\Models\MenuModel;
 use Modules\Project\Models\ProjectModuleEntityDBModel;
+use Modules\Project\Models\ProjectModuleMenuModel;
 
 class CreateMenuItemsListener extends CreateMenuItemsListenerContract
 {
@@ -21,7 +21,7 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
 
     public function handle(CreateMenuItemsEvent $event): void
     {
-        if (MenuModel::query()->where('name', $this->moduleName())->exists()) {
+        if (ProjectModuleMenuModel::query()->where('name', $this->moduleName())->exists()) {
             return;
         }
 
@@ -45,18 +45,18 @@ class CreateMenuItemsListener extends CreateMenuItemsListenerContract
         return $action;
     }
 
-    /**@return MenuModel|Model */
-    protected function createMenu($name, $title, $order = 1): MenuModel
+    /**@return ProjectModuleMenuModel|Model */
+    protected function createMenu($name, $title, $order = 1): ProjectModuleMenuModel
     {
-        return MenuModel::firstOrCreate(
+        return ProjectModuleMenuModel::firstOrCreate(
             ['name' => $name],
             ['title' => $title, 'num_order' => $order, 'active' => true]
         );
     }
 
-    protected function createMenuItem(MenuModel $menuModel, ?ProjectModuleEntityDBModel $entity = null, $key = null): void
+    protected function createMenuItem(ProjectModuleMenuModel $menuModel, ?ProjectModuleEntityDBModel $entity = null, $active = null): void
     {
-        $p = MenuItemEntityModel::props();
+        $p = ProjectModuleMenuItemEntityModel::props();
         $menuModel->menuItems()->create([
             $p->label => trans('Page Examples'),
             $p->num_order => 1,
