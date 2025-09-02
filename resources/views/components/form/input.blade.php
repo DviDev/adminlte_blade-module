@@ -3,9 +3,7 @@
     'attr' => []
 ])
 @php
-    $array = collect($attr)->except('id')->merge($attributes->getAttributes())->all();
-    $attributes->setAttributes($array);
-    BaseFormBladeComponent::prepare($attributes);
+    prepareAttributes($attributes, $attr);
 @endphp
 <div @class([
         'w-full',

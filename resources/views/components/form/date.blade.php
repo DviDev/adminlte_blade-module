@@ -4,11 +4,7 @@
     'attr' => [],
 ])
 @php
-    use Modules\Base\View\Components\Form\BaseFormBladeComponent;
-
-    $array = collect($attr)->except('id')->merge($attributes->getAttributes())->all();
-    $attributes->setAttributes($array);
-    BaseFormBladeComponent::prepare($attributes);
+    prepareAttributes($attributes, $attr);
 @endphp
 <div>
     <div class="form-group">
