@@ -4,11 +4,12 @@
     'label' => null,
     'required' => false,
     'disable' => false,
+    'attr' => [],
 ])
 @php
     $field = $id ?? collect($attributes)->first(fn($value, $key) => str($key)->contains('wire:model'));
 
-    BaseFormBladeComponent::prepare($attributes);
+    prepareAttributes($attributes, $attr);
 @endphp
 @if($label)
     <div class="form-group w-full">
