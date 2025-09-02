@@ -4,18 +4,15 @@
 @php
     $attr = collect($attr);
     $array = $attr->merge($attributes->getAttributes())->all();
-    if (isset($array['placeholder'])){
-        $array['placeholder'] = trans($array['placeholder']);
-    }
-    if (isset($array['label'])){
-        $array['label'] = ucfirst(trans(strtolower($array['label'])));
-    }
+
     $wire_model = $attributes->get('wire:model');
 
     $array['id'] = $array['id'] ?: $wire_model;
 
     $field = $wire_model ?? $id ?? $attributes->get('name') ?? $attributes->get('label');
     $attributes->setAttributes($array);
+
+    prepareAttributes($attributes, $attr);
 @endphp
 
 <x-lte::plugins.summernote/>
