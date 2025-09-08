@@ -6,7 +6,6 @@ use Modules\Base\Events\UsingSpotlightEvent;
 
 class UsingSpotlightListener
 {
-
     public function handle(UsingSpotlightEvent $event): void
     {
         if (str($event->uri)->startsWith(['lte', '/lte'])) {
