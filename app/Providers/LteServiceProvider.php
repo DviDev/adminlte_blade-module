@@ -45,106 +45,29 @@ use Modules\Lte\View\Components\Todo\TodoList;
 
 class LteServiceProvider extends BaseServiceProviderContract
 {
-    /**
-     * @var string
-     */
-    protected $moduleName = 'Lte';
-
-    /**
-     * @var string
-     */
-    protected $moduleNameLower = 'lte';
-
-    /**
-     * Boot the application events.
-     */
     public function boot(): void
     {
-        $this->registerTranslations();
-        $this->registerConfig();
-        $this->registerViews();
-        $this->registerAssetPath();
-        $this->loadMigrationsFrom(module_path($this->moduleName, 'database/Migrations'));
-        $this->registerComponents();
+        parent::boot();
         /*Feature::define(ProfileActivity::class);
         Feature::define(ProfileTimeline::class);*/
     }
 
-    /**
-     * Register the service provider.
-     */
-    public function register(): void
+    public function provides(): array
     {
-        $this->app->register(RouteServiceProvider::class);
-        $this->app->register(LteEventServiceProvider::class);
+        return [
+            RouteServiceProvider::class,
+            LteEventServiceProvider::class,
+        ];
     }
 
-    /**
-     * Register config.
-     */
-    protected function registerConfig(): void
+    public function getModuleName(): string
     {
-        $this->publishes([
-            module_path($this->moduleName, 'config/config.php') => config_path($this->moduleNameLower.'.php'),
-        ], 'config');
-        $this->mergeConfigFrom(
-            module_path($this->moduleName, 'config/config.php'), $this->moduleNameLower
-        );
+        return 'Lte';
     }
 
-    /**
-     * Register views.
-     */
-    public function registerViews(): void
+    public function getModuleNameLower(): string
     {
-        $viewPath = resource_path('views/modules/'.$this->moduleNameLower);
-
-        $sourcePath = module_path($this->moduleName, 'resources/views');
-
-        $this->publishes([
-            $sourcePath => $viewPath,
-        ], ['views', $this->moduleNameLower.'-module-views']);
-
-        $this->publishes(
-            [resource_path('views/modules/lte/components/layout/v1/') => module_path('Lte', 'resources/views/components/layout/v1/page-card')],
-            ['views', $this->moduleNameLower.'-module-views']
-        );
-
-        $paths = array_merge($this->getPublishableViewPaths(), [$sourcePath]);
-        $this->loadViewsFrom($paths, $this->moduleNameLower);
-    }
-
-    private function registerAssetPath(): void
-    {
-        $assetVendorPath = public_path('assets/modules/'.$this->moduleNameLower);
-        $sourceVendorPath = module_path($this->moduleName, 'resources/assets');
-        $this->publishes([$sourceVendorPath => $assetVendorPath], 'lte-assets');
-    }
-
-    /**
-     * Register translations.
-     */
-    public function registerTranslations(): void
-    {
-        $langPath = resource_path('lang/modules/'.$this->moduleNameLower);
-
-        if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
-        } else {
-            $this->loadTranslationsFrom(module_path($this->moduleName, 'resources/lang'), $this->moduleNameLower);
-        }
-    }
-
-    protected function getPublishableViewPaths(): array
-    {
-        $paths = [];
-        foreach (config('view.paths') as $path) {
-            if (is_dir($path.'/modules/'.$this->moduleNameLower)) {
-                $paths[] = $path.'/modules/'.$this->moduleNameLower;
-            }
-        }
-
-        return $paths;
+        return 'lte';
     }
 
     protected function registerComponents(): void
@@ -195,15 +118,5 @@ class LteServiceProvider extends BaseServiceProviderContract
         $this->publishableComponent('modal', Modal::class);
         $this->publishableComponent('page_alert', PageAlert::class);
         $this->publishableComponent('toastr', Toastr::class);
-    }
-
-    public function getModuleName(): string
-    {
-        return 'Lte';
-    }
-
-    public function getModuleNameLower(): string
-    {
-        return 'lte';
     }
 }
