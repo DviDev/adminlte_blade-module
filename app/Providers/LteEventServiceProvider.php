@@ -4,7 +4,9 @@ namespace Modules\Lte\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Modules\Base\Events\UsingSpotlightEvent;
+use Modules\DBMap\Events\ScanTableEvent;
 use Modules\Lte\Listeners\CreateMenuItemsListener;
+use Modules\Lte\Listeners\ScanTableLteListener;
 use Modules\Lte\Listeners\UsingSpotlightListener;
 use Modules\Project\Events\CreateMenuItemsEvent;
 
@@ -17,6 +19,7 @@ class LteEventServiceProvider extends ServiceProvider
     {
         \Event::listen(UsingSpotlightEvent::class, UsingSpotlightListener::class);
         \Event::listen(CreateMenuItemsEvent::class, CreateMenuItemsListener::class);
+        \Event::listen(ScanTableEvent::class, ScanTableLteListener::class);
     }
 
     /**
