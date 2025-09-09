@@ -7,20 +7,19 @@ use Modules\Permission\Models\PermissionActionModel;
 use Modules\Person\Enums\UserType;
 use Modules\Project\Contracts\CreateMenuItemsListenerContract;
 use Modules\Project\Entities\ProjectModuleMenuItem\ProjectModuleMenuItemEntityModel;
-use Modules\Project\Models\ProjectModuleEntityDBModel;
-use Modules\Project\Models\ProjectModuleMenuModel;
+use Modules\Project\Events\CreateMenuItemsEvent;
 
 class CreateMenuItemsListener extends CreateMenuItemsListenerContract
 {
     public function moduleName(): string
     {
-        return config('lte.name');
+        return 'Lte';
     }
 
-    protected function createMenuItem(ProjectModuleMenuModel $menuModel, ?ProjectModuleEntityDBModel $entity = null, $active = null): void
+    protected function createMenuItems(CreateMenuItemsEvent $event): void
     {
         $p = ProjectModuleMenuItemEntityModel::props();
-        $menuModel->menuItems()->create([
+        $event->menu->menuItems()->create([
             $p->label => trans('Page Examples'),
             $p->num_order => 1,
             $p->title => trans('Page Examples'),
