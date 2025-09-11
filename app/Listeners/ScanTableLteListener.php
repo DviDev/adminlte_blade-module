@@ -8,6 +8,6 @@ class ScanTableLteListener
 {
     public function handle($event): void
     {
-        new ScanTableDomain()->scan('lte');
+        (new ScanTableDomain)->scan('lte');
     }
 }
