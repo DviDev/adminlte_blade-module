@@ -32,7 +32,7 @@ class LteDatabaseSeeder extends BaseSeeder
 
         $superAdminTypeModel = UserTypeModel::query()->where('name', UserType::SUPER_ADMIN->value)->first();
 
-        $superAdmin = new SeedFirstOrCreateUser()->firstOrCreateUser($superAdminTypeModel);
+        $superAdmin = (new SeedFirstOrCreateUser)->firstOrCreateUser($superAdminTypeModel);
 
         $config = ConfigEntityModel::props();
         ConfigModel::query()->firstOrCreate([$config->name => 'app_logo'], [
