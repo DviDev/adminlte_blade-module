@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Services;
 
 use Modules\DvUi\Enums\DvuiComponentAlias;
@@ -9,7 +11,7 @@ use Modules\Lte\View\Components\Form\Input;
 use Modules\Lte\View\Components\Form\Select;
 use Modules\Lte\View\Components\Layout\Page;
 
-class ComponentMap implements DvuiComponentSuiteContract
+final class ComponentMap implements DvuiComponentSuiteContract
 {
     public function getSuiteIdentifier(): string
     {

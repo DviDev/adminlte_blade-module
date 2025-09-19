@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\View\Components\Form;
 
 use Illuminate\View\View;
@@ -7,7 +9,7 @@ use Modules\Base\View\Components\Form\BaseFormBladeComponent;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 
-class Select extends BaseFormBladeComponent
+final class Select extends BaseFormBladeComponent
 {
     use DevResources;
 

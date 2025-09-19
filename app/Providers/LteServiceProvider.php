@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Providers;
 
 use Livewire\Livewire;
@@ -43,7 +45,7 @@ use Modules\Lte\View\Components\Scripts\Alpine\Mask;
 use Modules\Lte\View\Components\Toastr;
 use Modules\Lte\View\Components\Todo\TodoList;
 
-class LteServiceProvider extends BaseServiceProviderContract
+final class LteServiceProvider extends BaseServiceProviderContract
 {
     public function boot(): void
     {

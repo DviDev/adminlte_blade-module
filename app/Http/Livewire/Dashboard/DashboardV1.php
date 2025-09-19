@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Http\Livewire\Dashboard;
 
 use Livewire\Component;
 
-class DashboardV1 extends Component
+final class DashboardV1 extends Component
 {
     public function render()
     {

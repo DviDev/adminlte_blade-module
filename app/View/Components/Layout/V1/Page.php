@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\View\Components\Layout\V1;
 
 use Illuminate\Support\Facades\Route;
@@ -8,7 +10,7 @@ use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 
-class Page extends Component
+final class Page extends Component
 {
     use DevResources;
 
@@ -54,6 +56,11 @@ class Page extends Component
         return $items;
     }
 
+    public function componentAlias(): DvuiComponentAlias
+    {
+        return DvuiComponentAlias::LayoutV1Page;
+    }
+
     protected function getItems1(bool $condition, string $label1, string $label2): array
     {
         $contains = str(url()->previous())->contains(route($condition));
@@ -62,10 +69,5 @@ class Page extends Component
             'label' => $contains ? $label1 : $label2,
             'url' => $contains ? url()->previous() : route('admin.products'),
         ];
-    }
-
-    public function componentAlias(): DvuiComponentAlias
-    {
-        return DvuiComponentAlias::LayoutV1Page;
     }
 }

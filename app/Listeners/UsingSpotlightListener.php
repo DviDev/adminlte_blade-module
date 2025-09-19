@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Listeners;
 
 use Modules\Base\Events\UsingSpotlightEvent;
 
-class UsingSpotlightListener
+final class UsingSpotlightListener
 {
     public function handle(UsingSpotlightEvent $event): void
     {

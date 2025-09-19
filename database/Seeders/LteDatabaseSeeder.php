@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Database\Seeders;
 
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +12,7 @@ use Modules\Person\Enums\UserType;
 use Modules\Person\Models\UserTypeModel;
 use Modules\Person\Services\SeedFirstOrCreateUser;
 
-class LteDatabaseSeeder extends BaseSeeder
+final class LteDatabaseSeeder extends BaseSeeder
 {
     /**
      * Run the database seeds.
@@ -26,7 +28,7 @@ class LteDatabaseSeeder extends BaseSeeder
 
     protected function createConfigAppLogo(): void
     {
-        if (! config('base.default_layout') == 'lte') {
+        if (! config('base.default_layout') === 'lte') {
             return;
         }
 
