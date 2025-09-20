@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\View\Components\Layout\V1;
 
 use Closure;
@@ -8,7 +10,7 @@ use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 
-class Dashboard extends Component
+final class Dashboard extends Component
 {
     use DevResources;
 

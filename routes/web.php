@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +15,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('lte')->group(function () {
+Route::prefix('lte')->group(function (): void {
     if (config('app.env') !== 'local') {
         return;
     }

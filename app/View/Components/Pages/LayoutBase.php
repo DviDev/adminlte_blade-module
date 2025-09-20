@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\View\Components\Pages;
 
 use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\View\BaseBladeComponent;
 
-class LayoutBase extends BaseBladeComponent
+final class LayoutBase extends BaseBladeComponent
 {
     public function render(): View|string
     {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Listeners;
 
 use Modules\Permission\Enums\Actions;
@@ -9,9 +11,9 @@ use Modules\Project\Contracts\CreateMenuItemsListenerContract;
 use Modules\Project\Entities\ProjectModuleMenuItem\ProjectModuleMenuItemEntityModel;
 use Modules\Project\Events\CreateMenuItemsEvent;
 
-class CreateMenuItemsListener extends CreateMenuItemsListenerContract
+final class CreateMenuItemsListener extends CreateMenuItemsListenerContract
 {
-    public function moduleName(): string
+    protected function moduleName(): string
     {
         return 'Lte';
     }

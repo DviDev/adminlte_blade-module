@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Features\User;
 
 use App\Models\User;
 
-class ProfileActivity
+final class ProfileActivity
 {
     /**
      * Resolve the feature's initial value.

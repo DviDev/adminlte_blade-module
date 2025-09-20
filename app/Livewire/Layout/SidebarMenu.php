@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Livewire\Layout;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
-class SidebarMenu extends Component
+final class SidebarMenu extends Component
 {
     public $items = [];
 

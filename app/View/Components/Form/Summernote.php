@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\View\Components\Form;
 
 use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\View\BaseBladeComponent;
 
-class Summernote extends BaseBladeComponent
+final class Summernote extends BaseBladeComponent
 {
     public function __construct(
         public ?array $attr = null,

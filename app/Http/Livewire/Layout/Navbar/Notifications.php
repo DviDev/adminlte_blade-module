@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\Http\Livewire\Layout\Navbar;
 
 use Livewire\Component;
 
-class Notifications extends Component
+final class Notifications extends Component
 {
     protected $listeners = ['refresh' => '$refresh'];
 

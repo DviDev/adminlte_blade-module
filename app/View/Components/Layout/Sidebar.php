@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Lte\View\Components\Layout;
 
 use Illuminate\View\Component;
@@ -8,7 +10,7 @@ use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
 use Modules\Project\Domains\MenuDomain;
 
-class Sidebar extends Component
+final class Sidebar extends Component
 {
     use DevResources;
 
