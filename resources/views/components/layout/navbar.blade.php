@@ -57,6 +57,7 @@
                     <i class="far fa-comments"></i>
                     @php
                         $messagesQuery = ChatCategoryChannelTopicModel::query()
+                            ->with('user')
                             ->where('user_id', auth()->user()->id);
 
                         /**@var \Illuminate\Support\Collection|ChatCategoryChannelTopicModel[] $messages*/
