@@ -7,7 +7,7 @@ namespace Modules\Lte\View\Components\Form;
 use Illuminate\View\View;
 use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Traits\DevResources;
-use Modules\DvUi\View\BaseBladeComponent;
+use Modules\DvUi\Contracts\BaseBladeComponent;
 
 final class Date extends BaseBladeComponent
 {
