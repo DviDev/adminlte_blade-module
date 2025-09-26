@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Lte\Http\Livewire\Layout\Navbar;
+namespace Modules\Lte\Livewire\Layout\Navbar;
 
 use Livewire\Component;
 

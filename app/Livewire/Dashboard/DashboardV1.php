@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Lte\Http\Livewire\Dashboard;
+namespace Modules\Lte\Livewire\Dashboard;
 
 use Livewire\Component;
 

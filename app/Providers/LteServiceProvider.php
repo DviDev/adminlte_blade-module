@@ -6,8 +6,8 @@ namespace Modules\Lte\Providers;
 
 use Livewire\Livewire;
 use Modules\Base\Contracts\BaseServiceProviderContract;
-use Modules\Lte\Http\Livewire\Dashboard\DashboardV1;
-use Modules\Lte\Http\Livewire\Layout\Navbar\Notifications;
+use Modules\Lte\Livewire\Dashboard\DashboardV1;
+use Modules\Lte\Livewire\Layout\Navbar\Notifications;
 use Modules\Lte\Livewire\Layout\SidebarMenu;
 use Modules\Lte\View\Components\Box;
 use Modules\Lte\View\Components\Button;
@@ -77,7 +77,7 @@ final class LteServiceProvider extends BaseServiceProviderContract
         $this->publishableComponent('pages.examples.invoice', Invoice::class);
         Livewire::component('lte::dashboard.v1', DashboardV1::class);
         Livewire::component('lte::layout.navbar.notifications', Notifications::class);
-        Livewire::component('lte::page', \Modules\Lte\Http\Livewire\Page\Page::class);
+        Livewire::component('lte::page', \Modules\Lte\Livewire\Page\Page::class);
 
         Livewire::component('lte::dashboard.dashboard-v1', DashboardV1::class);
         Livewire::component('lte::layout.navbar.notifications', Notifications::class);
