@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Lte\Database\Seeders;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\Base\Database\Seeders\BaseSeeder;
+use Modules\Base\Contracts\BaseSeeder;
 use Modules\Base\Entities\Config\ConfigEntityModel;
 use Modules\Base\Models\ConfigModel;
 use Modules\Person\Enums\UserType;
