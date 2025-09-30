@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Lte\Services;
 
-use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\DvUi\Contracts\DvuiComponentSuiteContract;
+use Modules\DvUi\Enums\DvuiComponentAlias;
 use Modules\Lte\View\Components\Form\Date;
 use Modules\Lte\View\Components\Form\Input;
 use Modules\Lte\View\Components\Form\Select;
