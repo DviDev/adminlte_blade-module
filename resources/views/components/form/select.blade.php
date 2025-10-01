@@ -1,4 +1,4 @@
-@php use Modules\Base\View\Components\Form\BaseFormBladeComponent; @endphp
+@php use Modules\Base\Contracts\BaseFormBladeComponent; @endphp
 @props([
     'id' => null,
     'label' => null,

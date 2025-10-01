@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Lte\Http\Livewire\Page;
+namespace Modules\Lte\Livewire\Page;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Request;

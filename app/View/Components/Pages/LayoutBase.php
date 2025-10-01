@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Lte\View\Components\Pages;
 
 use Illuminate\View\View;
+use Modules\DvUi\Contracts\BaseBladeComponent;
 use Modules\DvUi\Enums\DvuiComponentAlias;
-use Modules\DvUi\View\BaseBladeComponent;
 
 final class LayoutBase extends BaseBladeComponent
 {
