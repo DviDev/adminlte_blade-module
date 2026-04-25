@@ -18,7 +18,7 @@
         />
     @else
         <div x-data="{hover: false}" @mouseenter="hover = true" @mouseleave="hover = false"
-            class="border border-gray-300 bg-gray-100 rounded-md p-2 flex items-center justify-between space-x-2">
+            class="border bg-gray-50 rounded-md p-2 flex items-center justify-between space-x-2">
             <div>
                 @if($label = $attributes->get('label'))
                     <x-lte::label :value="$label"/>
