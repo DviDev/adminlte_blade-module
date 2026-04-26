@@ -51,7 +51,7 @@
             @endif
         </li>
         <!-- Todo - Verificar se seria legal incluir aqui o Messages Dropdown Menu -->
-        @if(\Nwidart\Modules\Facades\Module::isEnabled('Chat'))
+        @if(moduleIsEnabled('Chat'))
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <i class="far fa-comments"></i>
