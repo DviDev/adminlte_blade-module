@@ -121,4 +121,9 @@ final class LteServiceProvider extends BaseServiceProviderContract
         $this->publishableComponent('page_alert', PageAlert::class);
         $this->publishableComponent('toastr', Toastr::class);
     }
+
+    protected function langPath(): string
+    {
+        return module_path($this->getModuleName(), 'resources/lang');
+    }
 }
